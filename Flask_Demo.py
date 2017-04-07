@@ -4,7 +4,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def test():
-    return "He He He!!I was just testing your patience level!!!??!!!"
+    return render_template("home.html")
 
 @app.route('/home')
 def home():
