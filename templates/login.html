@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HopUp</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"
+  </head>
+  <body>
+  <form>
+    <div class="container">
+       <label><b>UserName</b></label>
+       <input type="text" placeholder="Enter user name" name="uname" required>
+
+       <label><b>Password</b></label>
+       <input type="password" placeholder="Enter password" name="pwd" required>
+
+       <button type="submit">Login</button>
+       <input type="checkbox" checked="checked">Remember Me
+    </div>
+    <div class="container">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="pwd">Forgot <a href="#">password??</a></span>
+    </div>
+  </form>
+  </body>
+</html>
