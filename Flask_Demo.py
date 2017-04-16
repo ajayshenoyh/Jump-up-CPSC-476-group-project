@@ -1,8 +1,13 @@
 from flask import Flask, render_template,redirect,url_for,make_response
+from flask import flash
 from flask import request
 from flask import current_app
 from flask_bootstrap import Bootstrap
+from HopUp_Database_Code import *
 import smtplib
+import psycopg2
+import base64
+
 from email.mime.text import MIMEText
 msg = MIMEText('From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup','plain','utf-8')
 from_addr = 'srushti.gangireddy@gmail.com'
@@ -12,11 +17,17 @@ s =smtplib.SMTP_SSL('smtp.gmail.com')
 s.login(from_addr,password)
 
 app=Flask(__name__)
-app.config['SECRET KEY']='QAZWSXEDC45%'
+app.config['SESSION_TYPE'] = 'memcached'
+app.config['SECRET_KEY'] = 'super secret key'
+
+UploadFoler = '/static/'
+
 ctx = app.app_context()
 #flask.g.projectTitl=''
 #ctx.push()
 bootstrap=Bootstrap(app)
+
+create_project_table()
 
 @app.route('/')
 def test():
@@ -64,11 +75,18 @@ def project_registration():
         project_category = request.form.get('ddl1')
         project_sub_category = request.form.get('ddl2')
         project_country = request.form.get('projectCountry')
-        project_image = request.form.get('project_image')
+        #project_image = request.files.get('project_image','')
         project_description = request.form.get('project_description')
         project_location = request.form.get('project_location')
         project_fund_duration = request.form.get('fund_duration')
         project_fund_goal = request.form.get('fundGoal')
+        #print(type(project_image))
+        #image_str = base64.b64encode(request.files.get('project_image',''))
+        if 'file' not in request.files:
+            flash("No file upload")
+        file = request.files['project_image']
+        print(type(file))
+        file.save(os.path.join)
         resp = make_response(render_template('rewards.html'))
         resp.set_cookie('projectTitle',project_title)
         reward()
@@ -135,6 +153,23 @@ def reward():
 def page_not_found(e):
     return render_template("404.html"),404
 
+def validate_project_title(ptitle):
+    if not ptitle.isalpha():
+        return False
+    else:
+        return True
+
+def validate_funding_duration(pfunddur):
+    if not pfunddur.isdigit():
+        return False
+    else:
+        return True
+
+def validate_fund_goal(pfundgoal):
+    if not pfundgoal.isdigit():
+        return False
+    else:
+        return True
 
 if __name__=="__main__":
     app.run(debug=True)
