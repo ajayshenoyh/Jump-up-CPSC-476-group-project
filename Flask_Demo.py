@@ -9,12 +9,11 @@ import psycopg2
 import base64
 
 from email.mime.text import MIMEText
-#msg = MIMEText('From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup','plain','utf-8')
-#from_addr = 'srushti.gangireddy@gmail.com'
-#password='SRIRAMA1!'
-#to_addr = 'srushti.gangireddy@gmail.com'
-#s =smtplib.SMTP_SSL('smtp.gmail.com')
-#s.login(from_addr,password)
+msg = MIMEText('From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup','plain','utf-8')
+from_addr = 'craftingideas.25@gmail.com'
+password='SuperUser'
+s =smtplib.SMTP_SSL('smtp.gmail.com')
+s.login(from_addr,password)
 
 app=Flask(__name__)
 app.config['SESSION_TYPE'] = 'memcached'
@@ -125,8 +124,8 @@ def account_details():
 
 @app.route('/send_invite',methods=['POST','GET'])
 def send_invite():
-    #to_addr = request.form.get('col_email')
-    #s.sendmail(from_addr,[to_addr],msg.as_string())
+    to_addr = request.form.get('col_email')
+    s.sendmail(from_addr,[to_addr],msg.as_string())
     return "Successfully sent invitation"
 
 @app.route('/save_reward',methods=['POST','GET'])
