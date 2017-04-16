@@ -27,7 +27,7 @@ ctx = app.app_context()
 #ctx.push()
 bootstrap=Bootstrap(app)
 
-create_project_table()
+
 
 @app.route('/')
 def test():
