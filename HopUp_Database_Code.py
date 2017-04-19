@@ -109,7 +109,7 @@ def create_project_detailed_info_table():
     conn.close()
 
 def add_project_detailed_info(pdid,pt,pvideo,pdesc):
-    conn = psycopg2.connect(database=url.path[1:] user=url.username password=url.password host=url.hostname port=url.port)
+    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("insert into PROJECTDETAILS values(%s,%s,%s,%s)",(pdid,pt,pvideo,pdesc))
     conn.commit()
