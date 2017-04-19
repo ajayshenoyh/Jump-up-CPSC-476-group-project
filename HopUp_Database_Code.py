@@ -1,26 +1,21 @@
 import os
 import urlparse
 import psycopg2
-
-urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
+from DatabaseConnection import *
 
 def create_project_table():
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("create table if not exists PROJECT(ProjectID Integer,ProjectTitle text,UserName text,ProjectCategory text,ProjectSubCategory text,ProjectCountry text,ProjectImage text,ProjectDescription text,ProjectLocation text,ProjectFundDuration text,ProjectFundGoal text)")
     conn.commit()
     conn.close()
 
 def add_project(pid,ptitle,un,pcat,psubcat,pcountry,pimage,pdesc,ploc,pfunddur,pfundgoal):
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("insert into PROJECT values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(pid,ptitle,un,pcat,psubcat,pcountry,pimage,pdesc,ploc,pfunddur,pfundgoal))
     conn.commit()
     conn.close()
 
 def view_projects():
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("select * from PROJECT")
     rows = curs.fetchall()
@@ -28,7 +23,6 @@ def view_projects():
     return rows
 
 def search_projects_by_title(ptitle):
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("select * from PROJECT where ProjectTitle = %s",(ptitle,))
     rows = curs.fetchall()
@@ -36,21 +30,18 @@ def search_projects_by_title(ptitle):
     return rows
 
 def create_reward_table():
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("create table if not exists REWARD(RewardID Integer,RewardTitle text,ProjectTitle text,UserName text,PledgedAmount integer,RewardDescription text,ExpectedMonth integer,ExpectedYear integer,ShippingDetails text,RewardLimit integer)")
     conn.commit()
     conn.close()
 
 def add_reward(rid,rtitle,ptitle,un,pa,rdesc,expmonth,expyear,shippingDetails,rlimit):
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("insert into REWARD values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(rid,rtitle,ptitle,'  ',pa,rdesc,expmonth,expyear,shippingDetails,rlimit))
     conn.commit()
     conn.close()
 
 def view_rewards():
-    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("select * from REWARD")
     rows = curs.fetchall()
