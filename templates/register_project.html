@@ -216,16 +216,58 @@
 		opt.text = text;
 		ddl.options.add(opt);
 	}
+
+  function validateProjectRegistrationForm()
+  {
+    var title = document.forms["ProjectRegistrationForm"]["project_title"].value;
+    var pattern = /[^a-zA-Z0-9]/;
+    if (title == "") {
+        alert("Project title cannot be empty");
+        return false;
+    }else if(title.length > 100){
+      alert("Project title is too lengthy");
+      return false;
+    }else if(pattern.test(title)){
+      alert("Project title is not valid.Please give a valid title");
+      return false;
+    }
+
+    var funding_duration = document.forms["ProjectRegistrationForm"]["fund_duration"].value;
+    if(funding_duration == ""){
+      alert("Funding duration cannot be empty");
+      return false;
+    }else if(isNaN(funding_duration)){
+      alert("Funding duration should be a numeric");
+      return false;
+    }else if(funding_duration <= 0 | funding_duration > 60){
+      alert("Funding duration is greater than or less than the threshold");
+      return false;
+    }
+
+    var funding_goal = document.forms["ProjectRegistrationForm"]["fundGoal"].value;
+    if(funding_goal == ""){
+      alert("Fund Goal cannot be empty");
+      return false;
+    }else if(isNaN(funding_goal)){
+      alert("Fund Goal should be a numeric");
+      return false;
+    }else if(funding_goal <= 0 | funding_goal > 50000){
+      alert("Fund Goal is greater than or less than the threshold");
+      return false;
+    }
+
+  }
+
 </script>
 </head>
 <body>
-	<form method="post" action="/project_register" enctype="multipart/form-data">
+	<form method="post" name="PRojectRegistrationForm" action="/project_register" onsubmit="return validateProjectRegistrationForm()">
 		<div class="form-group" align="center">
 			<label for="start"><h1>Getting Started with the project</h1></label>
 		</div>
 		<div class="form-group">
 			<label for="category">1. Choose a project Category</label>
-			<select id="ddl1" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+			<select id="ddl1" name="ddl1" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
 			<option>Category</option>
 			<option value="arts">Arts</option>
 			<option value="comics">Comics</option>
@@ -244,13 +286,13 @@
 			<option value="theatre">Theatre</option>
 			</select><br><br>
 			<label for="subCategory">Sub Category</label>
-			<select id="ddl2">
+			<select id="ddl2" name="ddl2">
 			<option>Sub Category</option>
 			</select>
 		</div>
 		<div class="form-group">
 			<label for="title">2. Project title</label>
-			<input type="text" class="form-control" id="project_title" name="project_title" placeholder="Project title should go in here">
+			<input type="text" class="form-control" id="project_title" name="project_title" placeholder="Project title should go in here" required>
 		</div>
 		<div class="form-group">
 	    		<label for="country">3. Country of Residence</label>
@@ -278,10 +320,10 @@
 			<option value="us">United States</option>
 			</select><br><br>
 		</div>
-		<div class="form-group">
-		    <label for="project image">4. Project Image</label>
-		    <input type="file" id="project_image" name="project_image">
-		    <p class="help-block">Upload your project image</p>
+    <div class="form-group">
+	    		<label for="project image">4. Project Image</label>
+			<input type="text" class="form-control" id="project_image" name="project_image">
+      <p> Please give the link of your project's image </p>
 		</div>
 		<div class="form-group">
 	    		<label for="projectDescription">5. Project Description</label>
@@ -294,11 +336,11 @@
 		<div class="form-group">
 			 <label for="fundDuration">7. Funding Duration</label>
        <p> Please specify the duration in number of days, just the number </p>
-			 <input type="text" class="form-control" id="fund_duration" name="fund_duration" placeholder=" ">
+			 <input type="text" class="form-control" id="fund_duration" name="fund_duration" placeholder=" " required>
 		</div>
 		<div class="form-group">
 		 	   <label for="fundingGoal">8. Fund Goal</label>
-			   <input type="text" class="form-control" id="fundGoal" name="fundGoal" placeholder="Specify your fund goal starting from $0">
+			   <input type="text" class="form-control" id="fundGoal" name="fundGoal" placeholder="Specify your fund goal starting from $0" required>
 	  </div>
 		<div class="form-group">
 		 	   <label for="projectLocation">9. Location of project</label>

@@ -26,7 +26,11 @@ ctx = app.app_context()
 #ctx.push()
 bootstrap=Bootstrap(app)
 
-
+create_project_table()
+create_reward_table()
+create_personal_info_table()
+create_bank_account_info_table()
+create_project_detailed_info_table()
 
 @app.route('/')
 def test():
@@ -60,32 +64,38 @@ def story():
     if request.method == 'GET':
         return render_template("story.html")
     elif request.method == 'POST':
-        print(request.cookies.get('projectTitle'))
+        pt = request.cookies.get('projectTitle')
         project_video_link = request.form.get('projectVideoLink')
         project_Detailed_Description = request.form.get('projectDetails')
+        pdid = len(view_project_detailed_info())+1
+        add_project_detailed_info(pdid,pt,project_video_link,project_Detailed_Description)
         return render_template('more_about_you.html')
 
 @app.route('/project_register',methods=['POST','GET'])
 def project_registration():
     if request.method == 'GET':
-        return render_template("register_project.html")
+        resp = make_response(render_template('register_project.html'))
+        resp.set_cookie('UserName','')
+        return resp
     elif request.method == 'POST':
         project_title = request.form.get('project_title')
         project_category = request.form.get('ddl1')
         project_sub_category = request.form.get('ddl2')
         project_country = request.form.get('projectCountry')
-        #project_image = request.files.get('project_image','')
+        project_image = request.form.get('project_image')
         project_description = request.form.get('project_description')
         project_location = request.form.get('project_location')
         project_fund_duration = request.form.get('fund_duration')
         project_fund_goal = request.form.get('fundGoal')
         #print(type(project_image))
         #image_str = base64.b64encode(request.files.get('project_image',''))
-        if 'file' not in request.files:
-            flash("No file upload")
-        file = request.files['project_image']
-        print(type(file))
-        file.save(os.path.join)
+        projects = search_projects_by_title(project_title)
+        if len(projects) >= 1:
+            return render_template("register_project.html")
+        else:
+            next_id = len(view_projects())+1
+            un = request.cookies.get('UserName')
+            add_project(next_id,project_title,un,project_category,project_sub_category,project_country,project_image,project_description,project_location,project_fund_duration,project_fund_goal)
         resp = make_response(render_template('rewards.html'))
         resp.set_cookie('projectTitle',project_title)
         reward()
@@ -106,6 +116,9 @@ def more_about_you():
         personal_location = request.form.get('location')
         github_url = request.form.get('giturl')
         biography = request.form.get('biography')
+        next_id = len(view_personal_info())+1
+        un = request.cookies.get('UserName')
+        add_personal_info(next_id,un,profile_image,facebook_url,personal_website_url,personal_location,github_url,biography)
         return render_template('bank_details.html')
 
 @app.route('/account_details',methods=['POST','GET'])
@@ -120,7 +133,11 @@ def account_details():
         HomeAddress = request.form.get('homeAddress')
         RoutingNumber = request.form.get('routingNumber')
         bankAccountNumber = request.form.get('BankAccountNumber')
-        return render_template('home.html')
+        next_id = len(view_bank_account_info())+1
+        un = request.cookies.get('UserName')
+        add_bank_account_info(next_id,un,contact_email,firstName,lastName,DOB,HomeAddress,RoutingNumber,bankAccountNumber)
+        project_details = search_projects_by_title(request.cookies.get('projectTitle'))
+        return render_template('project_overview.html',projectList=project_details)
 
 @app.route('/send_invite',methods=['POST','GET'])
 def send_invite():
@@ -140,12 +157,16 @@ def reward():
         return render_template("rewards.html")
     elif request.method == 'POST':
         reward_title = request.form.get('rewardTitle')
-        pledged_amount = request.form.get('rewardTitle')
+        pledged_amount = request.form.get('pledgedAmount')
         reward_description = request.form.get('rewardDescription')
         expected_delivery_month = request.form.get('month')
         expected_delivery_year = request.form.get('year')
         shippingDetails = request.form.get('shippingDetails')
         reward_limit = request.form.get('rewardLimit')
+        un = request.cookies.get('UserName')
+        pt = request.cookies.get('projectTitle')
+        next_id = len(view_rewards())+1
+        add_reward(next_id,reward_title,pt,un,pledged_amount,reward_description,expected_delivery_month,expected_delivery_year,shippingDetails,reward_limit)
         return render_template('more_about_you.html')
 
 @app.errorhandler(404)
