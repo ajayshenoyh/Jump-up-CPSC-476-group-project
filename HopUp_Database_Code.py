@@ -6,7 +6,7 @@ urlparse.uses_netloc.append("postgres")
 url = urlparse.urlparse(os.environ["JumpUpDB_URL"])
 
 def create_project_table():
-    conn = psycopg2.connect(database=url.path[1:] user=url.username password=url.password host=url.hostname port=url.port)
+    conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
     curs = conn.cursor()
     curs.execute("create table if not exists PROJECT(ProjectID Integer,ProjectTitle text,UserName text,ProjectCategory text,ProjectSubCategory text,ProjectCountry text,ProjectImage text,ProjectDescription text,ProjectLocation text,ProjectFundDuration text,ProjectFundGoal text)")
     conn.commit()
