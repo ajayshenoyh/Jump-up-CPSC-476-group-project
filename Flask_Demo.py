@@ -32,13 +32,14 @@ ctx = app.app_context()
 # flask.g.projectTitl=''
 # ctx.push()
 bootstrap = Bootstrap(app)
-
-create_project_table()
-create_reward_table()
-create_personal_info_table()
-create_bank_account_info_table()
-create_project_detailed_info_table()
-
+try:
+    create_project_table()
+    create_reward_table()
+    create_personal_info_table()
+    create_bank_account_info_table()
+    create_project_detailed_info_table()
+except:
+    pass
 
 @app.route('/')
 def test():
