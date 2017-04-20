@@ -1,0 +1,98 @@
+{% extends 'bootstrap/base.html'%}
+{% block title %}HopUp User Login{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"
+      data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Home</a>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/login">Login</a></li>
+      <li><a href="/project_register">Start a new Project</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+{% endblock %}
+{%block content%}
+<!doctype html>
+<html>
+<head>
+  <script type="text/javascript">
+    function validatePersonalProfileForm(){
+      var fb_url = document.forms["PersonalProfileForm"]["fbProfile"].value;
+      var url_regex = /[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/;
+      if(fb_url == ""){
+        alert("Facebook url cannot be empty");
+        return false;
+      }else if(!url_regex.test(fb_url)){
+        alert("Please enter the valid facebook url");
+        return false;
+      }
+
+      var website_url = document.forms["PersonalProfileForm"]["website"].value;
+      if(website_url == ""){
+        alert("Personal Website url cannot be empty");
+        return false;
+      }else if(!url_regex.test(website_url)){
+        alert("Please enter the valid website url");
+        return false;
+      }
+
+      var git_url = document.forms["PersonalProfileForm"]["giturl"].value;
+      if(git_url == ""){
+        alert("Github url cannot be empty");
+        return false;
+      }else if(!url_regex.test(git_url)){
+        alert("Please enter the valid git url");
+        return false;
+      }
+
+    }
+  </script>
+  <div class="container" align="center">
+    <h1>We need more information about you to verify the authenticity of the project</h1>
+  </div>
+</head>
+<body>
+  <form method="post" action="/more_about_you" name="PersonalProfileForm" onsubmit="return validatePersonalProfileForm()">
+    <div class="container">
+      <div class="form-group">
+         <label for="profile image">Profile Image</label>
+        <input type="text" class="form-control" id="profileimage" name="profileimage">
+        <p> Please give the link of your image </p>
+      </div>
+    <div class="form-group">
+      <label for="fbProfile">Facebook url</label>
+      <input type="text" class="form-control" id="fbProfile" name="fbProfile" placeholder="facebook url to connect">
+    </div>
+    <div class="form-group">
+      <label for="website">Personal Website url</label>
+      <input type="text" class="form-control" id="website" name="website" placeholder="personal website url">
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" id="location" name="location" placeholder="your location">
+    </div>
+    <div class="form-group">
+      <label for="giturl">GitHub url</label>
+      <input type="text" class="form-control" id="giturl" name="giturl" placeholder="Your github url">
+    </div>
+    <div class="form-group">
+      <label for="biography">Biography</label>
+      <textarea rows="3" cols="50" id="biography" name="biography" placeholder="Describe something interesting about yourself"></textarea>
+    </div>
+    <button type="submit" style="background-color:grey;margin:auto;display:block">Submit Bank account details</button>
+  </div>
+  </form>
+</body>
+</html>
+{%endblock%}
