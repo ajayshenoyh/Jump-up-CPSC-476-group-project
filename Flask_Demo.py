@@ -65,9 +65,7 @@ def app_context_learning():
 def login():
     return render_template("login.html")
 
-<<<<<<< HEAD
-@app.route('/story',methods=['POST','GET'])
-=======
+
 
 #@app.route('/loginback', methods=['POST', 'GET'])
 #def loginback():
@@ -76,7 +74,6 @@ def login():
 
 
 @app.route('/story', methods=['POST', 'GET'])
->>>>>>> 191569a60b756aa0cf226e1ea5c5fdce589d6b5d
 def story():
     if request.method == 'GET':
         return render_template("story.html")
