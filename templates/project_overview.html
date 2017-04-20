@@ -28,15 +28,121 @@
 <head>
   <script type="text/javascript">
   </script>
+  <style type="text/css">
+    .Table
+    {
+        display: table;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+  </style>
   <div class="container" align="center">
     <h1>Project Created Successfully</h1>
   </div>
 </head>
 <body>
-<ul>
   {% for project in projectList %}
-  <li>{{project}}</li>
-  {% endfor %}
+  <div class="Table">
+    <div class="Title">
+        <p>Project created successfully</p>
+    </div>
+    <div class="Heading">
+        <div class="Cell">
+            <p>ProjectID</p>
+        </div>
+        <div class="Cell">
+            <p>ProjectTitle</p>
+        </div>
+        <div class="Cell">
+            <p>Project Category</p>
+        </div>
+        <div class="Cell">
+            <p>Project Sub Category</p>
+        </div>
+        <div class="Cell">
+            <p>Country</p>
+        </div>
+        <div class="Cell">
+            <p>Project Image link</p>
+        </div>
+        <div class="Cell">
+            <p>Project Description</p>
+        </div>
+        <div class="Cell">
+            <p>Project Location</p>
+        </div>
+        <div class="Cell">
+            <p>Project fund duration</p>
+        </div>
+        <div class="Cell">
+            <p>Project fund goal</p>
+        </div>
+        <div class="Cell">
+            <p>Project Location</p>
+        </div>
+    </div>
+    <div class="Row">
+        <div class="Cell">
+            <p>{{project[0]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[1]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[2]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[3]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[4]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[5]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[6]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[7]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[8]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[9]}}</p>
+        </div>
+        <div class="Cell">
+            <p>{{project[10]}}</p>
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+
 </body>
 </html>
 {%endblock%}
