@@ -1,9 +1,13 @@
 from flask import Flask, render_template, redirect, url_for, make_response
 from flask import flash
+from datetime import datetime
 from flask import request
 from flask import current_app
 from flask_bootstrap import Bootstrap
 from HopUp_Database_Code import *
+#from JumpUp import JumpUpDB_URL
+import os
+import urlparse
 import smtplib
 import psycopg2
 import base64
@@ -29,14 +33,11 @@ ctx = app.app_context()
 # ctx.push()
 bootstrap = Bootstrap(app)
 
-try:
-    create_project_table()
-    create_reward_table()
-    create_personal_info_table()
-    create_bank_account_info_table()
-    create_project_detailed_info_table()
-except:
-    pass
+create_project_table()
+create_reward_table()
+create_personal_info_table()
+create_bank_account_info_table()
+create_project_detailed_info_table()
 
 
 @app.route('/')
@@ -64,6 +65,9 @@ def app_context_learning():
 def login():
     return render_template("login.html")
 
+<<<<<<< HEAD
+@app.route('/story',methods=['POST','GET'])
+=======
 
 #@app.route('/loginback', methods=['POST', 'GET'])
 #def loginback():
@@ -72,6 +76,7 @@ def login():
 
 
 @app.route('/story', methods=['POST', 'GET'])
+>>>>>>> 191569a60b756aa0cf226e1ea5c5fdce589d6b5d
 def story():
     if request.method == 'GET':
         return render_template("story.html")
@@ -100,6 +105,7 @@ def project_registration():
         project_location = request.form.get('project_location')
         project_fund_duration = request.form.get('fund_duration')
         project_fund_goal = request.form.get('fundGoal')
+        dt = str(datetime.now())
         # print(type(project_image))
         # image_str = base64.b64encode(request.files.get('project_image',''))
         projects = search_projects_by_title(project_title)
@@ -109,7 +115,7 @@ def project_registration():
             next_id = len(view_projects()) + 1
             un = request.cookies.get('UserName')
             add_project(next_id, project_title, un, project_category, project_sub_category, project_country,
-                        project_image, project_description, project_location, project_fund_duration, project_fund_goal)
+                        project_image, project_description, project_location, project_fund_duration, project_fund_goal,project_fund_goal,dt)
         resp = make_response(render_template('rewards.html'))
         resp.set_cookie('projectTitle', project_title)
         reward()
