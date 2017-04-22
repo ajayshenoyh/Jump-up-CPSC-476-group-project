@@ -170,6 +170,11 @@ def send_invite():
     s.sendmail(from_addr, [to_addr], msg.as_string())
     return "Successfully sent invitation"
 
+@app.route('/explore',methods=['POST','GET'])
+def explore():
+    projects = view_projects()
+    return render_template('project_overview.html',projectList=projects)
+
 
 @app.route('/save_reward', methods=['POST', 'GET'])
 def save_reward():

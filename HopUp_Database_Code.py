@@ -25,6 +25,12 @@ def search_projects_by_title(ptitle):
     rows = curs.fetchall()
     return rows
 
+def search_projects_by_username(username):
+    curs = conn.cursor()
+    curs.execute("select * from PROJECT where UserName = %s",(username,))
+    rows = curs.fetchall()
+    return rows
+
 def create_reward_table():
     curs = conn.cursor()
     curs.execute("create table if not exists REWARD(RewardID Integer,RewardTitle text,ProjectTitle text,UserName text,PledgedAmount integer,RewardDescription text,ExpectedMonth integer,ExpectedYear integer,ShippingDetails text,RewardLimit integer)")
