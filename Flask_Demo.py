@@ -125,7 +125,7 @@ def invite():
     return render_template("invite_collaborator.html")
 
 @app.route('/register', methods=['POST', 'GET'])
-def invite():
+def usrregister():
     return render_template("register.html")
 
 
