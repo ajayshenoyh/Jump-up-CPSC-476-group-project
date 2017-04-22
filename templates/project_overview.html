@@ -27,6 +27,15 @@
 <html>
 <head>
   <script type="text/javascript">
+      function donateAmount(){
+        var projectid = document.getElementById("cell1");
+        var projectname = document.getElementById("cell2");
+        var remaining = document.getElementById("cell12")
+        localStorage.setItem('projectId',projectid);
+        localStorage.setItem('projectTitle',projectname);
+        localStorage.setItem('remaining',remaining);
+        window.location.href="donateAmount.html"
+      }
   </script>
   <style type="text/css">
     .Table
@@ -103,40 +112,46 @@
         <div class="Cell">
             <p>Project Location</p>
         </div>
+        <div class="Cell">
+            <p>Remaining fund</p>
+        </div>
     </div>
-    <div class="Row">
+    <div class="Row" onclick="donateAmount()">
         <div class="Cell">
-            <p>{{project[0]}}</p>
+            <p id = "cell1" name="cell1">{{project[0]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[1]}}</p>
+            <p id = "cell2" name="cell2">{{project[1]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[2]}}</p>
+            <p id="cell3" name="cell3">{{project[2]}}</p>
+        </div>
+        <div class="Cell" >
+            <p id="cell4" name="cell4">{{project[3]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[3]}}</p>
+            <p id="cell5" name="cell5">{{project[4]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[4]}}</p>
+            <p id="cell6" name="cell6">{{project[5]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[5]}}</p>
+            <p id="cell7" name="cell7">{{project[6]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[6]}}</p>
+            <p id="cell8" name="cell8">{{project[7]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[7]}}</p>
+            <p id="cell9" name="cell9">{{project[8]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[8]}}</p>
+            <p id="cell10" name="cell10">{{project[9]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[9]}}</p>
+            <p id="cell11" name="cell11">{{project[10]}}</p>
         </div>
         <div class="Cell">
-            <p>{{project[10]}}</p>
+            <p id="cell12" name="cell12">{{project[12]}}</p>
         </div>
     </div>
 

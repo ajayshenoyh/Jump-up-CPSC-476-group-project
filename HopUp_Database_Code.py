@@ -2,18 +2,7 @@ import os
 import urlparse
 import psycopg2
 from DatabaseConnection import *
-def create_user_table():
-    conn = psycopg2.connect("dbname='JumpUp' user='postgres' password='postgres123' host='localhost' port='5432'")
-    curs = conn.cursor()
-    curs.execute(
-        "create table if not exists USER ( UserId SERIAL PRIMARY KEY,UserName text,PassWord text, EmailId text)")
-    conn.commit()
-    conn.close()
-def connection():
-    conn = psycopg2.connect("dbname='JumpUp' user='postgres' password='postgres123' host='localhost' port='5432'")
-    curs = conn.cursor()
-    c=conn.cursor()
-    return c,conn
+
 def create_project_table():
     curs = conn.cursor()
     curs.execute("create table if not exists PROJECT(ProjectID Integer,ProjectTitle text,UserName text,ProjectCategory text,ProjectSubCategory text,ProjectCountry text,ProjectImage text,ProjectDescription text,ProjectLocation text,ProjectFundDuration text,ProjectFundGoal text,Remaining text,StartTime text)")
@@ -29,6 +18,11 @@ def view_projects():
     curs.execute("select * from PROJECT")
     rows = curs.fetchall()
     return rows
+
+def project_pledged_amount(amount_pledged,id,rem):
+    curs = conn.cursor()
+    curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id))
+    conn.commit()
 
 def search_projects_by_title(ptitle):
     curs = conn.cursor()

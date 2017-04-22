@@ -124,10 +124,6 @@ def project_registration():
 def invite():
     return render_template("invite_collaborator.html")
 
-@app.route('/register', methods=['POST', 'GET'])
-def usrregister():
-    return render_template("register.html")
-
 
 @app.route('/more_about_you', methods=['POST', 'GET'])
 def more_about_you():
@@ -206,6 +202,18 @@ def reward():
                    expected_delivery_year, shippingDetails, reward_limit)
         return render_template('more_about_you.html')
 
+@app.route('/donate',methods=['POST','GET'])
+def donate():
+    id = request.form.get('projectID')
+    fn = request.form.get('fn')
+    ln = request.form.get('ln')
+    rem = request.form.get('rem')
+    rem_amount = int(rem) - int(amount_pledged)
+    amount_pledged = request.form.get('pledgeAmount')
+    address = request.form.get('address')
+    mobileNumber = request.form.get('mobileNumber')
+    project_pledged_amount(amount_pledged,str(rem_amount))
+    return "Pledged Successfully"
 
 @app.errorhandler(404)
 def page_not_found(e):
