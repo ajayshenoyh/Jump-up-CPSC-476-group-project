@@ -159,7 +159,8 @@ def account_details():
         un = request.cookies.get('UserName')
         add_bank_account_info(next_id, un, contact_email, firstName, lastName, DOB, HomeAddress, RoutingNumber,
                               bankAccountNumber)
-        project_details = search_projects_by_title(request.cookies.get('projectTitle'))
+        #project_details = search_projects_by_title(request.cookies.get('projectTitle'))
+        project_details = view_projects()
         return render_template('project_overview.html', projectList=project_details)
 
 
