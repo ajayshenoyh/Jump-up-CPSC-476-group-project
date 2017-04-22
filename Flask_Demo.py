@@ -124,6 +124,10 @@ def project_registration():
 def invite():
     return render_template("invite_collaborator.html")
 
+@app.route('/register', methods=['POST', 'GET'])
+def invite():
+    return render_template("register.html")
+
 
 @app.route('/more_about_you', methods=['POST', 'GET'])
 def more_about_you():
