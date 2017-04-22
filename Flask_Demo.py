@@ -159,7 +159,8 @@ def account_details():
         un = request.cookies.get('UserName')
         add_bank_account_info(next_id, un, contact_email, firstName, lastName, DOB, HomeAddress, RoutingNumber,
                               bankAccountNumber)
-        project_details = search_projects_by_title(request.cookies.get('projectTitle'))
+        #project_details = search_projects_by_title(request.cookies.get('projectTitle'))
+        project_details = view_projects()
         return render_template('project_overview.html', projectList=project_details)
 
 
@@ -168,6 +169,11 @@ def send_invite():
     to_addr = request.form.get('col_email')
     s.sendmail(from_addr, [to_addr], msg.as_string())
     return "Successfully sent invitation"
+
+@app.route('/explore',methods=['POST','GET'])
+def explore():
+    projects = view_projects()
+    return render_template('project_overview.html',projectList=projects)
 
 
 @app.route('/save_reward', methods=['POST', 'GET'])
