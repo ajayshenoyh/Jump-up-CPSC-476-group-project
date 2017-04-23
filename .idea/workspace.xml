@@ -4,6 +4,7 @@
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HopUp_Database_Code.py" afterPath="$PROJECT_DIR$/HopUp_Database_Code.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,18 +13,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/jumpup$jumpup.coverage" NAME="jumpup Coverage Results" MODIFIED="1492935348178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="110" column="12" lean-forward="true" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+            <state relative-caret-position="339">
+              <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
-                <marker date="1492935230184" expanded="true" signature="2841:2881" ph="SELECT * FRO... users" />
-                <marker date="1492935230184" expanded="true" signature="3154:3220" ph="INSERT INTO users... " />
+                <marker date="1492936060400" expanded="true" signature="2849:2890" ph="SELECT * FRO... users" />
+                <marker date="1492936060400" expanded="true" signature="3151:3188" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -32,30 +36,30 @@
       <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="69" lean-forward="true" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="106" />
+            <state relative-caret-position="486">
+              <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1492933483809" expanded="true" signature="150:252" ph="create table... if" />
-                <marker date="1492933483809" expanded="true" signature="425:714" ph="create table... if" />
-                <marker date="1492933483809" expanded="true" signature="877:943" ph="insert into PROJECT... " />
-                <marker date="1492933483809" expanded="true" signature="1111:1132" ph="select * fro... PROJECT" />
-                <marker date="1492933483809" expanded="true" signature="1273:1323" ph="update PROJE... " />
-                <marker date="1492933483809" expanded="true" signature="1435:1480" ph="select * fro... PROJECT" />
-                <marker date="1492933483809" expanded="true" signature="1623:1664" ph="select * fro... PROJECT" />
-                <marker date="1492933483809" expanded="true" signature="1793:2022" ph="create table... if" />
-                <marker date="1492933483809" expanded="true" signature="2174:2230" ph="insert into REWARD... " />
-                <marker date="1492933483809" expanded="true" signature="2389:2409" ph="select * fro... REWARD" />
-                <marker date="1492933483809" expanded="true" signature="2533:2689" ph="create table... if" />
-                <marker date="1492933483809" expanded="true" signature="2810:2867" ph="insert into PERSONAL_INFO... " />
-                <marker date="1492933483809" expanded="true" signature="2993:3020" ph="select * fro... PERSONAL_INFO" />
-                <marker date="1492933483809" expanded="true" signature="3148:3300" ph="create table... if" />
-                <marker date="1492933483809" expanded="true" signature="3434:3488" ph="insert into ACCOUNT... " />
-                <marker date="1492933483809" expanded="true" signature="3627:3648" ph="select * fro... ACCOUNT" />
-                <marker date="1492933483809" expanded="true" signature="3780:3888" ph="create table... if" />
-                <marker date="1492933483809" expanded="true" signature="4006:4052" ph="insert into PROJECTDETAILS... " />
-                <marker date="1492933483809" expanded="true" signature="4174:4202" ph="select * fro... PROJECTDETAILS" />
-                <marker date="1492933483809" expanded="true" signature="4329:4370" ph="select * fro... PROJECT" />
+                <marker date="1492935846792" expanded="true" signature="150:251" ph="create table... if" />
+                <marker date="1492935846792" expanded="true" signature="424:713" ph="create table... if" />
+                <marker date="1492935846792" expanded="true" signature="876:942" ph="insert into PROJECT... " />
+                <marker date="1492935846792" expanded="true" signature="1110:1131" ph="select * fro... PROJECT" />
+                <marker date="1492935846792" expanded="true" signature="1272:1322" ph="update PROJE... " />
+                <marker date="1492935846792" expanded="true" signature="1434:1479" ph="select * fro... PROJECT" />
+                <marker date="1492935846792" expanded="true" signature="1622:1663" ph="select * fro... PROJECT" />
+                <marker date="1492935846792" expanded="true" signature="1792:2021" ph="create table... if" />
+                <marker date="1492935846792" expanded="true" signature="2173:2229" ph="insert into REWARD... " />
+                <marker date="1492935846792" expanded="true" signature="2388:2408" ph="select * fro... REWARD" />
+                <marker date="1492935846792" expanded="true" signature="2532:2688" ph="create table... if" />
+                <marker date="1492935846792" expanded="true" signature="2809:2866" ph="insert into PERSONAL_INFO... " />
+                <marker date="1492935846792" expanded="true" signature="2992:3019" ph="select * fro... PERSONAL_INFO" />
+                <marker date="1492935846792" expanded="true" signature="3147:3299" ph="create table... if" />
+                <marker date="1492935846792" expanded="true" signature="3433:3487" ph="insert into ACCOUNT... " />
+                <marker date="1492935846792" expanded="true" signature="3626:3647" ph="select * fro... ACCOUNT" />
+                <marker date="1492935846792" expanded="true" signature="3779:3887" ph="create table... if" />
+                <marker date="1492935846792" expanded="true" signature="4005:4051" ph="insert into PROJECTDETAILS... " />
+                <marker date="1492935846792" expanded="true" signature="4173:4201" ph="select * fro... PROJECTDETAILS" />
+                <marker date="1492935846792" expanded="true" signature="4328:4369" ph="select * fro... PROJECT" />
               </folding>
             </state>
           </provider>
@@ -84,8 +88,8 @@
       <file leaf-file-name="explore.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/explore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -495,7 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1492934829974</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changes in HopUp_Database_Code">
+      <created>1492935234637</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1492935234637</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Changes in HopUp_Database_Code">
+      <created>1492935620425</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1492935620425</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -507,7 +525,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25349087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -576,8 +594,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1492935230184" expanded="true" signature="2841:2881" ph="SELECT * FRO... users" />
-            <marker date="1492935230184" expanded="true" signature="3154:3220" ph="INSERT INTO users... " />
+            <marker date="1492936060400" expanded="true" signature="2849:2890" ph="SELECT * FRO... users" />
+            <marker date="1492936060400" expanded="true" signature="3151:3188" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -604,17 +622,9 @@
           <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1492935230184" expanded="true" signature="2841:2881" ph="SELECT * FRO... users" />
-            <marker date="1492935230184" expanded="true" signature="3154:3220" ph="INSERT INTO users... " />
+            <marker date="1492936060400" expanded="true" signature="2849:2890" ph="SELECT * FRO... users" />
+            <marker date="1492936060400" expanded="true" signature="3151:3188" ph="INSERT INTO users... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/explore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,6 +676,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/explore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DatabaseConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -678,42 +696,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="69" lean-forward="true" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="106" />
+        <state relative-caret-position="486">
+          <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1492933483809" expanded="true" signature="150:252" ph="create table... if" />
-            <marker date="1492933483809" expanded="true" signature="425:714" ph="create table... if" />
-            <marker date="1492933483809" expanded="true" signature="877:943" ph="insert into PROJECT... " />
-            <marker date="1492933483809" expanded="true" signature="1111:1132" ph="select * fro... PROJECT" />
-            <marker date="1492933483809" expanded="true" signature="1273:1323" ph="update PROJE... " />
-            <marker date="1492933483809" expanded="true" signature="1435:1480" ph="select * fro... PROJECT" />
-            <marker date="1492933483809" expanded="true" signature="1623:1664" ph="select * fro... PROJECT" />
-            <marker date="1492933483809" expanded="true" signature="1793:2022" ph="create table... if" />
-            <marker date="1492933483809" expanded="true" signature="2174:2230" ph="insert into REWARD... " />
-            <marker date="1492933483809" expanded="true" signature="2389:2409" ph="select * fro... REWARD" />
-            <marker date="1492933483809" expanded="true" signature="2533:2689" ph="create table... if" />
-            <marker date="1492933483809" expanded="true" signature="2810:2867" ph="insert into PERSONAL_INFO... " />
-            <marker date="1492933483809" expanded="true" signature="2993:3020" ph="select * fro... PERSONAL_INFO" />
-            <marker date="1492933483809" expanded="true" signature="3148:3300" ph="create table... if" />
-            <marker date="1492933483809" expanded="true" signature="3434:3488" ph="insert into ACCOUNT... " />
-            <marker date="1492933483809" expanded="true" signature="3627:3648" ph="select * fro... ACCOUNT" />
-            <marker date="1492933483809" expanded="true" signature="3780:3888" ph="create table... if" />
-            <marker date="1492933483809" expanded="true" signature="4006:4052" ph="insert into PROJECTDETAILS... " />
-            <marker date="1492933483809" expanded="true" signature="4174:4202" ph="select * fro... PROJECTDETAILS" />
-            <marker date="1492933483809" expanded="true" signature="4329:4370" ph="select * fro... PROJECT" />
+            <marker date="1492935846792" expanded="true" signature="150:251" ph="create table... if" />
+            <marker date="1492935846792" expanded="true" signature="424:713" ph="create table... if" />
+            <marker date="1492935846792" expanded="true" signature="876:942" ph="insert into PROJECT... " />
+            <marker date="1492935846792" expanded="true" signature="1110:1131" ph="select * fro... PROJECT" />
+            <marker date="1492935846792" expanded="true" signature="1272:1322" ph="update PROJE... " />
+            <marker date="1492935846792" expanded="true" signature="1434:1479" ph="select * fro... PROJECT" />
+            <marker date="1492935846792" expanded="true" signature="1622:1663" ph="select * fro... PROJECT" />
+            <marker date="1492935846792" expanded="true" signature="1792:2021" ph="create table... if" />
+            <marker date="1492935846792" expanded="true" signature="2173:2229" ph="insert into REWARD... " />
+            <marker date="1492935846792" expanded="true" signature="2388:2408" ph="select * fro... REWARD" />
+            <marker date="1492935846792" expanded="true" signature="2532:2688" ph="create table... if" />
+            <marker date="1492935846792" expanded="true" signature="2809:2866" ph="insert into PERSONAL_INFO... " />
+            <marker date="1492935846792" expanded="true" signature="2992:3019" ph="select * fro... PERSONAL_INFO" />
+            <marker date="1492935846792" expanded="true" signature="3147:3299" ph="create table... if" />
+            <marker date="1492935846792" expanded="true" signature="3433:3487" ph="insert into ACCOUNT... " />
+            <marker date="1492935846792" expanded="true" signature="3626:3647" ph="select * fro... ACCOUNT" />
+            <marker date="1492935846792" expanded="true" signature="3779:3887" ph="create table... if" />
+            <marker date="1492935846792" expanded="true" signature="4005:4051" ph="insert into PROJECTDETAILS... " />
+            <marker date="1492935846792" expanded="true" signature="4173:4201" ph="select * fro... PROJECTDETAILS" />
+            <marker date="1492935846792" expanded="true" signature="4328:4369" ph="select * fro... PROJECT" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="110" column="12" lean-forward="true" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+        <state relative-caret-position="339">
+          <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1492935230184" expanded="true" signature="2841:2881" ph="SELECT * FRO... users" />
-            <marker date="1492935230184" expanded="true" signature="3154:3220" ph="INSERT INTO users... " />
+            <marker date="1492936060400" expanded="true" signature="2849:2890" ph="SELECT * FRO... users" />
+            <marker date="1492936060400" expanded="true" signature="3151:3188" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>

@@ -102,7 +102,7 @@ def register_page():
             password=str(form.password.data)
             c, conn = connection()
 
-            x = c.execute("SELECT * FROM USER WHERE UserName = (%s)",
+            x = c.execute("SELECT * FROM USERS WHERE UserName = (%s)",
                           (username))
 
             if int(x) > 0:
@@ -110,9 +110,7 @@ def register_page():
                 return render_template('register.html', form=form)
 
             else:
-                c.execute("INSERT INTO USER (UserName, PassWord, EmailId) VALUES (%s, %s, %s)",
-                          (username,password,email))
-
+                c.execute("INSERT INTO USERS VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
                 flash('Thanks for registering!')
                 c.close()
