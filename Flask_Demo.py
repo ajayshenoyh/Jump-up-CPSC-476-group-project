@@ -108,7 +108,7 @@ def register_page():
                 return render_template('register.html', form=form)
 
             else:
-                c.execute("INSERT INTO USERS VALUES (%s, %s, %s)",(username,password,email))
+                c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
                 flash('Thanks for registering!')
                 c.close()
