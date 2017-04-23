@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, make_response
 from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
-from psycopg2.extensions import adapt as thwart
+#from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
 from flask import current_app
@@ -102,8 +102,7 @@ def register_page():
             password=str(form.password.data)
             c, conn = connection()
 
-            x = c.execute("SELECT * FROM USERS WHERE UserName = (%s)",
-                          (username))
+            x = c.execute("SELECT * FROM USERS WHERE UserName = %s",(username,))
             print("hello")
             if int(x) > 0:
                 flash('That username is already taken, please choose another')
