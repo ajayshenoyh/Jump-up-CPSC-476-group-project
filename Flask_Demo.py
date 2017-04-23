@@ -36,6 +36,7 @@ ctx = app.app_context()
 # ctx.push()
 bootstrap = Bootstrap(app)
 try:
+    create_user_table()
     create_project_table()
     create_reward_table()
     create_personal_info_table()
