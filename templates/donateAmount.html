@@ -13,9 +13,9 @@
     <title>Donations Page</title>
     <script type="text/javascript">
         function putValues(){
-            var projectid = localStorage.getItem('projectId');
-            var projectTitle = localStorage.getItem('projectTitle');
-            var remaining = localStorage.getItem('remaining');
+            var projectid = sessionStorage.getItem('projectId');
+            var projectTitle = sessionStorage.getItem('projectTitle');
+            var remaining = sessionStorage.getItem('remaining');
             document.getElementById("projectID").innerHTML=projectid;
             document.getElementById("projectTitle").innerHTML=projectTitle;
             document.getElementById("rem").innerHTML=remaining;
