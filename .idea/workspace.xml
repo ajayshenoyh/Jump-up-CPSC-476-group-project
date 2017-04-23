@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/donateAmount.html" afterPath="$PROJECT_DIR$/templates/donateAmount.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+            <state relative-caret-position="441">
+              <caret line="75" column="58" lean-forward="true" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -27,12 +27,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/register.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1281">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#93#0" expanded="true" />
+                <marker date="1492902276893" expanded="true" signature="1373:1414" ph="SELECT * FRO... users" />
+                <marker date="1492902276893" expanded="true" signature="1683:1748" ph="INSERT INTO users... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-              <folding />
+              <folding>
+                <marker date="1492906208915" expanded="true" signature="3541:3723" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="3753:3948" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="3978:4159" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="4189:4403" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="4433:4605" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="4635:4804" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="4834:5017" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="5047:5247" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="5295:5426" ph="..." />
+                <marker date="1492906208915" expanded="true" signature="5339:5412" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,8 +70,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Flask_Demo.py" />
         <option value="$PROJECT_DIR$/templates/donateAmount.html" />
+        <option value="$PROJECT_DIR$/Flask_Demo.py" />
       </list>
     </option>
   </component>
@@ -236,21 +261,44 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-          <folding />
+          <folding>
+            <marker date="1492906208915" expanded="true" signature="3541:3723" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="3753:3948" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="3978:4159" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="4189:4403" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="4433:4605" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="4635:4804" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="4834:5017" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="5047:5247" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="5295:5426" ph="..." />
+            <marker date="1492906208915" expanded="true" signature="5339:5412" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+            <marker date="1492902276893" expanded="true" signature="1373:1414" ph="SELECT * FRO... users" />
+            <marker date="1492902276893" expanded="true" signature="1683:1748" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="75" column="58" lean-forward="true" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

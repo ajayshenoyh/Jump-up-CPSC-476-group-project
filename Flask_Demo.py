@@ -62,12 +62,19 @@ def app_context_learning():
     return current_app.name
 
 
-@app.route('/login')
+@app.route('/login',methods=['POST','GET'])
 def login():
-    return render_template("login.html")
+    username = request.form.get('uname')
+    password = request.form.get('pwd')
+    error = None
 
-
-
+    if request.method == 'POST':
+        if username == 'uname' and password == 'pwd':
+            session['login'] = True
+            return redirect(url_for('home'))
+        else:
+            error ='Invalid credentials. Please try again'
+    return render_template("login.html", error=error)
 #@app.route('/loginback', methods=['POST', 'GET'])
 #def loginback():
 #    uname = request.form.get('uname')
