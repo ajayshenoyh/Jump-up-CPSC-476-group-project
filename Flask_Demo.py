@@ -17,6 +17,7 @@ import base64
 
 from email.mime.text import MIMEText
 
+
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
     'plain', 'utf-8')
@@ -102,7 +103,7 @@ def register_page():
             c, conn = connection()
 
             x = c.execute("SELECT * FROM users WHERE username = (%s)",
-                          (thwart(username)))
+                          ((username.lstrip()).rstrip()))
 
             if int(x) > 0:
                 flash('That username is already taken, please choose another')
@@ -110,7 +111,7 @@ def register_page():
 
             else:
                 c.execute("INSERT INTO users (username, password, email) VALUES (%s, %s, %s)",
-                          (thwart(username), thwart(password), thwart(email)))
+                          ((username.lstrip()).rstrip()), (password.lstrip()).rstrip(),(email.lstrip()).rstrip())
 
                 conn.commit()
                 flash('Thanks for registering!')

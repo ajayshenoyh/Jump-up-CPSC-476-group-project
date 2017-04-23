@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HopUp_Database_Code.py" afterPath="$PROJECT_DIR$/HopUp_Database_Code.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,21 +15,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="630">
+              <caret line="113" column="18" lean-forward="true" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
-                <marker date="1492932984788" expanded="true" signature="2840:2881" ph="SELECT * FRO... users" />
-                <marker date="1492932984788" expanded="true" signature="3150:3215" ph="INSERT INTO users... " />
+                <marker date="1492934568100" expanded="true" signature="2841:2882" ph="SELECT * FRO... users" />
+                <marker date="1492934568100" expanded="true" signature="3163:3228" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
@@ -155,8 +155,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/Flask_Demo.py" />
         <option value="$PROJECT_DIR$/HopUp_Database_Code.py" />
+        <option value="$PROJECT_DIR$/Flask_Demo.py" />
       </list>
     </option>
   </component>
@@ -337,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492932991243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changes in HopUp_Database_Code">
+      <created>1492933509954</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1492933509954</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -404,7 +411,8 @@
     <MESSAGE value="register page added" />
     <MESSAGE value="register page added 1" />
     <MESSAGE value="Added registration files to Flask_demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added registration files to Flask_demo" />
+    <MESSAGE value="Changes in HopUp_Database_Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in HopUp_Database_Code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -417,8 +425,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1492932984788" expanded="true" signature="2840:2881" ph="SELECT * FRO... users" />
-            <marker date="1492932984788" expanded="true" signature="3150:3215" ph="INSERT INTO users... " />
+            <marker date="1492934568100" expanded="true" signature="2841:2882" ph="SELECT * FRO... users" />
+            <marker date="1492934568100" expanded="true" signature="3163:3228" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -445,8 +453,8 @@
           <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1492932984788" expanded="true" signature="2840:2881" ph="SELECT * FRO... users" />
-            <marker date="1492932984788" expanded="true" signature="3150:3215" ph="INSERT INTO users... " />
+            <marker date="1492934568100" expanded="true" signature="2841:2882" ph="SELECT * FRO... users" />
+            <marker date="1492934568100" expanded="true" signature="3163:3228" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -507,28 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <marker date="1492932984788" expanded="true" signature="2840:2881" ph="SELECT * FRO... users" />
-            <marker date="1492932984788" expanded="true" signature="3150:3215" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DatabaseConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -555,6 +541,28 @@
             <marker date="1492933483809" expanded="true" signature="4006:4052" ph="insert into PROJECTDETAILS... " />
             <marker date="1492933483809" expanded="true" signature="4174:4202" ph="select * fro... PROJECTDETAILS" />
             <marker date="1492933483809" expanded="true" signature="4329:4370" ph="select * fro... PROJECT" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatabaseConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="113" column="18" lean-forward="true" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+            <marker date="1492934568100" expanded="true" signature="2841:2882" ph="SELECT * FRO... users" />
+            <marker date="1492934568100" expanded="true" signature="3163:3228" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
