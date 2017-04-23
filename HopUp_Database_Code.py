@@ -5,7 +5,7 @@ from DatabaseConnection import *
 def create_user_table():
     curs=conn.cursor()
     curs.execute(
-        "create table if not exists USERS(UserId SERIAL PRIMARY KEY,UserName text,PassWord text, EmailId text)")
+        "create table if not exists USERS(UserId SERIAL, UserName text,PassWord text, EmailId text)")
     conn.commit()
 def connection():
     curs = conn.cursor()
