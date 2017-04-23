@@ -205,6 +205,7 @@ def reward():
 @app.route('/donate',methods=['POST','GET'])
 def donate():
     if request.method == 'GET':
+
         return render_template('donateAmount.html')
     elif request.method == 'POST':
         id = request.form.get('projectID')

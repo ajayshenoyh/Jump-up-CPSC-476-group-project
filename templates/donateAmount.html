@@ -16,9 +16,9 @@
             var projectid = localStorage.getItem('projectId');
             var projectTitle = localStorage.getItem('projectTitle');
             var remaining = localStorage.getItem('remaining');
-            document.getElementById("projectID").setAttribute('value',projectid);
-            document.getElementById("projectTitle").setAttribute('value',projectTitle);
-            document.getElementById("rem").setAttribute('value',remaining);
+            document.getElementById("projectID").innerHTML=projectid;
+            document.getElementById("projectTitle").innerHTML=projectTitle;
+            document.getElementById("rem").innerHTML=remaining;
         }
 
     </script>
