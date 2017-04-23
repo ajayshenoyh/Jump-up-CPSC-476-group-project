@@ -1,6 +1,6 @@
 {% macro render_field(field) %}
-    <h2 style="color: black"> <dt>{{ field.label}}</dt></h2>
-    <dd>{{ field(**kwargs)|safe }}
+     <dt>{{ field.label}}</dt>
+    <h2 style="color: black"><dd>{{ field(**kwargs)|safe }}</h2>
     {% if field.errors %}
         <ul class=errors>
             {% for error in field.errors %}
