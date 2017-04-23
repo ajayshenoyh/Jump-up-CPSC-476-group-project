@@ -76,7 +76,7 @@
 		{% from "_formhelpers.html" import render_field %}
 		<form method=post action="/register/">
 			<dl>
-                <h1>{{render_field(form.username)}}</h1>
+                <h1 style="color: black">{{render_field(form.username)}}</h1>
 				{{render_field(form.email)}}
 				{{render_field(form.password)}}
 				{{render_field(form.confirm)}}
