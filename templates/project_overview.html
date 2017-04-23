@@ -31,9 +31,9 @@
         var projectid = document.getElementById("cell1");
         var projectname = document.getElementById("cell2");
         var remaining = document.getElementById("cell12")
-        localStorage.setItem('projectId',projectid);
-        localStorage.setItem('projectTitle',projectname);
-        localStorage.setItem('remaining',remaining);
+        sessionStorage.setItem('projectId',projectid);
+        sessionStorage.setItem('projectTitle',projectname);
+        sessionStorage.setItem('remaining',remaining);
         window.location.href="/donate";
       }
   </script>
