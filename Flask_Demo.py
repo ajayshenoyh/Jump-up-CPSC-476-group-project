@@ -257,16 +257,20 @@ def reward():
 
 @app.route('/donate',methods=['POST','GET'])
 def donate():
-    id = request.form.get('projectID')
-    fn = request.form.get('fn')
-    ln = request.form.get('ln')
-    rem = request.form.get('rem')
-    rem_amount = int(rem) - int(amount_pledged)
-    amount_pledged = request.form.get('pledgeAmount')
-    address = request.form.get('address')
-    mobileNumber = request.form.get('mobileNumber')
-    project_pledged_amount(amount_pledged,str(rem_amount))
-    return "Pledged Successfully"
+    if request.method == 'GET':
+
+        return render_template('donateAmount.html')
+    elif request.method == 'POST':
+        id = request.form.get('projectID')
+        fn = request.form.get('fn')
+        ln = request.form.get('ln')
+        rem = request.form.get('rem')
+        rem_amount = int(rem) - int(amount_pledged)
+        amount_pledged = request.form.get('pledgeAmount')
+        address = request.form.get('address')
+        mobileNumber = request.form.get('mobileNumber')
+        project_pledged_amount(amount_pledged,str(rem_amount))
+        return "Pledged Successfully"
 
 @app.errorhandler(404)
 def page_not_found(e):
