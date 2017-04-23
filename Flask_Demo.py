@@ -102,9 +102,8 @@ def register_page():
             password=str(form.password.data)
             c, conn = connection()
 
-            x = c.execute("SELECT * FROM USERS WHERE UserName = %s",(username,))
-            print("hello")
-            if int(x) > 0:
+            x = c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
+            if x:
                 flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
 
