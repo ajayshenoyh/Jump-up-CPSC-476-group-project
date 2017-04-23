@@ -111,7 +111,7 @@ def register_page():
 
             else:
                 c.execute("INSERT INTO users (username, password, email) VALUES (%s, %s, %s)",
-                          ((username.lstrip()).rstrip()), (password.lstrip()).rstrip(),(email.lstrip()).rstrip())
+                          ((username), (password),(email)))
 
                 conn.commit()
                 flash('Thanks for registering!')
