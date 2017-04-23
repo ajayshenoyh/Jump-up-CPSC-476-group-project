@@ -65,8 +65,14 @@
         </div>
         <!-- /.container -->
     </nav>
-
-		<h4>Registration</h4>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1 class="brand-heading">Jump up</h1>
+                      <h4>Registration</h4>
 		{% from "_formhelpers.html" import render_field %}
 		<form method=post action="/register/">
 			<dl>
@@ -78,10 +84,18 @@
 			</dl>
 			<p><input type=submit value=Register></p>
 		</form>
-		
+
 		{% if error %}
 			<p class="error"><strong>Error:</strong>{{error}}</p>
 		{% endif %}
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 </body>
 
