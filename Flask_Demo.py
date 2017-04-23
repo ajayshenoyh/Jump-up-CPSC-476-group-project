@@ -104,7 +104,7 @@ def register_page():
 
             x = c.execute("SELECT * FROM USERS WHERE UserName = (%s)",
                           (username))
-
+            print("hello")
             if int(x) > 0:
                 flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
