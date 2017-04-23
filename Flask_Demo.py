@@ -103,7 +103,7 @@ def register_page():
             c, conn = connection()
 
             x = c.execute("SELECT * FROM users WHERE username = (%s)",
-                          ((username.lstrip()).rstrip()))
+                          (username))
 
             if int(x) > 0:
                 flash('That username is already taken, please choose another')
