@@ -1,17 +1,7 @@
-<style>
-.container {
-    font-size:20px;
-   <!-- position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-    -->
-}
-</style>
+
 {% block body %}
 
 <body>
-	<div class = "container">
 		<h4>Registration</h4>
 		{% from "_formhelpers.html" import render_field %}
 		<form method=post action="/register/">
@@ -29,7 +19,6 @@
 			<p class="error"><strong>Error:</strong>{{error}}</p>
 		{% endif %}
 
-	</div>
 </body>
 
 {% endblock %}
