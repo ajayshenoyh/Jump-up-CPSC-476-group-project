@@ -96,13 +96,13 @@ def register_page():
         form = RegistrationForm(request.form)
 
         if request.method == "POST" and form.validate():
-            username = form.username.data
-            email = form.email.data
+            username = str(form.username.data)
+            email = str(form.email.data)
             #password = sha256_crypt.encrypt((str(form.password.data)))
-            password=(str(form.password.data))
+            password=str(form.password.data)
             c, conn = connection()
 
-            x = c.execute("SELECT * FROM USER WHERE username = (%s)",
+            x = c.execute("SELECT * FROM USER WHERE UserName = (%s)",
                           (username))
 
             if int(x) > 0:
