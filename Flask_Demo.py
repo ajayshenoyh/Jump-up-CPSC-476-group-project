@@ -111,8 +111,6 @@ def register_page():
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
                 flash('Thanks for registering!')
-                c.close()
-                conn.close()
                 #gc.collect()
 
                 #session['logged_in'] = True
