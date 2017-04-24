@@ -8,7 +8,6 @@ def create_user_table():
         "create table if not exists USERS(UserId SERIAL, UserName text,PassWord text, EmailId text)")
     conn.commit()
 def connection():
-    curs = conn.cursor()
     c=conn.cursor()
     return c,conn
 def create_project_table():

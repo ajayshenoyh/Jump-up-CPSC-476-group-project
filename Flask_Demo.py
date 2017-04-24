@@ -103,7 +103,7 @@ def register_page():
             c, conn = connection()
 
             x = c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
-            if x:
+            if x == True :
                 flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
 
