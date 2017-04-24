@@ -102,8 +102,8 @@ def register_page():
             password=str(form.password.data)
             c, conn = connection()
 
-            x = c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
-            if x:
+            c.execute("Select EXISTS (SELECT * FROM USERS WHERE username = %s)",(username,))
+            if c.fetchone():
                 flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
 
@@ -255,7 +255,6 @@ def reward():
 @app.route('/donate',methods=['POST','GET'])
 def donate():
     if request.method == 'GET':
-
         return render_template('donateAmount.html')
     elif request.method == 'POST':
         id = request.form.get('projectID')

@@ -27,46 +27,13 @@
 <html>
 <head>
   <script type="text/javascript">
-      function donateAmount(){
-        var projectid = document.getElementById("cell1");
-        var projectname = document.getElementById("cell2");
-        var remaining = document.getElementById("cell12")
-        sessionStorage.setItem('projectId',projectid);
-        sessionStorage.setItem('projectTitle',projectname);
-        sessionStorage.setItem('remaining',remaining);
-        window.location.href="/donate";
+      function donateAmount(id,title){
+            localStorage.setItem('projectID',id);
+            localStorage.setItem('projectTITLE',title);
+            window.location.href="/donate";
       }
   </script>
   <style type="text/css">
-    .Table
-    {
-        display: table;
-    }
-    .Title
-    {
-        display: table-caption;
-        text-align: center;
-        font-weight: bold;
-        font-size: larger;
-    }
-    .Heading
-    {
-        display: table-row;
-        font-weight: bold;
-        text-align: center;
-    }
-    .Row
-    {
-        display: table-row;
-    }
-    .Cell
-    {
-        display: table-cell;
-        border: solid;
-        border-width: thin;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
   </style>
   <div class="container" align="center">
     <h1>Projects</h1>
@@ -74,89 +41,15 @@
 </head>
 <body>
   {% for project in projectList %}
-  <div class="Table">
-    <div class="Title">
-        <p></p>
+    <div style="background-color:black;color:white;padding:20px;" >
+        <a href="/donate" onclick="donateAmount({{project[0]}},{{project[1]}})"><h2>{{project[0]}}. {{project[1]}}</h2></a>
+    <h3>Project Category: {{project[2]}} {{project[3]}}</h3>
+    <p>{{project[6]}}</p>
+    <h4> Location: {{project[7]}} </h4>
+    <h5> Fund duration: {{project[8]}} </h5>
+    <h6> Fund Goal: {{project[9]}} </h6>
     </div>
-    <div class="Heading">
-        <div class="Cell">
-            <p>ProjectID</p>
-        </div>
-        <div class="Cell">
-            <p>ProjectTitle</p>
-        </div>
-        <div class="Cell">
-            <p>Project Category</p>
-        </div>
-        <div class="Cell">
-            <p>Project Sub Category</p>
-        </div>
-        <div class="Cell">
-            <p>Country</p>
-        </div>
-        <div class="Cell">
-            <p>Project Image link</p>
-        </div>
-        <div class="Cell">
-            <p>Project Description</p>
-        </div>
-        <div class="Cell">
-            <p>Project Location</p>
-        </div>
-        <div class="Cell">
-            <p>Project fund duration</p>
-        </div>
-        <div class="Cell">
-            <p>Project fund goal</p>
-        </div>
-        <div class="Cell">
-            <p>Project Location</p>
-        </div>
-        <div class="Cell">
-            <p>Remaining fund</p>
-        </div>
-    </div>
-    <div class="Row" onclick="donateAmount()">
-        <div class="Cell">
-            <p id = "cell1" name="cell1">{{project[0]}}</p>
-        </div>
-        <div class="Cell">
-            <p id = "cell2" name="cell2">{{project[1]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell3" name="cell3">{{project[2]}}</p>
-        </div>
-        <div class="Cell" >
-            <p id="cell4" name="cell4">{{project[3]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell5" name="cell5">{{project[4]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell6" name="cell6">{{project[5]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell7" name="cell7">{{project[6]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell8" name="cell8">{{project[7]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell9" name="cell9">{{project[8]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell10" name="cell10">{{project[9]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell11" name="cell11">{{project[10]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell12" name="cell12">{{project[11]}}</p>
-        </div>
-    </div>
-
-</div>
-{% endfor %}
+  {% endfor %}
 
 </body>
 </html>
