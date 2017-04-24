@@ -463,13 +463,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added registration files to Flask_demo">
-      <created>1492932606328</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1492932606328</updated>
-    </task>
     <task id="LOCAL-00006" summary="Added registration files to Flask_demo">
       <created>1492932881580</created>
       <option name="number" value="00006" />
@@ -806,7 +799,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493077679324</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Changes in projects explore page">
+      <created>1493077686793</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1493077686793</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView">
