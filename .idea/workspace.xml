@@ -77,8 +77,8 @@
       <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="502">
+              <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -148,6 +148,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="SrushtiGangireddy &lt;srushti.gangireddy@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
@@ -458,13 +463,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
-    </task>
-    <task id="LOCAL-00001" summary="register page added">
-      <created>1492902926676</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1492902926676</updated>
     </task>
     <task id="LOCAL-00002" summary="register page added 1">
       <created>1492902972322</created>
@@ -802,7 +800,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493100034551</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Changes in projects explore page">
+      <created>1493075807802</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1493075807803</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -873,7 +878,8 @@
     <MESSAGE value="Added JUMP UP heading" />
     <MESSAGE value="Removed closing connection in register def from Flask_demo.py" />
     <MESSAGE value="Fix bugs in Flask_Demo registration page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs in Flask_Demo registration page" />
+    <MESSAGE value="Changes in projects explore page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in projects explore page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1309,8 +1315,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        <state relative-caret-position="502">
+          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
