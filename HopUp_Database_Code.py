@@ -33,6 +33,8 @@ def pledge_amount(id,amount_pledged):
     try:
         remaining_goal = project_details[0][11]
         rem = int(remaining_goal) - int(amount_pledged)
+        print(amount_pledged)
+        print(rem)
         curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id,))
         conn.commit()
     except:
