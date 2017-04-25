@@ -1,4 +1,5 @@
-from flask import Flask, render_template, redirect, url_for, make_response, pymsgbox
+from flask import Flask, render_template, redirect, url_for, make_response
+from tkinter import messagebox
 from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
@@ -104,7 +105,7 @@ def register_page():
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
             if c.fetchone()[0]:
-                pymsgbox.native.alert('This is an alert!', 'Title')
+                messagebox.showinfo("Title", "a Tk MessageBox")
                 return render_template('register.html', form=form)
 
             else:
