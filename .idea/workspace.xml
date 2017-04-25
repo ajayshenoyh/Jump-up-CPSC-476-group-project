@@ -4,6 +4,7 @@
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/donateAmount.html" afterPath="$PROJECT_DIR$/templates/donateAmount.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/project_overview.html" afterPath="$PROJECT_DIR$/templates/project_overview.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +46,8 @@
       <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="709">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
@@ -87,8 +88,8 @@
       <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="47" column="85" lean-forward="true" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
+            <state relative-caret-position="426">
+              <caret line="47" column="86" lean-forward="false" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -99,8 +100,8 @@
       <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="89" column="210" lean-forward="true" selection-start-line="89" selection-start-column="210" selection-end-line="89" selection-end-column="210" />
+            <state relative-caret-position="317">
+              <caret line="90" column="140" lean-forward="false" selection-start-line="90" selection-start-column="140" selection-end-line="90" selection-end-column="140" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -478,13 +479,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00021" summary="Changes in HopUp_Database_Code">
-      <created>1492937729769</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1492937729769</updated>
-    </task>
     <task id="LOCAL-00022" summary="Altering Registration page UI">
       <created>1492938028705</created>
       <option name="number" value="00022" />
@@ -821,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493081737850</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Changes in projects explore page">
+      <created>1493081876734</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1493081876734</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1364,20 +1365,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="47" column="85" lean-forward="true" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="709">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
@@ -1417,10 +1408,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="47" column="86" lean-forward="false" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="89" column="210" lean-forward="true" selection-start-line="89" selection-start-column="210" selection-end-line="89" selection-end-column="210" />
+        <state relative-caret-position="317">
+          <caret line="90" column="140" lean-forward="false" selection-start-line="90" selection-start-column="140" selection-end-line="90" selection-end-column="140" />
           <folding>
             <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
