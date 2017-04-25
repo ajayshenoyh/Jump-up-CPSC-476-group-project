@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/project_overview.html" afterPath="$PROJECT_DIR$/templates/project_overview.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="211" column="30" lean-forward="true" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
+            <state relative-caret-position="584">
+              <caret line="118" column="51" lean-forward="true" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="51" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
                 <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
@@ -87,8 +88,8 @@
       <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="45" column="34" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="25">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -478,13 +479,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00030" summary="Altering Registration page UI">
-      <created>1492938943716</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1492938943716</updated>
-    </task>
     <task id="LOCAL-00031" summary="Altering Registration page UI">
       <created>1492939226169</created>
       <option name="number" value="00031" />
@@ -821,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493083447360</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Changes in projects explore page">
+      <created>1493083632723</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1493083632723</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1378,19 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="211" column="30" lean-forward="true" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -1422,10 +1410,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="118" column="51" lean-forward="true" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="45" column="34" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="25">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
