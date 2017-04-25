@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register-backup.html" afterPath="$PROJECT_DIR$/templates/register-backup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/register.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +40,7 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493097908791" expanded="true" signature="77709:77723" ph="..." />
+                <marker date="1493098019109" expanded="true" signature="88140:88154" ph="..." />
               </folding>
             </state>
           </provider>
@@ -89,8 +91,8 @@
       <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="476">
+              <caret line="112" column="7" lean-forward="false" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -99,8 +101,8 @@
       <file leaf-file-name="register-backup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/register-backup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -181,6 +183,7 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/_formhelpers.html" />
         <option value="$PROJECT_DIR$/Flask_Demo.py" />
+        <option value="$PROJECT_DIR$/templates/register-backup.html" />
         <option value="$PROJECT_DIR$/templates/register.html" />
       </list>
     </option>
@@ -621,13 +624,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00008" summary="Changes in HopUp_Database_Code">
-      <created>1492933509954</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1492933509954</updated>
-    </task>
     <task id="LOCAL-00009" summary="Changes in HopUp_Database_Code">
       <created>1492934572791</created>
       <option name="number" value="00009" />
@@ -964,7 +960,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493097651803</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Removed bootstrap UI to check registration">
+      <created>1493097963456</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1493097963456</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1202,7 +1205,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493097908791" expanded="true" signature="77709:77723" ph="..." />
+            <marker date="1493098019109" expanded="true" signature="88140:88154" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1547,14 +1550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register-backup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1568,10 +1563,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register-backup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="476">
+          <caret line="112" column="7" lean-forward="false" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
           <folding />
         </state>
       </provider>
