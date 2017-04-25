@@ -1,16 +1,14 @@
-import gc
 from flask import Flask, render_template, redirect, url_for, make_response
-from tkinter import messagebox
 from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
-# from passlib.hash import sha256_crypt
-# from psycopg2.extensions import adapt as thwart
+#from passlib.hash import sha256_crypt
+#from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
 from flask import current_app
 from flask_bootstrap import Bootstrap
 from HopUp_Database_Code import *
-# from JumpUp import JumpUpDB_URL
+#from JumpUp import JumpUpDB_URL
 import os
 import urlparse
 import smtplib
@@ -18,6 +16,7 @@ import psycopg2
 import base64
 
 from email.mime.text import MIMEText
+
 
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
@@ -31,7 +30,7 @@ app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'memcached'
 app.config['SECRET_KEY'] = 'super secret key'
 
-# UploadFolder = '/static/'
+#UploadFolder = '/static/'
 
 ctx = app.app_context()
 # flask.g.projectTitl=''
@@ -46,7 +45,6 @@ try:
     create_project_detailed_info_table()
 except:
     pass
-
 
 @app.route('/')
 def test():
@@ -74,49 +72,50 @@ def login():
     return render_template("login.html")
 
 
-# @app.route('/loginback', methods=['POST', 'GET'])
-# def loginback():
+
+#@app.route('/loginback', methods=['POST', 'GET'])
+#def loginback():
 #    uname = request.form.get('uname')
 #    return "Hello %s" % (uname)
 
 
+class RegistrationForm(Form):
+    username = TextField('Username', [validators.Length(min=4, max=20)])
+    email = TextField('Email Address', [validators.Length(min=6, max=50)])
+    password = PasswordField('New Password', [
+        validators.Required(),
+        validators.EqualTo('confirm', message='Passwords must match')
+    ])
+    confirm = PasswordField('Repeat Password')
+    accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
+                              [validators.Required()])
 
 @app.route('/register/', methods=["GET", "POST"])
 def register_page():
-    class RegistrationForm(Form):
-        username = TextField('Username', [validators.Length(min=4, max=20)])
-        email = TextField('Email Address', [validators.Length(min=6, max=50)])
-        password = PasswordField('New Password', [
-            validators.Required(),
-            validators.EqualTo('confirm', message='Passwords must match')
-        ])
-        confirm = PasswordField('Repeat Password')
-        accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
-                                  [validators.Required()])
-
     try:
         form = RegistrationForm(request.form)
 
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            # password = sha256_crypt.encrypt((str(form.password.data)))
-            password = str(form.password.data)
+            #password = sha256_crypt.encrypt((str(form.password.data)))
+            password=str(form.password.data)
             c, conn = connection()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
             if c.fetchone()[0]:
-                messagebox.showinfo("Title", "a Tk MessageBox")
+                flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
 
             else:
-                c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)", (username, password, email))
+                c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
+                flash('Thanks for registering!')
                 c.close()
-                gc.collect()
+                #gc.collect()
 
-            # session['logged_in'] = True
-            # session['username'] = username
+                #session['logged_in'] = True
+                #session['username'] = username
 
                 return redirect(url_for('login'))
 
@@ -165,8 +164,7 @@ def project_registration():
             next_id = len(view_projects()) + 1
             un = request.cookies.get('UserName')
             add_project(next_id, project_title, un, project_category, project_sub_category, project_country,
-                        project_image, project_description, project_location, project_fund_duration, project_fund_goal,
-                        project_fund_goal, dt)
+                        project_image, project_description, project_location, project_fund_duration, project_fund_goal,project_fund_goal,dt)
         resp = make_response(render_template('rewards.html'))
         resp.set_cookie('projectTitle', project_title)
         reward()
@@ -212,7 +210,7 @@ def account_details():
         un = request.cookies.get('UserName')
         add_bank_account_info(next_id, un, contact_email, firstName, lastName, DOB, HomeAddress, RoutingNumber,
                               bankAccountNumber)
-        # project_details = search_projects_by_title(request.cookies.get('projectTitle'))
+        #project_details = search_projects_by_title(request.cookies.get('projectTitle'))
         project_details = view_projects()
         return render_template('project_overview.html', projectList=project_details)
 
@@ -223,11 +221,10 @@ def send_invite():
     s.sendmail(from_addr, [to_addr], msg.as_string())
     return "Successfully sent invitation"
 
-
-@app.route('/explore', methods=['POST', 'GET'])
+@app.route('/explore',methods=['POST','GET'])
 def explore():
     projects = view_projects()
-    return render_template('project_overview.html', projectList=projects)
+    return render_template('project_overview.html',projectList=projects)
 
 
 @app.route('/save_reward', methods=['POST', 'GET'])
@@ -256,8 +253,7 @@ def reward():
                    expected_delivery_year, shippingDetails, reward_limit)
         return render_template('more_about_you.html')
 
-
-@app.route('/donate', methods=['POST', 'GET'])
+@app.route('/donate',methods=['POST','GET'])
 def donate():
     if request.method == 'GET':
 
@@ -271,9 +267,8 @@ def donate():
         amount_pledged = request.form.get('pledgeAmount')
         address = request.form.get('address')
         mobileNumber = request.form.get('mobileNumber')
-        project_pledged_amount(amount_pledged, str(rem_amount))
+        project_pledged_amount(amount_pledged,str(rem_amount))
         return "Pledged Successfully"
-
 
 @app.errorhandler(404)
 def page_not_found(e):

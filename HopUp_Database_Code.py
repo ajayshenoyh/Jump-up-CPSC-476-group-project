@@ -8,7 +8,6 @@ def create_user_table():
         "create table if not exists USERS(UserId SERIAL, UserName text,PassWord text, EmailId text)")
     conn.commit()
 def connection():
-    curs = conn.cursor()
     c=conn.cursor()
     return c,conn
 def create_project_table():
@@ -27,10 +26,21 @@ def view_projects():
     rows = curs.fetchall()
     return rows
 
-def project_pledged_amount(amount_pledged,id,rem):
+def pledge_amount(id,amount_pledged):
     curs = conn.cursor()
-    curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id))
-    conn.commit()
+    curs.execute("select * from PROJECT where ProjectID = %s",(id,))
+    project_details = curs.fetchall()
+    try:
+        remaining_goal = project_details[0][11]
+        rem = int(remaining_goal) - int(amount_pledged)
+        print(amount_pledged)
+        print(rem)
+        curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id,))
+        conn.commit()
+        return true
+    except:
+        pass
+        return false
 
 def search_projects_by_title(ptitle):
     curs = conn.cursor()
