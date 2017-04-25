@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bank_details.html" afterPath="$PROJECT_DIR$/templates/bank_details.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -154,8 +155,8 @@
       <file leaf-file-name="bank_details.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bank_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="183" column="7" lean-forward="false" selection-start-line="183" selection-start-column="7" selection-end-line="183" selection-end-column="7" />
+            <state relative-caret-position="477">
+              <caret line="160" column="36" lean-forward="false" selection-start-line="160" selection-start-column="36" selection-end-line="160" selection-end-column="36" />
               <folding>
                 <element signature="e#3537#3543#0#HTML" expanded="true" />
                 <element signature="e#3544#3550#0#HTML" expanded="true" />
@@ -166,6 +167,16 @@
                 <element signature="e#3579#3585#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#label#0;n#label#0;n#label#0;n#label#0;n#label#0;n#label#1;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="story.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/story.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="752">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -534,13 +545,6 @@
       <option name="project" value="LOCAL" />
       <updated>1493100034551</updated>
     </task>
-    <task id="LOCAL-00050" summary="Changes in projects explore page">
-      <created>1493075807802</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1493075807803</updated>
-    </task>
     <task id="LOCAL-00051" summary="Changes in projects explore page">
       <created>1493075910245</created>
       <option name="number" value="00051" />
@@ -856,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493088202842</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Changes in projects explore page">
+      <created>1493088507106</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1493088507106</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TodoView">
@@ -935,14 +946,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/explore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1775">
@@ -1551,10 +1554,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bank_details.html">
+    <entry file="file://$PROJECT_DIR$/templates/story.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
-          <caret line="183" column="7" lean-forward="false" selection-start-line="183" selection-start-column="7" selection-end-line="183" selection-end-column="7" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bank_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="160" column="36" lean-forward="false" selection-start-line="160" selection-start-column="36" selection-end-line="160" selection-end-column="36" />
           <folding>
             <element signature="e#3537#3543#0#HTML" expanded="true" />
             <element signature="e#3544#3550#0#HTML" expanded="true" />
