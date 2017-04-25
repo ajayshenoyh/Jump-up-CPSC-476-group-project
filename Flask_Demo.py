@@ -112,13 +112,12 @@ def register_page():
                 conn.commit()
                 flash('Thanks for registering!')
                 c.close()
-                conn.close()
                 #gc.collect()
 
                 #session['logged_in'] = True
                 #session['username'] = username
 
-                return redirect(url_for('explore'))
+                return redirect(url_for('login'))
 
         return render_template("register.html", form=form)
 
