@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, make_response
+from flask import Flask, render_template, redirect, url_for, make_response, pymsgbox
 from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
@@ -104,13 +104,13 @@ def register_page():
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
             if c.fetchone()[0]:
-                flash('That username is already taken, please choose another')
+                pymsgbox.alert('This is an alert!', 'Title')
                 return render_template('register.html', form=form)
 
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
-                flash('Thanks for registering!')
+                pymsgbox.alert('This is an alert!', 'Title')
                 c.close()
                 #gc.collect()
 
