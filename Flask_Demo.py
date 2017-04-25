@@ -141,15 +141,24 @@ def login():
     username = request.form.get('uname')
     password = request.form.get('pwd')
     #error = None
-    registered_user = User.query.filter_by(username = uname,password=password).first()
-    # records = login_table(username)
+    #registered_user = User.query.filter_by(username = uname,password=password).first()
+    records = login_table(username)
 
-    if registered_user is None:
-        flash('Username or password is invalid. Please check your credentials or Signup!','error')
+    #if registered_user is None:
+        #flash('Username or password is invalid. Please check your credentials or Signup!','error')
+        # return redirect(url_for('login'))
+    # login_user(registered_user)
+
+    if len(records) == 0:
+        flash('Username or password is invalid. Please check your credentials or Signup!', 'error')
         return redirect(url_for('login'))
-    login_user(registered_user)
-    flash('Logged in!')
-    return redirect(url_for('home'))
+    else:
+        pwd = records[0][1];
+        if password == pwd:
+            flash('Logged in!')
+        else:
+            flash('Try Again !')
+        return redirect(url_for('home'))
 
 
     # if request.method == 'POST':

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Flask_Demo.py" line="149" mnemonic="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
+    <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="Checking pymsgbox!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="104">
+              <caret line="159" column="30" lean-forward="false" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -56,10 +59,10 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493160469162" expanded="true" signature="62118:62135" ph="..." />
-                <marker date="1493160469162" expanded="true" signature="62118:62153" ph="..." />
-                <marker date="1493160469162" expanded="true" signature="62118:62166" ph="..." />
-                <marker date="1493160469162" expanded="true" signature="62118:62181" ph="..." />
+                <marker date="1493160948849" expanded="true" signature="62252:62269" ph="..." />
+                <marker date="1493160948849" expanded="true" signature="62252:62287" ph="..." />
+                <marker date="1493160948849" expanded="true" signature="62252:62300" ph="..." />
+                <marker date="1493160948849" expanded="true" signature="62252:62315" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,8 +71,8 @@
       <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -109,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+            <state relative-caret-position="301">
+              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -160,8 +163,8 @@
         <option value="$PROJECT_DIR$/templates/register-backup.html" />
         <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/HopUp_Database_Code.py" />
-        <option value="$PROJECT_DIR$/Flask_Demo.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/Flask_Demo.py" />
       </list>
     </option>
   </component>
@@ -409,13 +412,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Changes in HopUp_Database_Code">
-      <created>1492936857394</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1492936857394</updated>
     </task>
     <task id="LOCAL-00019" summary="Changes in HopUp_Database_Code">
       <created>1492937381408</created>
@@ -753,7 +749,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493160188880</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Checking pymsgbox!">
+      <created>1493160483196</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1493160483196</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1163,10 +1166,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493160469162" expanded="true" signature="62118:62135" ph="..." />
-            <marker date="1493160469162" expanded="true" signature="62118:62153" ph="..." />
-            <marker date="1493160469162" expanded="true" signature="62118:62166" ph="..." />
-            <marker date="1493160469162" expanded="true" signature="62118:62181" ph="..." />
+            <marker date="1493160948849" expanded="true" signature="62252:62269" ph="..." />
+            <marker date="1493160948849" expanded="true" signature="62252:62287" ph="..." />
+            <marker date="1493160948849" expanded="true" signature="62252:62300" ph="..." />
+            <marker date="1493160948849" expanded="true" signature="62252:62315" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1213,10 +1216,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1225,19 +1236,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="104">
+          <caret line="159" column="30" lean-forward="false" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
