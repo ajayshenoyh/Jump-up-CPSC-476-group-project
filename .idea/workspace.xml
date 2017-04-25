@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HopUp_Database_Code.py" afterPath="$PROJECT_DIR$/HopUp_Database_Code.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/donateAmount.html" afterPath="$PROJECT_DIR$/templates/donateAmount.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/project_overview.html" afterPath="$PROJECT_DIR$/templates/project_overview.html" />
     </list>
@@ -28,16 +30,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="264" column="57" lean-forward="true" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
+            <state relative-caret-position="509">
+              <caret line="265" column="40" lean-forward="true" selection-start-line="265" selection-start-column="40" selection-end-line="265" selection-end-column="40" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
-                <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-                <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-                <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+                <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+                <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+                <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
               </folding>
             </state>
           </provider>
@@ -46,30 +48,31 @@
       <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="653">
+              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
-                <marker date="1493075641878" expanded="true" signature="388:677" ph="create table... if" />
-                <marker date="1493075641878" expanded="true" signature="840:906" ph="insert into PROJECT... " />
-                <marker date="1493075641878" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
-                <marker date="1493075641878" expanded="true" signature="1236:1286" ph="update PROJE... " />
-                <marker date="1493075641878" expanded="true" signature="1398:1443" ph="select * fro... PROJECT" />
-                <marker date="1493075641878" expanded="true" signature="1586:1627" ph="select * fro... PROJECT" />
-                <marker date="1493075641878" expanded="true" signature="1756:1985" ph="create table... if" />
-                <marker date="1493075641878" expanded="true" signature="2137:2193" ph="insert into REWARD... " />
-                <marker date="1493075641878" expanded="true" signature="2352:2372" ph="select * fro... REWARD" />
-                <marker date="1493075641878" expanded="true" signature="2496:2652" ph="create table... if" />
-                <marker date="1493075641878" expanded="true" signature="2773:2830" ph="insert into PERSONAL_INFO... " />
-                <marker date="1493075641878" expanded="true" signature="2956:2983" ph="select * fro... PERSONAL_INFO" />
-                <marker date="1493075641878" expanded="true" signature="3111:3263" ph="create table... if" />
-                <marker date="1493075641878" expanded="true" signature="3397:3451" ph="insert into ACCOUNT... " />
-                <marker date="1493075641878" expanded="true" signature="3590:3611" ph="select * fro... ACCOUNT" />
-                <marker date="1493075641878" expanded="true" signature="3743:3851" ph="create table... if" />
-                <marker date="1493075641878" expanded="true" signature="3969:4015" ph="insert into PROJECTDETAILS... " />
-                <marker date="1493075641878" expanded="true" signature="4137:4165" ph="select * fro... PROJECTDETAILS" />
-                <marker date="1493075641878" expanded="true" signature="4292:4333" ph="select * fro... PROJECT" />
+                <marker date="1493082979013" expanded="true" signature="150:240" ph="create table... if" />
+                <marker date="1493082979013" expanded="true" signature="388:677" ph="create table... if" />
+                <marker date="1493082979013" expanded="true" signature="840:906" ph="insert into PROJECT... " />
+                <marker date="1493082979013" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
+                <marker date="1493082979013" expanded="true" signature="1223:1265" ph="select * fro... PROJECT" />
+                <marker date="1493082979013" expanded="true" signature="1438:1488" ph="update PROJE... " />
+                <marker date="1493082979013" expanded="true" signature="1630:1675" ph="select * fro... PROJECT" />
+                <marker date="1493082979013" expanded="true" signature="1818:1859" ph="select * fro... PROJECT" />
+                <marker date="1493082979013" expanded="true" signature="1988:2217" ph="create table... if" />
+                <marker date="1493082979013" expanded="true" signature="2369:2425" ph="insert into REWARD... " />
+                <marker date="1493082979013" expanded="true" signature="2584:2604" ph="select * fro... REWARD" />
+                <marker date="1493082979013" expanded="true" signature="2728:2884" ph="create table... if" />
+                <marker date="1493082979013" expanded="true" signature="3005:3062" ph="insert into PERSONAL_INFO... " />
+                <marker date="1493082979013" expanded="true" signature="3188:3215" ph="select * fro... PERSONAL_INFO" />
+                <marker date="1493082979013" expanded="true" signature="3343:3495" ph="create table... if" />
+                <marker date="1493082979013" expanded="true" signature="3629:3683" ph="insert into ACCOUNT... " />
+                <marker date="1493082979013" expanded="true" signature="3822:3843" ph="select * fro... ACCOUNT" />
+                <marker date="1493082979013" expanded="true" signature="3975:4083" ph="create table... if" />
+                <marker date="1493082979013" expanded="true" signature="4201:4247" ph="insert into PROJECTDETAILS... " />
+                <marker date="1493082979013" expanded="true" signature="4369:4397" ph="select * fro... PROJECTDETAILS" />
+                <marker date="1493082979013" expanded="true" signature="4524:4565" ph="select * fro... PROJECT" />
               </folding>
             </state>
           </provider>
@@ -88,8 +91,8 @@
       <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="47" column="86" lean-forward="false" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
+            <state relative-caret-position="400">
+              <caret line="39" column="90" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="90" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -97,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="90" column="140" lean-forward="false" selection-start-line="90" selection-start-column="140" selection-end-line="90" selection-end-column="140" />
+            <state relative-caret-position="242">
+              <caret line="87" column="44" lean-forward="true" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -178,10 +181,10 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/_formhelpers.html" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/HopUp_Database_Code.py" />
-        <option value="$PROJECT_DIR$/Flask_Demo.py" />
         <option value="$PROJECT_DIR$/templates/project_overview.html" />
         <option value="$PROJECT_DIR$/templates/donateAmount.html" />
+        <option value="$PROJECT_DIR$/Flask_Demo.py" />
+        <option value="$PROJECT_DIR$/HopUp_Database_Code.py" />
       </list>
     </option>
   </component>
@@ -478,20 +481,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Altering Registration page UI">
-      <created>1492938028705</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1492938028705</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Altering Registration page UI">
-      <created>1492938147757</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1492938147757</updated>
     </task>
     <task id="LOCAL-00024" summary="Altering Registration page UI">
       <created>1492938293244</created>
@@ -822,7 +811,21 @@
       <option name="project" value="LOCAL" />
       <updated>1493081876734</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Changes in projects explore page">
+      <created>1493082081909</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1493082081909</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Changes in projects explore page">
+      <created>1493082313844</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1493082313844</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView">
@@ -901,45 +904,33 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="388:677" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="840:906" ph="insert into PROJECT... " />
-            <marker date="1493075641878" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1236:1286" ph="update PROJE... " />
-            <marker date="1493075641878" expanded="true" signature="1398:1443" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1586:1627" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1756:1985" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2137:2193" ph="insert into REWARD... " />
-            <marker date="1493075641878" expanded="true" signature="2352:2372" ph="select * fro... REWARD" />
-            <marker date="1493075641878" expanded="true" signature="2496:2652" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2773:2830" ph="insert into PERSONAL_INFO... " />
-            <marker date="1493075641878" expanded="true" signature="2956:2983" ph="select * fro... PERSONAL_INFO" />
-            <marker date="1493075641878" expanded="true" signature="3111:3263" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3397:3451" ph="insert into ACCOUNT... " />
-            <marker date="1493075641878" expanded="true" signature="3590:3611" ph="select * fro... ACCOUNT" />
-            <marker date="1493075641878" expanded="true" signature="3743:3851" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3969:4015" ph="insert into PROJECTDETAILS... " />
-            <marker date="1493075641878" expanded="true" signature="4137:4165" ph="select * fro... PROJECTDETAILS" />
-            <marker date="1493075641878" expanded="true" signature="4292:4333" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="150:240" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="388:677" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="840:906" ph="insert into PROJECT... " />
+            <marker date="1493082979013" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1223:1265" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1438:1488" ph="update PROJE... " />
+            <marker date="1493082979013" expanded="true" signature="1630:1675" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1818:1859" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1988:2217" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="2369:2425" ph="insert into REWARD... " />
+            <marker date="1493082979013" expanded="true" signature="2584:2604" ph="select * fro... REWARD" />
+            <marker date="1493082979013" expanded="true" signature="2728:2884" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3005:3062" ph="insert into PERSONAL_INFO... " />
+            <marker date="1493082979013" expanded="true" signature="3188:3215" ph="select * fro... PERSONAL_INFO" />
+            <marker date="1493082979013" expanded="true" signature="3343:3495" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3629:3683" ph="insert into ACCOUNT... " />
+            <marker date="1493082979013" expanded="true" signature="3822:3843" ph="select * fro... ACCOUNT" />
+            <marker date="1493082979013" expanded="true" signature="3975:4083" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="4201:4247" ph="insert into PROJECTDETAILS... " />
+            <marker date="1493082979013" expanded="true" signature="4369:4397" ph="select * fro... PROJECTDETAILS" />
+            <marker date="1493082979013" expanded="true" signature="4524:4565" ph="select * fro... PROJECT" />
           </folding>
         </state>
       </provider>
@@ -1018,9 +1009,9 @@
           <caret line="225" column="38" lean-forward="true" selection-start-line="225" selection-start-column="38" selection-end-line="225" selection-end-column="38" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1031,26 +1022,27 @@
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="388:677" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="840:906" ph="insert into PROJECT... " />
-            <marker date="1493075641878" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1236:1286" ph="update PROJE... " />
-            <marker date="1493075641878" expanded="true" signature="1398:1443" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1586:1627" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1756:1985" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2137:2193" ph="insert into REWARD... " />
-            <marker date="1493075641878" expanded="true" signature="2352:2372" ph="select * fro... REWARD" />
-            <marker date="1493075641878" expanded="true" signature="2496:2652" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2773:2830" ph="insert into PERSONAL_INFO... " />
-            <marker date="1493075641878" expanded="true" signature="2956:2983" ph="select * fro... PERSONAL_INFO" />
-            <marker date="1493075641878" expanded="true" signature="3111:3263" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3397:3451" ph="insert into ACCOUNT... " />
-            <marker date="1493075641878" expanded="true" signature="3590:3611" ph="select * fro... ACCOUNT" />
-            <marker date="1493075641878" expanded="true" signature="3743:3851" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3969:4015" ph="insert into PROJECTDETAILS... " />
-            <marker date="1493075641878" expanded="true" signature="4137:4165" ph="select * fro... PROJECTDETAILS" />
-            <marker date="1493075641878" expanded="true" signature="4292:4333" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="150:240" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="388:677" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="840:906" ph="insert into PROJECT... " />
+            <marker date="1493082979013" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1223:1265" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1438:1488" ph="update PROJE... " />
+            <marker date="1493082979013" expanded="true" signature="1630:1675" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1818:1859" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1988:2217" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="2369:2425" ph="insert into REWARD... " />
+            <marker date="1493082979013" expanded="true" signature="2584:2604" ph="select * fro... REWARD" />
+            <marker date="1493082979013" expanded="true" signature="2728:2884" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3005:3062" ph="insert into PERSONAL_INFO... " />
+            <marker date="1493082979013" expanded="true" signature="3188:3215" ph="select * fro... PERSONAL_INFO" />
+            <marker date="1493082979013" expanded="true" signature="3343:3495" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3629:3683" ph="insert into ACCOUNT... " />
+            <marker date="1493082979013" expanded="true" signature="3822:3843" ph="select * fro... ACCOUNT" />
+            <marker date="1493082979013" expanded="true" signature="3975:4083" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="4201:4247" ph="insert into PROJECTDETAILS... " />
+            <marker date="1493082979013" expanded="true" signature="4369:4397" ph="select * fro... PROJECTDETAILS" />
+            <marker date="1493082979013" expanded="true" signature="4524:4565" ph="select * fro... PROJECT" />
           </folding>
         </state>
       </provider>
@@ -1129,9 +1121,9 @@
           <caret line="225" column="14" lean-forward="true" selection-start-line="225" selection-start-column="14" selection-end-line="225" selection-end-column="14" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1142,26 +1134,27 @@
           <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="388:677" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="840:906" ph="insert into PROJECT... " />
-            <marker date="1493075641878" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1236:1286" ph="update PROJE... " />
-            <marker date="1493075641878" expanded="true" signature="1398:1443" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1586:1627" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1756:1985" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2137:2193" ph="insert into REWARD... " />
-            <marker date="1493075641878" expanded="true" signature="2352:2372" ph="select * fro... REWARD" />
-            <marker date="1493075641878" expanded="true" signature="2496:2652" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2773:2830" ph="insert into PERSONAL_INFO... " />
-            <marker date="1493075641878" expanded="true" signature="2956:2983" ph="select * fro... PERSONAL_INFO" />
-            <marker date="1493075641878" expanded="true" signature="3111:3263" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3397:3451" ph="insert into ACCOUNT... " />
-            <marker date="1493075641878" expanded="true" signature="3590:3611" ph="select * fro... ACCOUNT" />
-            <marker date="1493075641878" expanded="true" signature="3743:3851" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3969:4015" ph="insert into PROJECTDETAILS... " />
-            <marker date="1493075641878" expanded="true" signature="4137:4165" ph="select * fro... PROJECTDETAILS" />
-            <marker date="1493075641878" expanded="true" signature="4292:4333" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="150:240" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="388:677" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="840:906" ph="insert into PROJECT... " />
+            <marker date="1493082979013" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1223:1265" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1438:1488" ph="update PROJE... " />
+            <marker date="1493082979013" expanded="true" signature="1630:1675" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1818:1859" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1988:2217" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="2369:2425" ph="insert into REWARD... " />
+            <marker date="1493082979013" expanded="true" signature="2584:2604" ph="select * fro... REWARD" />
+            <marker date="1493082979013" expanded="true" signature="2728:2884" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3005:3062" ph="insert into PERSONAL_INFO... " />
+            <marker date="1493082979013" expanded="true" signature="3188:3215" ph="select * fro... PERSONAL_INFO" />
+            <marker date="1493082979013" expanded="true" signature="3343:3495" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3629:3683" ph="insert into ACCOUNT... " />
+            <marker date="1493082979013" expanded="true" signature="3822:3843" ph="select * fro... ACCOUNT" />
+            <marker date="1493082979013" expanded="true" signature="3975:4083" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="4201:4247" ph="insert into PROJECTDETAILS... " />
+            <marker date="1493082979013" expanded="true" signature="4369:4397" ph="select * fro... PROJECTDETAILS" />
+            <marker date="1493082979013" expanded="true" signature="4524:4565" ph="select * fro... PROJECT" />
           </folding>
         </state>
       </provider>
@@ -1237,9 +1230,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1258,9 +1251,9 @@
           <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1357,6 +1350,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="39" column="90" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/more_about_you.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
@@ -1365,65 +1368,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="87" column="44" lean-forward="true" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Python Mega Course/postgres/postgres_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1491876228895" expanded="true" signature="193:387" ph="CREATE TABLE... if" />
+            <marker date="1491876228895" expanded="true" signature="790:854" ph="Insert into USERDETAILS... " />
+            <marker date="1491876228895" expanded="true" signature="1258:1283" ph="select * fro... USERDETAILS" />
+            <marker date="1491876228895" expanded="true" signature="1530:1572" ph="Delete from " />
+            <marker date="1491876228895" expanded="true" signature="1824:1878" ph="Update USERD... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="653">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1493075641878" expanded="true" signature="150:240" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="388:677" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="840:906" ph="insert into PROJECT... " />
-            <marker date="1493075641878" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1236:1286" ph="update PROJE... " />
-            <marker date="1493075641878" expanded="true" signature="1398:1443" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1586:1627" ph="select * fro... PROJECT" />
-            <marker date="1493075641878" expanded="true" signature="1756:1985" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2137:2193" ph="insert into REWARD... " />
-            <marker date="1493075641878" expanded="true" signature="2352:2372" ph="select * fro... REWARD" />
-            <marker date="1493075641878" expanded="true" signature="2496:2652" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="2773:2830" ph="insert into PERSONAL_INFO... " />
-            <marker date="1493075641878" expanded="true" signature="2956:2983" ph="select * fro... PERSONAL_INFO" />
-            <marker date="1493075641878" expanded="true" signature="3111:3263" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3397:3451" ph="insert into ACCOUNT... " />
-            <marker date="1493075641878" expanded="true" signature="3590:3611" ph="select * fro... ACCOUNT" />
-            <marker date="1493075641878" expanded="true" signature="3743:3851" ph="create table... if" />
-            <marker date="1493075641878" expanded="true" signature="3969:4015" ph="insert into PROJECTDETAILS... " />
-            <marker date="1493075641878" expanded="true" signature="4137:4165" ph="select * fro... PROJECTDETAILS" />
-            <marker date="1493075641878" expanded="true" signature="4292:4333" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="150:240" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="388:677" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="840:906" ph="insert into PROJECT... " />
+            <marker date="1493082979013" expanded="true" signature="1074:1095" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1223:1265" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1438:1488" ph="update PROJE... " />
+            <marker date="1493082979013" expanded="true" signature="1630:1675" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1818:1859" ph="select * fro... PROJECT" />
+            <marker date="1493082979013" expanded="true" signature="1988:2217" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="2369:2425" ph="insert into REWARD... " />
+            <marker date="1493082979013" expanded="true" signature="2584:2604" ph="select * fro... REWARD" />
+            <marker date="1493082979013" expanded="true" signature="2728:2884" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3005:3062" ph="insert into PERSONAL_INFO... " />
+            <marker date="1493082979013" expanded="true" signature="3188:3215" ph="select * fro... PERSONAL_INFO" />
+            <marker date="1493082979013" expanded="true" signature="3343:3495" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="3629:3683" ph="insert into ACCOUNT... " />
+            <marker date="1493082979013" expanded="true" signature="3822:3843" ph="select * fro... ACCOUNT" />
+            <marker date="1493082979013" expanded="true" signature="3975:4083" ph="create table... if" />
+            <marker date="1493082979013" expanded="true" signature="4201:4247" ph="insert into PROJECTDETAILS... " />
+            <marker date="1493082979013" expanded="true" signature="4369:4397" ph="select * fro... PROJECTDETAILS" />
+            <marker date="1493082979013" expanded="true" signature="4524:4565" ph="select * fro... PROJECT" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="264" column="57" lean-forward="true" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
+        <state relative-caret-position="509">
+          <caret line="265" column="40" lean-forward="true" selection-start-line="265" selection-start-column="40" selection-end-line="265" selection-end-column="40" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493080732183" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493080732183" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493080732183" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="47" column="86" lean-forward="false" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="90" column="140" lean-forward="false" selection-start-line="90" selection-start-column="140" selection-end-line="90" selection-end-column="140" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1493082619179" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493082619179" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493082619179" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>

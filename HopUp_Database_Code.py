@@ -26,10 +26,17 @@ def view_projects():
     rows = curs.fetchall()
     return rows
 
-def project_pledged_amount(amount_pledged,id,rem):
+def pledge_amount(id,amount_pledged):
     curs = conn.cursor()
-    curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id))
-    conn.commit()
+    curs.execute("select * from PROJECT where ProjectID = %s",(id,))
+    project_details = curs.fetchall
+    remaining_goal = project_details[11]
+    try:
+        rem = int(remaining_goal) - int(amount_pledged)
+        curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id,))
+        conn.commit()
+    except:
+        pass
 
 def search_projects_by_title(ptitle):
     curs = conn.cursor()

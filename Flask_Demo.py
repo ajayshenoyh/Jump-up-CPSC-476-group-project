@@ -260,12 +260,10 @@ def donate():
         id = request.form.get('projectID')
         fn = request.form.get('fn')
         ln = request.form.get('ln')
-        rem = request.form.get('rem')
-        rem_amount = int(rem) - int(amount_pledged)
         amount_pledged = request.form.get('pledgeAmount')
         address = request.form.get('address')
         mobileNumber = request.form.get('mobileNumber')
-        project_pledged_amount(amount_pledged,str(rem_amount))
+        pledge_amount(id,amount_pledged)
         return "Pledged Successfully"
 
 @app.errorhandler(404)
