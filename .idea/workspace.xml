@@ -27,11 +27,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="256" column="31" lean-forward="false" selection-start-line="256" selection-start-column="31" selection-end-line="256" selection-end-column="31" />
+            <state relative-caret-position="484">
+              <caret line="264" column="57" lean-forward="true" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
                 <marker date="1493077793366" expanded="true" signature="2846:2901" ph="Select EXIST... " />
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="donateAmount.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="83" column="109" lean-forward="true" selection-start-line="83" selection-start-column="109" selection-end-line="83" selection-end-column="109" />
+            <state relative-caret-position="-569">
+              <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -457,20 +457,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00008" summary="Changes in HopUp_Database_Code">
-      <created>1492933509954</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1492933509954</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Changes in HopUp_Database_Code">
-      <created>1492934572791</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1492934572791</updated>
-    </task>
     <task id="LOCAL-00010" summary="Changes in HopUp_Database_Code">
       <created>1492934704506</created>
       <option name="number" value="00010" />
@@ -800,7 +786,21 @@
       <option name="project" value="LOCAL" />
       <updated>1493077722292</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Changes in projects explore page">
+      <created>1493078463631</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1493078463631</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Changes in projects explore page">
+      <created>1493078713114</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1493078713114</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1277,19 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="256" column="31" lean-forward="false" selection-start-line="256" selection-start-column="31" selection-end-line="256" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493077793366" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493077793366" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493077793366" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/explore.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1318,10 +1305,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="83" column="109" lean-forward="true" selection-start-line="83" selection-start-column="109" selection-end-line="83" selection-end-column="109" />
+        <state relative-caret-position="-569">
+          <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
           <folding>
             <element signature="n#style#0;n#input#0;n#p#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="264" column="57" lean-forward="true" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+            <marker date="1493077793366" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493077793366" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493077793366" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
