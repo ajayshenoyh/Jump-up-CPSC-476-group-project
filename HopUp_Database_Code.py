@@ -37,8 +37,10 @@ def pledge_amount(id,amount_pledged):
         print(rem)
         curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id,))
         conn.commit()
+        return true
     except:
         pass
+        return false
 
 def search_projects_by_title(ptitle):
     curs = conn.cursor()

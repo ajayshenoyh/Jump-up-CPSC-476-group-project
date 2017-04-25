@@ -263,8 +263,11 @@ def donate():
         amount_pledged = request.form.get('pledgeAmount')
         address = request.form.get('address')
         mobileNumber = request.form.get('mobileNumber')
-        pledge_amount(id,amount_pledged)
-        return "Pledged Successfully"
+        if pledge_amount(id,amount_pledged):
+            flash("Pledged Successfully")
+            return render_template('project_overview.html')
+        else:
+            flash("Transaction unsuccessful and is rolled back")
 
 @app.errorhandler(404)
 def page_not_found(e):
