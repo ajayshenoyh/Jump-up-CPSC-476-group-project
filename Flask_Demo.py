@@ -111,8 +111,6 @@ def register_page():
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
-                pymsgbox.native.alert('This is an alert!', 'Title')
-                c.close()
                 #gc.collect()
 
                 #session['logged_in'] = True
