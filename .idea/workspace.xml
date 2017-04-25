@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register_project.html" afterPath="$PROJECT_DIR$/templates/register_project.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/project_overview.html" afterPath="$PROJECT_DIR$/templates/project_overview.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,25 +27,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="268" column="13" lean-forward="false" selection-start-line="268" selection-start-column="13" selection-end-line="268" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#74#0" expanded="true" />
-                <marker date="1493084036149" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-                <marker date="1493084036149" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-                <marker date="1493084036149" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HopUp_Database_Code.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
+            <state relative-caret-position="853">
               <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -85,20 +70,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_project.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register_project.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/register_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="412" column="7" lean-forward="false" selection-start-line="412" selection-start-column="7" selection-end-line="412" selection-end-column="7" />
+            <state relative-caret-position="306">
+              <caret line="258" column="0" lean-forward="true" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
               <folding>
-                <element signature="e#9921#9927#0#HTML" expanded="true" />
-                <element signature="e#9928#9934#0#HTML" expanded="true" />
-                <element signature="e#9935#9941#0#HTML" expanded="true" />
-                <element signature="e#9942#9948#0#HTML" expanded="true" />
-                <element signature="e#9949#9955#0#HTML" expanded="true" />
-                <element signature="e#9956#9962#0#HTML" expanded="true" />
-                <element signature="e#9963#9969#0#HTML" expanded="true" />
+                <element signature="e#9734#9740#0#HTML" expanded="true" />
+                <element signature="e#9741#9747#0#HTML" expanded="true" />
+                <element signature="e#9748#9754#0#HTML" expanded="true" />
+                <element signature="e#9755#9761#0#HTML" expanded="true" />
+                <element signature="e#9762#9768#0#HTML" expanded="true" />
+                <element signature="e#9769#9775#0#HTML" expanded="true" />
+                <element signature="e#9776#9782#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,13 +108,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="225" column="72" lean-forward="true" selection-start-line="225" selection-start-column="72" selection-end-line="225" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#74#0" expanded="true" />
+                <marker date="1493084036149" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+                <marker date="1493084036149" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+                <marker date="1493084036149" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>explore</find>
       <find>butto</find>
       <find>`</find>
+      <find>explore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,8 +153,8 @@
         <option value="$PROJECT_DIR$/templates/donateAmount.html" />
         <option value="$PROJECT_DIR$/HopUp_Database_Code.py" />
         <option value="$PROJECT_DIR$/Flask_Demo.py" />
-        <option value="$PROJECT_DIR$/templates/project_overview.html" />
         <option value="$PROJECT_DIR$/templates/register_project.html" />
+        <option value="$PROJECT_DIR$/templates/project_overview.html" />
       </list>
     </option>
   </component>
@@ -441,20 +451,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Altering Registration page UI">
-      <created>1492939665186</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1492939665186</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Altering Registration page UI">
-      <created>1492939807296</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1492939807296</updated>
     </task>
     <task id="LOCAL-00036" summary="Altering Registration page UI">
       <created>1492939983750</created>
@@ -785,7 +781,21 @@
       <option name="project" value="LOCAL" />
       <updated>1493084204048</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Changes in projects explore page">
+      <created>1493085124905</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1493085124905</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Changes in projects explore page">
+      <created>1493085315055</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1493085315055</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TodoView">
@@ -885,7 +895,7 @@
         <state relative-caret-position="1775">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -927,7 +937,7 @@
         <state relative-caret-position="75">
           <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,7 +1007,7 @@
         <state relative-caret-position="1491">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1039,7 +1049,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1122,7 +1132,7 @@
         <state relative-caret-position="1491">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,7 +1150,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,7 +1268,7 @@
         <state relative-caret-position="75">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1293,9 +1303,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="96" column="15" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="96" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register_project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="258" column="0" lean-forward="true" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+          <folding>
+            <element signature="e#9734#9740#0#HTML" expanded="true" />
+            <element signature="e#9741#9747#0#HTML" expanded="true" />
+            <element signature="e#9748#9754#0#HTML" expanded="true" />
+            <element signature="e#9755#9761#0#HTML" expanded="true" />
+            <element signature="e#9762#9768#0#HTML" expanded="true" />
+            <element signature="e#9769#9775#0#HTML" expanded="true" />
+            <element signature="e#9776#9782#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="102" column="38" lean-forward="true" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="225" column="72" lean-forward="true" selection-start-line="225" selection-start-column="72" selection-end-line="225" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+            <marker date="1493084036149" expanded="true" signature="2846:2901" ph="Select EXIST... " />
+            <marker date="1493084036149" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
+            <marker date="1493084036149" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HopUp_Database_Code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
+        <state relative-caret-position="853">
           <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -1324,58 +1379,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="268" column="13" lean-forward="false" selection-start-line="268" selection-start-column="13" selection-end-line="268" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493084036149" expanded="true" signature="2846:2901" ph="Select EXIST... " />
-            <marker date="1493084036149" expanded="true" signature="2861:2897" ph="SELECT * FRO... USERS" />
-            <marker date="1493084036149" expanded="true" signature="3137:3203" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="84" column="32" lean-forward="false" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="102" column="38" lean-forward="true" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+        <state relative-caret-position="518">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/donateAmount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="96" column="15" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="96" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register_project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="412" column="7" lean-forward="false" selection-start-line="412" selection-start-column="7" selection-end-line="412" selection-end-column="7" />
-          <folding>
-            <element signature="e#9921#9927#0#HTML" expanded="true" />
-            <element signature="e#9928#9934#0#HTML" expanded="true" />
-            <element signature="e#9935#9941#0#HTML" expanded="true" />
-            <element signature="e#9942#9948#0#HTML" expanded="true" />
-            <element signature="e#9949#9955#0#HTML" expanded="true" />
-            <element signature="e#9956#9962#0#HTML" expanded="true" />
-            <element signature="e#9963#9969#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

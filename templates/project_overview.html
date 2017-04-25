@@ -77,10 +77,11 @@
                        {% for project in projectList %}
                             <div style="background-color:black;color:white;padding:20px;" >
                                 <a href="/donate" onclick="localStorage.setItem('projectID',{{ project[0] }})"><h2>{{project[0]}}. {{project[1]}}</h2></a>
-                                <h3>Project Category: {{project[2]}} {{project[3]}}</h3>
-                                <p>{{project[6]}}</p>
-                                <h4> Location: {{project[7]}} </h4>
-                                <h5> Fund duration: {{project[8]}} </h5>
+                                <h3>Project Category: {{project[3]}}</h3>
+                                <p>Sub Category: {{ project[4]}}</p>
+                                <p>{{project[7]}}</p>
+                                <h4> Location: {{project[8]}} </h4>
+                                <h5> Fund duration: {{project[9]}} </h5>
                                 <h6> Fund Goal: {{project[10]}} </h6>
                                 <h6> Remaining: {{ project[11] }}</h6>
                             </div>
