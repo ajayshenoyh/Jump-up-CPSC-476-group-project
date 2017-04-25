@@ -29,7 +29,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        function fillValues() {
 
+            var id = localStorage.getItem('projectID');
+            var title = localStorage.getItem('projectTITLE');
+
+            
+        }
+    </script>
 </head>
 {% block body %}
 
@@ -73,7 +81,7 @@
                     <div class="col-md-8 col-md-offset-2">
                       <h1 class="brand-heading">Jump up</h1>
                       <h1 class="intro-text">Pledge Amount</h1>
-		<form method=post action="/donate">
+		<form method=post action="/donate" onfocus="fillValues()">
             <dl>
                 <input type="number" class="form-control" id="projectID" name="projectID" value = " " placeholder="Enter project ID">
                 <input type="text" class="form-control" id="projectTitle" name="projectTitle" value = " " placeholder="Enter project title">
