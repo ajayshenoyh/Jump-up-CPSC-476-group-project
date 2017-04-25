@@ -28,6 +28,8 @@
 <head>
   <script type="text/javascript">
       function donateAmount(id,title){
+            alert(id);
+            alert(title);
             localStorage.setItem('projectID',id);
             localStorage.setItem('projectTITLE',title);
             window.location.href="/donate";
