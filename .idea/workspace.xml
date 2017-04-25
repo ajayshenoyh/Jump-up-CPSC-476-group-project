@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/register-backup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/register.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+            <state relative-caret-position="172">
+              <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1493097534706" expanded="true" signature="2936:2991" ph="Select EXIST... " />
@@ -42,10 +39,10 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493097614332" expanded="true" signature="77918:77935" ph="..." />
-                <marker date="1493097614332" expanded="true" signature="77918:77953" ph="..." />
-                <marker date="1493097614332" expanded="true" signature="77918:77966" ph="..." />
-                <marker date="1493097614332" expanded="true" signature="77918:77981" ph="..." />
+                <marker date="1493097706317" expanded="true" signature="77668:77685" ph="..." />
+                <marker date="1493097706317" expanded="true" signature="77668:77703" ph="..." />
+                <marker date="1493097706317" expanded="true" signature="77668:77716" ph="..." />
+                <marker date="1493097706317" expanded="true" signature="77668:77731" ph="..." />
               </folding>
             </state>
           </provider>
@@ -501,13 +498,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00007" summary="Added registration files to Flask_demo">
-      <created>1492932991243</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1492932991243</updated>
-    </task>
     <task id="LOCAL-00008" summary="Changes in HopUp_Database_Code">
       <created>1492933509954</created>
       <option name="number" value="00008" />
@@ -844,7 +834,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493097221493</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Removed bootstrap UI to check registration">
+      <created>1493097651803</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1493097651803</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -924,7 +921,8 @@
     <MESSAGE value="Fixing bus in registration page" />
     <MESSAGE value="Alert box while registering" />
     <MESSAGE value="Bug test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug test" />
+    <MESSAGE value="Removed bootstrap UI to check registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed bootstrap UI to check registration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1072,10 +1070,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493097614332" expanded="true" signature="77918:77935" ph="..." />
-            <marker date="1493097614332" expanded="true" signature="77918:77953" ph="..." />
-            <marker date="1493097614332" expanded="true" signature="77918:77966" ph="..." />
-            <marker date="1493097614332" expanded="true" signature="77918:77981" ph="..." />
+            <marker date="1493097706317" expanded="true" signature="77668:77685" ph="..." />
+            <marker date="1493097706317" expanded="true" signature="77668:77703" ph="..." />
+            <marker date="1493097706317" expanded="true" signature="77668:77716" ph="..." />
+            <marker date="1493097706317" expanded="true" signature="77668:77731" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1394,20 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1493097534706" expanded="true" signature="2936:2991" ph="Select EXIST... " />
-            <marker date="1493097534706" expanded="true" signature="2951:2987" ph="SELECT * FRO... USERS" />
-            <marker date="1493097534706" expanded="true" signature="2951:2991" ph="Select EXIST... " />
-            <marker date="1493097534706" expanded="true" signature="3215:3281" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1421,6 +1405,20 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1493097534706" expanded="true" signature="2936:2991" ph="Select EXIST... " />
+            <marker date="1493097534706" expanded="true" signature="2951:2987" ph="SELECT * FRO... USERS" />
+            <marker date="1493097534706" expanded="true" signature="2951:2991" ph="Select EXIST... " />
+            <marker date="1493097534706" expanded="true" signature="3215:3281" ph="INSERT INTO USERS... " />
+          </folding>
         </state>
       </provider>
     </entry>
