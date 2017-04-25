@@ -104,13 +104,13 @@ def register_page():
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
             if c.fetchone()[0]:
-                pymsgbox.alert('This is an alert!', 'Title')
+                pymsgbox.native.alert('This is an alert!', 'Title')
                 return render_template('register.html', form=form)
 
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
-                pymsgbox.alert('This is an alert!', 'Title')
+                pymsgbox.native.alert('This is an alert!', 'Title')
                 c.close()
                 #gc.collect()
 
