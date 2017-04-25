@@ -106,11 +106,10 @@
                       <h1 class="intro-text">Add Reward</h1>
 						<div class="container" align="center">
 							<h1>Register the rewards you are going to give to the fund donors for your project</h1>
-							Appreciate the help people are doing by giving them some rewards or by giving them some extra privileged access to your project
+                            <p>Appreciate the help people are doing by giving them some rewards or by giving them some extra privileged access to your project</p>
 						</div>
 		<form method="post" name="RewardForm" action="/reward" onsubmit="return validateRewards()">
 			<dl>
-    <h2 align = "center"> Reward </h2>
 
       <label for="rewardTitle">Reward Title</label>
       <input type="text" class="form-control" id="rewardTitle" name="rewardTitle" placeholder="Title for reward" required>
@@ -122,6 +121,7 @@
       <textarea rows="3" cols="40" id="rewardDescription" name="rewardDescription">
         Think of creative rewards like ebooks, videos, your project manuals, t-shirts with your project logo,...
       </textarea>
+                <br><br>
 
       <label for="expectedDelivery">Expected Delivery</label>
       <label for="month">Month</label>
@@ -139,7 +139,7 @@
 	       <option value = "11">11</option>
 	       <option value = "12">12</option>
       </select>
-
+    <br><br>
       <label for="year">Year</label>
       <select name="year" id="year">
 	       <option value = "2017">2017</option>
@@ -153,14 +153,14 @@
 	       <option value = "2025">2025</option>
 	       <option value = "2026">2026</option>
       </select>
-
+<br>
       <label for="shippingDetails">ShippingDetails</label>
       <select name="shippingDetails" id="shippingDetails">
 	       <option value = "No shipping involved">No shipping involved</option>
 	       <option value = "Ships anywhere in the world">Ships anywhere in the world</option>
 	       <option value = "Ships only to specific countries">Ships only to specific countries</option>
       </select>
-
+<br>
       <label for="Limit Rewards">Limit the availability of rewards</label>
       <input type="text" class="form-control" id="rewardLimit" name="rewardLimit" placeholder="15" required>
 
