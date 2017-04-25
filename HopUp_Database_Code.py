@@ -30,9 +30,8 @@ def pledge_amount(id,amount_pledged):
     curs = conn.cursor()
     curs.execute("select * from PROJECT where ProjectID = %s",(id,))
     project_details = curs.fetchall()
-    remaining_goal = 0
-    print(project_details)
     try:
+        remaining_goal = project_details[0][11]
         rem = int(remaining_goal) - int(amount_pledged)
         curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id,))
         conn.commit()
