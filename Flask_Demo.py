@@ -156,9 +156,11 @@ def login():
         pwd = records[0][1];
         if password == pwd:
             flash('Logged in!')
+            return redirect(url_for('home'))
         else:
             flash('Try Again !')
-        return redirect(url_for('home'))
+            return redirect(url_for('login'))
+
 
 
     # if request.method == 'POST':

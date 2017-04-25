@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +24,8 @@
       <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="159" column="30" lean-forward="false" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
+            <state relative-caret-position="87">
+              <caret line="158" column="44" lean-forward="false" selection-start-line="158" selection-start-column="44" selection-end-line="158" selection-end-column="44" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -58,10 +59,10 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493160953693" expanded="true" signature="62252:62269" ph="..." />
-                <marker date="1493160953693" expanded="true" signature="62252:62287" ph="..." />
-                <marker date="1493160953693" expanded="true" signature="62252:62300" ph="..." />
-                <marker date="1493160953693" expanded="true" signature="62252:62315" ph="..." />
+                <marker date="1493161174540" expanded="true" signature="62208:62225" ph="..." />
+                <marker date="1493161174540" expanded="true" signature="62208:62243" ph="..." />
+                <marker date="1493161174540" expanded="true" signature="62208:62256" ph="..." />
+                <marker date="1493161174540" expanded="true" signature="62208:62271" ph="..." />
               </folding>
             </state>
           </provider>
@@ -412,13 +413,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00020" summary="Changes in HopUp_Database_Code">
-      <created>1492937723728</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1492937723728</updated>
-    </task>
     <task id="LOCAL-00021" summary="Changes in HopUp_Database_Code">
       <created>1492937729769</created>
       <option name="number" value="00021" />
@@ -755,7 +749,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493160964813</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Checking pymsgbox!">
+      <created>1493160974711</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1493160974711</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1165,10 +1166,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493160953693" expanded="true" signature="62252:62269" ph="..." />
-            <marker date="1493160953693" expanded="true" signature="62252:62287" ph="..." />
-            <marker date="1493160953693" expanded="true" signature="62252:62300" ph="..." />
-            <marker date="1493160953693" expanded="true" signature="62252:62315" ph="..." />
+            <marker date="1493161174540" expanded="true" signature="62208:62225" ph="..." />
+            <marker date="1493161174540" expanded="true" signature="62208:62243" ph="..." />
+            <marker date="1493161174540" expanded="true" signature="62208:62256" ph="..." />
+            <marker date="1493161174540" expanded="true" signature="62208:62271" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1235,8 +1236,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="159" column="30" lean-forward="false" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
+        <state relative-caret-position="87">
+          <caret line="158" column="44" lean-forward="false" selection-start-line="158" selection-start-column="44" selection-end-line="158" selection-end-column="44" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
