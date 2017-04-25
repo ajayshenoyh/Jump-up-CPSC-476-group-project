@@ -45,7 +45,7 @@
 <body>
   {% for project in projectList %}
     <div style="background-color:black;color:white;padding:20px;" >
-        <a href="/donate" onclick="donateAmount({{project[0]}},{{project[1]}})"><h2>{{project[0]}}. {{project[1]}}</h2></a>
+        <a href="/donate" onclick="alert({{ project[0] }}"><h2>{{project[0]}}. {{project[1]}}</h2></a>
     <h3>Project Category: {{project[2]}} {{project[3]}}</h3>
     <p>{{project[6]}}</p>
     <h4> Location: {{project[7]}} </h4>
