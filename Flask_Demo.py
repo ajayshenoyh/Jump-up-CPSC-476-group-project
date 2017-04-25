@@ -1,3 +1,4 @@
+import gc
 from flask import Flask, render_template, redirect, url_for, make_response
 from tkinter import messagebox
 from flask import flash
@@ -106,19 +107,20 @@ def register_page():
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
             if c.fetchone()[0]:
                 messagebox.showinfo("Title", "a Tk MessageBox")
-                #return render_template('register.html', form=form)
+                return render_template('register.html', form=form)
 
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
-                #gc.collect()
+                c.close()
+                gc.collect()
 
                 #session['logged_in'] = True
                 #session['username'] = username
 
-        return redirect(url_for('login'))
+                return redirect(url_for('login'))
 
-        #return render_template("register.html", form=form)
+        return render_template("register.html", form=form)
 
     except Exception as e:
         return (str(e))
