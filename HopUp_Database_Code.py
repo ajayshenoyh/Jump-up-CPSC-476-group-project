@@ -29,7 +29,7 @@ def view_projects():
 def pledge_amount(id,amount_pledged):
     curs = conn.cursor()
     curs.execute("select * from PROJECT where ProjectID = %s",(id,))
-    project_details = curs.fetchall
+    project_details = curs.fetchall()
     remaining_goal = 0
     print(project_details)
     try:
