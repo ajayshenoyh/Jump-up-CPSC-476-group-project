@@ -87,7 +87,7 @@
                       <h1 class="intro-text">Pledge Amount</h1>
 		<form method=post action="/donate" onautocomplete="fillValues()">
             <dl>
-                <input type="number" class="form-control" id="projectID" name="projectID" onclick="document.getElementById('projectID').innerHTML = localStorage.getItem('projectID');" placeholder="Enter project ID">
+                <input type="number" class="form-control" id="projectID" name="projectID" onclick="alert(localStorage.getItem('projectID'))" placeholder="Enter project ID">
                 <input type="text" class="form-control" id="projectTitle" name="projectTitle" value = " " placeholder="Enter project title">
                 <input type="number" class="form-control" id="pledgeAmount" name="pledgeAmount" value = " " placeholder="Enter the amount you want to donate">
                 <input type="text" class="form-control" id="fn" name="fn" value = " " placeholder="Enter your first name">
