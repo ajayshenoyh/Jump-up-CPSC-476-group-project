@@ -104,21 +104,21 @@ def register_page():
             password=str(form.password.data)
             c, conn = connection()
 
-            c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
-            if c.fetchone()[0]:
-                messagebox.showinfo("Title", "a Tk MessageBox")
-                return render_template('register.html', form=form)
+           # c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
+           # if c.fetchone()[0]:
+            #    messagebox.showinfo("Title", "a Tk MessageBox")
+             #   return render_template('register.html', form=form)
 
-            else:
-                c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
-                conn.commit()
-                c.close()
-                gc.collect()
+            #else:
+            c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
+            conn.commit()
+            c.close()
+            gc.collect()
 
                 #session['logged_in'] = True
                 #session['username'] = username
 
-                return redirect(url_for('login'))
+            return redirect(url_for('login'))
 
         return render_template("register.html", form=form)
 
