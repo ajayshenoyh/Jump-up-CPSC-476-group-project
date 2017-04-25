@@ -4,9 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/Flask_Demo.py" line="149" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="Checking pymsgbox!">
+    <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,10 +58,10 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493160948849" expanded="true" signature="62252:62269" ph="..." />
-                <marker date="1493160948849" expanded="true" signature="62252:62287" ph="..." />
-                <marker date="1493160948849" expanded="true" signature="62252:62300" ph="..." />
-                <marker date="1493160948849" expanded="true" signature="62252:62315" ph="..." />
+                <marker date="1493160953693" expanded="true" signature="62252:62269" ph="..." />
+                <marker date="1493160953693" expanded="true" signature="62252:62287" ph="..." />
+                <marker date="1493160953693" expanded="true" signature="62252:62300" ph="..." />
+                <marker date="1493160953693" expanded="true" signature="62252:62315" ph="..." />
               </folding>
             </state>
           </provider>
@@ -413,13 +412,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00019" summary="Changes in HopUp_Database_Code">
-      <created>1492937381408</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1492937381408</updated>
-    </task>
     <task id="LOCAL-00020" summary="Changes in HopUp_Database_Code">
       <created>1492937723728</created>
       <option name="number" value="00020" />
@@ -756,7 +748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493160483196</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Checking pymsgbox!">
+      <created>1493160964805</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1493160964813</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1166,10 +1165,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493160948849" expanded="true" signature="62252:62269" ph="..." />
-            <marker date="1493160948849" expanded="true" signature="62252:62287" ph="..." />
-            <marker date="1493160948849" expanded="true" signature="62252:62300" ph="..." />
-            <marker date="1493160948849" expanded="true" signature="62252:62315" ph="..." />
+            <marker date="1493160953693" expanded="true" signature="62252:62269" ph="..." />
+            <marker date="1493160953693" expanded="true" signature="62252:62287" ph="..." />
+            <marker date="1493160953693" expanded="true" signature="62252:62300" ph="..." />
+            <marker date="1493160953693" expanded="true" signature="62252:62315" ph="..." />
           </folding>
         </state>
       </provider>
