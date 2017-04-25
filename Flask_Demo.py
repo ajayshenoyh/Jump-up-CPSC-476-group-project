@@ -80,19 +80,19 @@ def login():
 #    return "Hello %s" % (uname)
 
 
-class RegistrationForm(Form):
-    username = TextField('Username', [validators.Length(min=4, max=20)])
-    email = TextField('Email Address', [validators.Length(min=6, max=50)])
-    password = PasswordField('New Password', [
-        validators.Required(),
-        validators.EqualTo('confirm', message='Passwords must match')
-    ])
-    confirm = PasswordField('Repeat Password')
-    accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
-                              [validators.Required()])
 
 @app.route('/register/', methods=["GET", "POST"])
 def register_page():
+    class RegistrationForm(Form):
+        username = TextField('Username', [validators.Length(min=4, max=20)])
+        email = TextField('Email Address', [validators.Length(min=6, max=50)])
+        password = PasswordField('New Password', [
+            validators.Required(),
+            validators.EqualTo('confirm', message='Passwords must match')
+        ])
+        confirm = PasswordField('Repeat Password')
+        accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
+                                  [validators.Required()])
     try:
         form = RegistrationForm(request.form)
 
@@ -106,7 +106,7 @@ def register_page():
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
             if c.fetchone()[0]:
                 messagebox.showinfo("Title", "a Tk MessageBox")
-                return render_template('register.html', form=form)
+                #return render_template('register.html', form=form)
 
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
@@ -116,9 +116,9 @@ def register_page():
                 #session['logged_in'] = True
                 #session['username'] = username
 
-                return redirect(url_for('login'))
+        return redirect(url_for('login'))
 
-        return render_template("register.html", form=form)
+        #return render_template("register.html", form=form)
 
     except Exception as e:
         return (str(e))
