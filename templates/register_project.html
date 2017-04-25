@@ -326,8 +326,10 @@
 									<select style="color:darkslategray" id="ddl2" name="ddl2">
 									<option style="color:darkslategray">Sub Category</option>
 									</select>
+                                    <br><br>
 									<label for="title">2. Project title</label>
 									<input type="text" class="form-control" id="project_title" name="project_title" placeholder="Project title should go in here" required>
+                                    <br>
 									<label for="country">3. Country of Residence</label>
 									<select style="color:darkslategray" class="Country" id="projectCountry" name="projectCountry" onchange="configureFundGoal(this,document.getElementById('fundGoal'))">
 									<option style="color:darkslategray" value="australia">Australia</option>
@@ -355,15 +357,20 @@
 									<label for="project image">4. Project Image</label>
 									<input type="text" class="form-control" id="project_image" name="project_image">
 									<p> Please give the link of your project's image </p>
+                                <br>
 									<label for="projectDescription">5. Project Description</label>
 									<input type="text" class="form-control" id="project_description" name="project_description" placeholder="Breifly describe the work in your project">
-									label for="projectLocation">6. Project Location</label>
+                                <br>
+									<label for="projectLocation">6. Project Location</label>
 									<input type="text" class="form-control" id="project_location" name="project_location" placeholder="Project Location">
+                                <br>
 									<label for="fundDuration">7. Funding Duration</label>
 									<p> Please specify the duration in number of days, just the number </p>
 									<input type="text" class="form-control" id="fund_duration" name="fund_duration" placeholder=" " required>
+                                <br>
 									<label for="fundingGoal">8. Fund Goal</label>
 									<input type="text" class="form-control" id="fundGoal" name="fundGoal" placeholder="Specify your fund goal starting from $0" required>
+                                <br>
 									<label for="projectLocation">9. Location of project</label>
 									<input type="text" class="form-control" id="project_exact_location" placeholder="Specify the exact location of your project">
 									<form method="post" action="/invite">
@@ -371,15 +378,12 @@
 										<label class="sr-only" for="projectCollaborators">10. Project Collaborators</label>
 									<p>11. Invite your team mates to help you with project</p>
 									</div>
-									<button type="submit" class="btn-btn-primary"><a href="/invite">Add Teammates</a></button>
+									<button style="color:darkslategray" type="submit" class="btn-btn-primary"><a href="/invite">Add Teammates</a></button>
 									</form>
 									<br>
 									<br>
-									<button align="center" type="submit" class="btn btn-default">Go ahead and add rewards to fund donors</button>
-									</form>
-			</div>
-		 	<button type="submit" class="btn-btn-primary"><a href="/invite">Add Teammates</a></button>
-	  </form>
+									<button style="color:darkslategray" align="center" type="submit" class="btn btn-default">Go ahead and add rewards to fund donors</button>
+
     <br><br>
 
 
