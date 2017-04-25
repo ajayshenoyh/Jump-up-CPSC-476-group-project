@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register_project.html" afterPath="$PROJECT_DIR$/templates/register_project.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/invite_collaborator.html" afterPath="$PROJECT_DIR$/templates/invite_collaborator.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +63,8 @@
       <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="96" column="14" lean-forward="true" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+            <state relative-caret-position="677">
+              <caret line="109" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_project.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register_project.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/register_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="387" column="0" lean-forward="true" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
+            <state relative-caret-position="502">
+              <caret line="394" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="412" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#select#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#option#1;n#select#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -128,6 +128,25 @@
                 <element signature="n#style#0;n#option#20;n#select#2;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#form#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invite_collaborator.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/invite_collaborator.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="752">
+              <caret line="111" column="7" lean-forward="false" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
+              <folding>
+                <element signature="e#1871#1877#0#HTML" expanded="true" />
+                <element signature="e#1878#1884#0#HTML" expanded="true" />
+                <element signature="e#1885#1891#0#HTML" expanded="true" />
+                <element signature="e#1892#1898#0#HTML" expanded="true" />
+                <element signature="e#1899#1905#0#HTML" expanded="true" />
+                <element signature="e#1906#1912#0#HTML" expanded="true" />
+                <element signature="e#1913#1919#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,6 +258,7 @@
         <option value="$PROJECT_DIR$/templates/project_overview.html" />
         <option value="$PROJECT_DIR$/templates/rewards.html" />
         <option value="$PROJECT_DIR$/templates/register_project.html" />
+        <option value="$PROJECT_DIR$/templates/invite_collaborator.html" />
       </list>
     </option>
   </component>
@@ -549,13 +569,6 @@
       <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
       <updated>1493095169747</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Added JUMP UP heading">
-      <created>1493071050214</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1493071050214</updated>
     </task>
     <task id="LOCAL-00046" summary="Added JUMP UP heading">
       <created>1493071204262</created>
@@ -879,7 +892,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493087166329</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Changes in projects explore page">
+      <created>1493087571655</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1493087571655</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView">
@@ -958,14 +978,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1825">
-          <caret line="73" column="60" lean-forward="false" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/explore.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
@@ -1432,14 +1444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="96" column="14" lean-forward="true" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/rewards.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -1494,10 +1498,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="109" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register_project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="387" column="0" lean-forward="true" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
+        <state relative-caret-position="502">
+          <caret line="394" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="412" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#select#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#option#1;n#select#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1541,6 +1553,23 @@
             <element signature="n#style#0;n#option#20;n#select#2;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#dl#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/invite_collaborator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="111" column="7" lean-forward="false" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
+          <folding>
+            <element signature="e#1871#1877#0#HTML" expanded="true" />
+            <element signature="e#1878#1884#0#HTML" expanded="true" />
+            <element signature="e#1885#1891#0#HTML" expanded="true" />
+            <element signature="e#1892#1898#0#HTML" expanded="true" />
+            <element signature="e#1899#1905#0#HTML" expanded="true" />
+            <element signature="e#1906#1912#0#HTML" expanded="true" />
+            <element signature="e#1913#1919#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
