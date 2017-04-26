@@ -1,31 +1,25 @@
-from flask import Flask, render_template, redirect, url_for, make_response
-from flask import flash
-from wtforms import Form, TextField, validators, PasswordField, BooleanField
+# import the extension
+# from flask-login import LoginManager()
+# from JumpUp import JumpUpDB_URL
+from cryptography.fernet import Fernet
+import smtplib
 # Session management is not facilitated  in flask hence we use an extension LoginManager()
 # import flask_login
 # from flask_login import login_user, logout_user
-#login_manager = LoginManager()
-#login_manager.init_app(app)
-import pyaes
-#from psycopg2.extensions import adapt as thwart
+# login_manager = LoginManager()
+# login_manager.init_app(app)
+# from psycopg2.extensions import adapt as thwart
 from datetime import datetime
-from flask import request
-from flask import current_app
-from flask_bootstrap import Bootstrap
-from HopUp_Database_Code import *
-# import the extension
-#from flask-login import LoginManager()
-#from JumpUp import JumpUpDB_URL
-import os
-import urlparse
-import smtplib
-import psycopg2
-import base64
-
-
-
 from email.mime.text import MIMEText
 
+from flask import Flask, render_template, redirect, url_for, make_response
+from flask import current_app
+from flask import flash
+from flask import request
+from flask_bootstrap import Bootstrap
+from wtforms import Form, TextField, validators, PasswordField, BooleanField
+
+from HopUp_Database_Code import *
 
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
