@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, make_response
 from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
-#from passlib.hash import sha256_crypt
+from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
@@ -98,8 +98,8 @@ def register_page():
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            #password = sha256_crypt.encrypt((str(form.password.data)))
-            password=str(form.password.data)
+            password = sha256_crypt.encrypt((str(form.password.data)))
+            #password=str(form.password.data)
             c, conn = connection()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
