@@ -3,6 +3,7 @@ from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
+from cryptography.fernet import Fernet
 from datetime import datetime
 from flask import request
 from flask import current_app
@@ -106,8 +107,13 @@ def register_page():
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            #password = sha256_crypt.encrypt((str(form.password.data)))
-            password=str(form.password.data)
+            #password=str(form.password.data)
+            key = Fernet.generate_key()
+            f = Fernet(key)
+            passw = str(form.password.data)
+            password = f.encrypt(b"" + passw)
+
+            # password=f.decrypt(password)
             c, conn = connections()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE username = %s)",(username,))
@@ -124,7 +130,7 @@ def register_page():
                 #session['logged_in'] = True
                 #session['username'] = username
 
-                return redirect(url_for('explore'))
+                return redirect(url_for('login'))
 
         return render_template("register.html", form=form)
 
