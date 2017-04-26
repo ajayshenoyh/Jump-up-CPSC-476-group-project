@@ -24,13 +24,13 @@
 {% endblock %}
 
 {%block content%}
-<form method="post" action="/loginback">
+<form method="post" action="/login">
     <div class="container">
        <label><b>UserName</b></label>
-       <input type="text" placeholder="Enter user name" name="uname" required>
+       <input type="text" placeholder="Enter user name" id = "uname" name="uname" required>
 
        <label><b>Password</b></label>
-       <input type="password" placeholder="Enter password" name="pwd" required>
+       <input type="password" placeholder="Enter password" id = "pwd" name="pwd" required>
 
        <button type="submit">Login</button>
        <input type="checkbox" checked="checked">Remember Me

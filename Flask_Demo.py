@@ -67,16 +67,25 @@ def app_context_learning():
     return current_app.name
 
 
-@app.route('/login')
+@app.route('/login',methods=['POST','GET'])
 def login():
-    return render_template("login.html")
+    if request.method == 'GET':
+        return render_template('login.html')
+    elif request.method == 'POST':
+        username = request.form.get('uname')
+        password = request.form.get('pwd')
+        user_details = validate_user(username)
+        if len(user_details) == 0:
+            return render_template('register.html')
+        else:
+            pwd = user_details[0][1]
+            if password == pwd:
+                Session['UserName'] = username
+            else:
+                return render_template('login.html')
 
 
 
-#@app.route('/loginback', methods=['POST', 'GET'])
-#def loginback():
-#    uname = request.form.get('uname')
-#    return "Hello %s" % (uname)
 
 
 class RegistrationForm(Form):

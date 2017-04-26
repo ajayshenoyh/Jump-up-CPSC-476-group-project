@@ -7,6 +7,13 @@ def create_user_table():
     curs.execute(
         "create table if not exists USERS(UserId SERIAL, UserName text,PassWord text, EmailId text)")
     conn.commit()
+
+def validate_user(username):
+    curs = conn.cursor()
+    curs.execute("select UserName,PassWord from USERS where UserName=%s",(username,))
+    users = curs.fetchall()
+    return users
+
 def connection():
     c=conn.cursor()
     return c,conn
