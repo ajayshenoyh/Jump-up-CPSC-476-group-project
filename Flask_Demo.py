@@ -76,13 +76,14 @@ def login():
         password = request.form.get('pwd')
         user_details = validate_user(username)
         if len(user_details) == 0:
-            return render_template("register.html")
+            flash("No user registered under this user name")
+            return redirect(url_for('register_page'))
         else:
             pwd = user_details[0][1]
             if password == pwd:
                 Session['UserName'] = username
             else:
-                return redirect(url_for('register_page'))
+                return render_template('login.html')
 
 
 
