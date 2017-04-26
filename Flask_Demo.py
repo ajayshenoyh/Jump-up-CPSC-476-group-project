@@ -171,7 +171,11 @@ def project_registration():
             return render_template("register_project.html")
         else:
             next_id = len(view_projects()) + 1
-            un = request.cookies.get('UserName')
+            un = ""
+            try:
+                un = session['UserName']
+            except:
+                un = "Guest"
             add_project(next_id, project_title, un, project_category, project_sub_category, project_country,
                         project_image, project_description, project_location, project_fund_duration, project_fund_goal,project_fund_goal,dt)
         resp = make_response(render_template('rewards.html'))
@@ -216,7 +220,11 @@ def account_details():
         RoutingNumber = request.form.get('routingNumber')
         bankAccountNumber = request.form.get('BankAccountNumber')
         next_id = len(view_bank_account_info()) + 1
-        un = request.cookies.get('UserName')
+        un = ""
+        try:
+            un = session['UserName']
+        except:
+            un = "Guest"
         add_bank_account_info(next_id, un, contact_email, firstName, lastName, DOB, HomeAddress, RoutingNumber,
                               bankAccountNumber)
         #project_details = search_projects_by_title(request.cookies.get('projectTitle'))
@@ -255,7 +263,11 @@ def reward():
         expected_delivery_year = request.form.get('year')
         shippingDetails = request.form.get('shippingDetails')
         reward_limit = request.form.get('rewardLimit')
-        un = request.cookies.get('UserName')
+        un = ""
+        try:
+            un = session['UserName']
+        except:
+            un = "Guest"
         pt = request.cookies.get('projectTitle')
         next_id = len(view_rewards()) + 1
         add_reward(next_id, reward_title, pt, un, pledged_amount, reward_description, expected_delivery_month,
