@@ -1,19 +1,28 @@
 from flask import Flask, render_template, redirect, url_for, make_response
 from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
-from passlib.hash import sha256_crypt
+# Session management is not facilitated  in flask hence we use an extension LoginManager()
+# import flask_login
+# from flask_login import login_user, logout_user
+#login_manager = LoginManager()
+#login_manager.init_app(app)
+#from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
 from flask import current_app
 from flask_bootstrap import Bootstrap
 from HopUp_Database_Code import *
+# import the extension
+#from flask-login import LoginManager()
 #from JumpUp import JumpUpDB_URL
 import os
 import urlparse
 import smtplib
 import psycopg2
 import base64
+
+
 
 from email.mime.text import MIMEText
 
@@ -67,9 +76,9 @@ def app_context_learning():
     return current_app.name
 
 
-@app.route('/login')
-def login():
-    return render_template("login.html")
+#@app.route('/login')
+#def login():
+#    return render_template("login.html")
 
 
 
@@ -80,6 +89,7 @@ def login():
 
 
 class RegistrationForm(Form):
+    #__tablename__ ="create_user_table"
     username = TextField('Username', [validators.Length(min=4, max=20)])
     email = TextField('Email Address', [validators.Length(min=6, max=50)])
     password = PasswordField('New Password', [
@@ -98,8 +108,8 @@ def register_page():
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            password = sha256_crypt.encrypt((str(form.password.data)))
-            #password=str(form.password.data)
+            #password = sha256_crypt.encrypt((str(form.password.data)))
+            password=str(form.password.data)
             c, conn = connection()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
@@ -123,6 +133,43 @@ def register_page():
 
     except Exception as e:
         return (str(e))
+
+@app.route('/login',methods=['GET','POST'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+    username = request.form.get('uname')
+    password = request.form.get('pwd')
+    #error = None
+    #registered_user = User.query.filter_by(username = uname,password=password).first()
+    records = login_table(username)
+
+    #if registered_user is None:
+        #flash('Username or password is invalid. Please check your credentials or Signup!','error')
+        # return redirect(url_for('login'))
+    # login_user(registered_user)
+
+    if len(records) == 0:
+        flash('Username or password is invalid. Please check your credentials or Signup!', 'error')
+        return redirect(url_for('login'))
+    else:
+        pwd = records[0][1];
+        if password == pwd:
+            flash('Logged in!')
+            return redirect(url_for('home'))
+        else:
+            flash('Try Again !')
+            return redirect(url_for('login'))
+
+
+
+    # if request.method == 'POST':
+    #    if username == 'uname' and password == 'pwd':
+    #         session['login'] = True
+    #         return redirect(url_for('home'))
+    #     else:
+    #         error ='Invalid credentials. Please try again'
+    # return render_template("login.html", error=error)
 
 
 @app.route('/story', methods=['POST', 'GET'])

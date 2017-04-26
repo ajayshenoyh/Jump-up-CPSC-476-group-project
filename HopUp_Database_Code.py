@@ -10,6 +10,13 @@ def create_user_table():
 def connection():
     c=conn.cursor()
     return c,conn
+
+def login_table(un):
+    log = conn.cursor()
+    log.execute("select UserName,PassWord from USERS where UserName=%s",(un,))
+    rows = log.fetchall()
+    return rows
+
 def create_project_table():
     curs = conn.cursor()
     curs.execute("create table if not exists PROJECT(ProjectID Integer,ProjectTitle text,UserName text,ProjectCategory text,ProjectSubCategory text,ProjectCountry text,ProjectImage text,ProjectDescription text,ProjectLocation text,ProjectFundDuration text,ProjectFundGoal text,Remaining text,StartTime text)")
