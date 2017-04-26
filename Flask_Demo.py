@@ -6,7 +6,7 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField
 # from flask_login import login_user, logout_user
 #login_manager = LoginManager()
 #login_manager.init_app(app)
-from Crypto.Cipher import AES
+from cryptography.fernet import Fernet
 #from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
@@ -108,12 +108,11 @@ def register_page():
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            obj = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
-            #password = sha256_crypt.encrypt((str(form.password.data)))
+            key = Fernet.generate_key()
+            cipher_suite = Fernet(key)
             passw=str(form.password.data)
-            password = obj.encrypt(passw)
-            #obj2 = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
-            #obj2.decrypt(ciphertext)
+            password = cipher_suite.encrypt(passw)
+            #plain_text = cipher_suite.decrypt(cipher_text)
             c, conn = connection()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
