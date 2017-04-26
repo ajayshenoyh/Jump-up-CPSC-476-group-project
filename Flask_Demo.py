@@ -102,8 +102,13 @@ def register_page():
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
+            key = Fernet.generate_key()
+            f = Fernet(key)
+            passw = str(form.password.data)
+            password = f.encrypt(b""+passw)
 
-            password=str(form.password.data)
+            #f.decrypt(token)
+
             #password = encrypt('password', passw)
             #plain_text = cipher_suite.decrypt(cipher_text)
             c, conn = connection()
