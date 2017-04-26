@@ -6,7 +6,7 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField
 # from flask_login import login_user, logout_user
 #login_manager = LoginManager()
 #login_manager.init_app(app)
-from simplecrypt import encrypt, decrypt
+import bcrypt
 #from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
@@ -109,8 +109,8 @@ def register_page():
             username = str(form.username.data)
             email = str(form.email.data)
 
-            passw=str(form.password.data)
-            password = encrypt('password', passw)
+            password=str(form.password.data)
+            #password = encrypt('password', passw)
             #plain_text = cipher_suite.decrypt(cipher_text)
             c, conn = connection()
 
