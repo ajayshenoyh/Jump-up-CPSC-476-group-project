@@ -36,6 +36,8 @@ app.config['SECRET_KEY'] = 'super secret key'
 ctx = app.app_context()
 # flask.g.projectTitl=''
 # ctx.push()
+key = Fernet.generate_key()
+f = Fernet(key)
 bootstrap = Bootstrap(app)
 try:
     create_user_table()
@@ -75,6 +77,7 @@ def login():
     elif request.method == 'POST':
         username = request.form.get('uname')
         password = request.form.get('pwd')
+        #password=f.decrypt(password) use this for password decryption
         user_details = validate_user(username)
         if len(user_details) == 0:
             flash("No user registered under this user name")
@@ -108,12 +111,11 @@ def register_page():
             username = str(form.username.data)
             email = str(form.email.data)
             #password=str(form.password.data)
-            key = Fernet.generate_key()
-            f = Fernet(key)
+
             passw = str(form.password.data)
             password = f.encrypt(b"" + passw)
 
-            # password=f.decrypt(password)
+
             c, conn = connections()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE username = %s)",(username,))
