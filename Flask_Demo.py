@@ -6,7 +6,8 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField
 # from flask_login import login_user, logout_user
 #login_manager = LoginManager()
 #login_manager.init_app(app)
-from cryptography.fernet import Fernet
+from cryptoshop import encryptstring
+from cryptoshop import decryptstring
 #from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
