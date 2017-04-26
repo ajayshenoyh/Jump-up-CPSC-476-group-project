@@ -107,10 +107,7 @@ def register_page():
             passw = str(form.password.data)
             password = f.encrypt(b""+passw)
 
-            #f.decrypt(token)
-
-            #password = encrypt('password', passw)
-            #plain_text = cipher_suite.decrypt(cipher_text)
+            password=f.decrypt(password)
             c, conn = connection()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
