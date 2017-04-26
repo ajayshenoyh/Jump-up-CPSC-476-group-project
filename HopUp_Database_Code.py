@@ -14,7 +14,7 @@ def validate_user(username):
     users = curs.fetchall()
     return users
 
-def connection():
+def connections():
     c=conn.cursor()
     return c,conn
 def create_project_table():

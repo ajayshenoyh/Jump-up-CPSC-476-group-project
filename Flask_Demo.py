@@ -87,21 +87,19 @@ def login():
 
 
 
-
-
-class RegistrationForm(Form):
-    username = TextField('Username', [validators.Length(min=4, max=20)])
-    email = TextField('Email Address', [validators.Length(min=6, max=50)])
-    password = PasswordField('New Password', [
-        validators.Required(),
-        validators.EqualTo('confirm', message='Passwords must match')
-    ])
-    confirm = PasswordField('Repeat Password')
-    accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
-                              [validators.Required()])
-
 @app.route('/register/', methods=["GET", "POST"])
 def register_page():
+    class RegistrationForm(Form):
+        username = TextField('Username', [validators.Length(min=4, max=20)])
+        email = TextField('Email Address', [validators.Length(min=6, max=50)])
+        password = PasswordField('New Password', [
+            validators.Required(),
+            validators.EqualTo('confirm', message='Passwords must match')
+        ])
+        confirm = PasswordField('Repeat Password')
+        accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
+                                  [validators.Required()])
+
     try:
         form = RegistrationForm(request.form)
 
@@ -110,7 +108,7 @@ def register_page():
             email = str(form.email.data)
             #password = sha256_crypt.encrypt((str(form.password.data)))
             password=str(form.password.data)
-            c, conn = connection()
+            c, conn = connections()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE username = %s)",(username,))
             if c.fetchone():
