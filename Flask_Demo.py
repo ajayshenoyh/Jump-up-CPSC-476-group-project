@@ -96,9 +96,11 @@ def login():
             pwd = user_details[0][1]
             if password == pwd:
                 Session['UserName'] = username
-                return user_details
+                print(user_details)
+                print(pwd)
+                return render_template('home.html')
             else:
-                return user_details
+                return render_template('login.html')
 
 
 
