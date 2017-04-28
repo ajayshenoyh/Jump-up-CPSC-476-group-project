@@ -87,14 +87,14 @@ def login():
     elif request.method == 'POST':
         username = request.form.get('uname')
         password = request.form.get('pwd')
-        password=f.decrypt(password)
+        decrpted_password=f.decrypt(password)
         user_details = validate_user(username)
         if len(user_details) == 0:
             flash("No user registered under this user name")
             return redirect(url_for('register_page'))
         else:
             pwd = user_details[0][1]
-            if password == pwd:
+            if decrpted_password == pwd:
                 Session['UserName'] = username
                 print(user_details)
                 print(pwd)
