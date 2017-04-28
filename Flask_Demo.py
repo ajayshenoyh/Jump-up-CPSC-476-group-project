@@ -93,7 +93,7 @@ def login():
             return redirect(url_for('register_page'))
         else:
             pwd = user_details[0][1]
-            print(pwd)
+            print(type(pwd))
             decrpted_password = f.decrypt(pwd)
             if password == decrpted_password:
                 Session['UserName'] = username
