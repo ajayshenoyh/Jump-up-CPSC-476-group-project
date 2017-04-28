@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="">
+    <list default="true" id="359cc3dd-937b-4253-a0db-583c62b52f83" name="Default" comment="Adding dashboard">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Flask_Demo.py" afterPath="$PROJECT_DIR$/Flask_Demo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,16 +27,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Flask_Demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="72" column="11" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
+            <state relative-caret-position="634">
+              <caret line="100" column="35" lean-forward="false" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
-                <marker date="1493401113258" expanded="true" signature="3815:3870" ph="Select EXIST... " />
-                <marker date="1493401113258" expanded="true" signature="3830:3866" ph="SELECT * FRO... USERS" />
-                <marker date="1493401113258" expanded="true" signature="4109:4175" ph="INSERT INTO USERS... " />
+                <marker date="1493401877772" expanded="true" signature="3782:3837" ph="Select EXIST... " />
+                <marker date="1493401877772" expanded="true" signature="3797:3833" ph="SELECT * FRO... USERS" />
+                <marker date="1493401877772" expanded="true" signature="4076:4142" ph="INSERT INTO USERS... " />
               </folding>
             </state>
           </provider>
@@ -105,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="project_overview.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -156,9 +157,9 @@
         <option value="$PROJECT_DIR$/HopUp_Database_Code.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/Flask_Demo.py" />
         <option value="$PROJECT_DIR$/static/css/custom.css" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/Flask_Demo.py" />
       </list>
     </option>
   </component>
@@ -499,13 +500,6 @@
       <option name="project" value="LOCAL" />
       <updated>1493100034551</updated>
     </task>
-    <task id="LOCAL-00069" summary="Changes in projects explore page">
-      <created>1493081737850</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1493081737850</updated>
-    </task>
     <task id="LOCAL-00070" summary="Changes in projects explore page">
       <created>1493081876734</created>
       <option name="number" value="00070" />
@@ -821,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493401542213</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Adding dashboard">
+      <created>1493401565657</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1493401565657</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TodoView">
@@ -920,9 +921,9 @@
           <caret line="225" column="38" lean-forward="true" selection-start-line="225" selection-start-column="38" selection-end-line="225" selection-end-column="38" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493401113258" expanded="true" signature="3815:3870" ph="Select EXIST... " />
-            <marker date="1493401113258" expanded="true" signature="3830:3866" ph="SELECT * FRO... USERS" />
-            <marker date="1493401113258" expanded="true" signature="4109:4175" ph="INSERT INTO USERS... " />
+            <marker date="1493401877772" expanded="true" signature="3782:3837" ph="Select EXIST... " />
+            <marker date="1493401877772" expanded="true" signature="3797:3833" ph="SELECT * FRO... USERS" />
+            <marker date="1493401877772" expanded="true" signature="4076:4142" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1027,9 +1028,9 @@
           <caret line="225" column="14" lean-forward="true" selection-start-line="225" selection-start-column="14" selection-end-line="225" selection-end-column="14" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493401113258" expanded="true" signature="3815:3870" ph="Select EXIST... " />
-            <marker date="1493401113258" expanded="true" signature="3830:3866" ph="SELECT * FRO... USERS" />
-            <marker date="1493401113258" expanded="true" signature="4109:4175" ph="INSERT INTO USERS... " />
+            <marker date="1493401877772" expanded="true" signature="3782:3837" ph="Select EXIST... " />
+            <marker date="1493401877772" expanded="true" signature="3797:3833" ph="SELECT * FRO... USERS" />
+            <marker date="1493401877772" expanded="true" signature="4076:4142" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1133,9 +1134,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493401113258" expanded="true" signature="3815:3870" ph="Select EXIST... " />
-            <marker date="1493401113258" expanded="true" signature="3830:3866" ph="SELECT * FRO... USERS" />
-            <marker date="1493401113258" expanded="true" signature="4109:4175" ph="INSERT INTO USERS... " />
+            <marker date="1493401877772" expanded="true" signature="3782:3837" ph="Select EXIST... " />
+            <marker date="1493401877772" expanded="true" signature="3797:3833" ph="SELECT * FRO... USERS" />
+            <marker date="1493401877772" expanded="true" signature="4076:4142" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1147,9 +1148,9 @@
           <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493401113258" expanded="true" signature="3815:3870" ph="Select EXIST... " />
-            <marker date="1493401113258" expanded="true" signature="3830:3866" ph="SELECT * FRO... USERS" />
-            <marker date="1493401113258" expanded="true" signature="4109:4175" ph="INSERT INTO USERS... " />
+            <marker date="1493401877772" expanded="true" signature="3782:3837" ph="Select EXIST... " />
+            <marker date="1493401877772" expanded="true" signature="3797:3833" ph="SELECT * FRO... USERS" />
+            <marker date="1493401877772" expanded="true" signature="4076:4142" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
@@ -1345,24 +1346,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="72" column="11" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-            <marker date="1493401113258" expanded="true" signature="3815:3870" ph="Select EXIST... " />
-            <marker date="1493401113258" expanded="true" signature="3830:3866" ph="SELECT * FRO... USERS" />
-            <marker date="1493401113258" expanded="true" signature="4109:4175" ph="INSERT INTO USERS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
           <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1374,12 +1372,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/project_overview.html">
+    <entry file="file://$PROJECT_DIR$/Flask_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="634">
+          <caret line="100" column="35" lean-forward="false" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#74#0" expanded="true" />
+            <marker date="1493401877772" expanded="true" signature="3782:3837" ph="Select EXIST... " />
+            <marker date="1493401877772" expanded="true" signature="3797:3833" ph="SELECT * FRO... USERS" />
+            <marker date="1493401877772" expanded="true" signature="4076:4142" ph="INSERT INTO USERS... " />
           </folding>
         </state>
       </provider>
