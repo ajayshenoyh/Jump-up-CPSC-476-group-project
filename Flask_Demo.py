@@ -87,8 +87,7 @@ def login():
     elif request.method == 'POST':
         username = request.form.get('uname')
         password = request.form.get('pwd')
-        password = b""
-        decrpted_password = f.decrypt(password)
+        decrpted_password = f.decrypt(b"" + password)
         user_details = validate_user(username)
         if len(user_details) == 0:
             flash("No user registered under this user name")
