@@ -63,6 +63,16 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route('/dashboard')
+def dashboard():
+    un = ""
+    try:
+        un = session['UserName']
+        projects = search_projects_by_username(un)
+        return render_template('dashboard.html',projects)
+    except:
+        return render_template('login.html')
+
 
 @app.route('/app_name')
 def app_context_learning():
