@@ -88,6 +88,7 @@ def login():
         username = request.form.get('uname')
         password = request.form.get('pwd')
         password = "".encode()
+        print(password)
         decrpted_password = f.decrypt(password)
         user_details = validate_user(username)
         if len(user_details) == 0:
