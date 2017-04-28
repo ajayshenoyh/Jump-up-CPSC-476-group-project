@@ -100,6 +100,8 @@ def login():
                 print(pwd)
                 return render_template('home.html')
             else:
+                print(user_details)
+                print(pwd)
                 return render_template('login.html')
 
 
