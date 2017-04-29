@@ -72,7 +72,6 @@ def dashboard():
         print(un)
         if un != "":
             projects = search_projects_by_username(un)
-            print(projects)
             return render_template('dashboard.html',projects=projects)
 
 @app.route('/app_name')
