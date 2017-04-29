@@ -98,7 +98,7 @@ def login():
             else:
                 pwd = str(user_details[0][1])
                 print(pwd)
-                pwdbytes = pwd.encode(encoding='UTF-8')
+                pwdbytes = str.encode(pwd)
                 print(pwdbytes)
                 print(type(pwdbytes))
                 #print(pwd.encode(encoding='UTF-8'))
