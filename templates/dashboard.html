@@ -78,11 +78,11 @@
                     <h1 class="intro-text">My Projects</h1>
                     {% for project in projects %}
                         <div class="floating-box" style="float: left;width: 200px;height: 150px;margin: 10px;border: 3px solid #73AD21;">
-                             <h3>Project Category: {{project[3]}}</h3>
-                             <p>Sub Category: {{ project[4]}}</p>
-                             <p>{{project[7]}}</p>
-                             <h4> Location: {{project[8]}} </h4>
-                             <h5> Fund duration: {{project[9]}} </h5>
+                             <h6>Project Category: {{project[3]}}</h6>
+                             <h6>Sub Category: {{ project[4]}}</h6>
+                             <h6>{{project[7]}}</h6>
+                             <h6> Location: {{project[8]}} </h6>
+                             <h6> Fund duration: {{project[9]}} </h6>
                              <h6> Fund Goal: {{project[10]}} </h6>
                              <h6> Remaining: {{ project[11] }}</h6>
                              <a href="/delete_project" ></a>
