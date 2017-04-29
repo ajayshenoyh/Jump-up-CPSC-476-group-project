@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, make_response
-from flask import flash
+from flask import flash,session
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
