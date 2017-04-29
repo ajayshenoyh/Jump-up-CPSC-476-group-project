@@ -81,7 +81,7 @@ def app_context_learning():
 
 @app.route('/delete_project',methods=['GET','POST'])
 def delete_project():
-    projectID = request.form['projectID']
+    projectID = request.args.get('projectID')
     message = "Deleting project " + projectID
     print(projectID)
     return "Deleting ..."
