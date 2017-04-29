@@ -96,7 +96,7 @@ def login():
                 flash("No user registered under this user name")
                 return redirect(url_for('register_page'))
             else:
-                pwd = user_details[0][1]
+                pwd = str(user_details[0][1])
                 print(pwd)
                 pwdbytes = pwd.encode(encoding='UTF-8')
                 print(pwdbytes)
