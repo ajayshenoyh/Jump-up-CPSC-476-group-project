@@ -73,6 +73,8 @@ def dashboard():
         if un != "":
             projects = search_projects_by_username(un)
             return render_template('dashboard.html',projects=projects)
+        else:
+            return render_template('login.html')
 
 @app.route('/app_name')
 def app_context_learning():
