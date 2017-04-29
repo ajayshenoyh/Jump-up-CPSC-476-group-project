@@ -88,8 +88,7 @@ def login():
         username = request.form.get('uname')
         password = request.form.get('pwd')
         print(password)
-        token = f.encrypt(b"" + password)
-        print(token)
+        print(password.encode(encoding='UTF-8'))
         #print(password)
         user_details = validate_user(username)
         if len(user_details) == 0:
@@ -101,14 +100,14 @@ def login():
             #print(pwd.encode(encoding='UTF-8'))
             #print(pwd.decode(encoding='UTF-8'))
 
-            decrpted_password = f.decrypt(pwd)
+            '''decrpted_password = f.decrypt(pwd)
             if password == decrpted_password:
                 session['UserName'] = username
                 return render_template('home.html')
             else:
                 print(user_details)
                 print(pwd)
-                return render_template('login.html')
+                return render_template('login.html')'''
 
 
 
