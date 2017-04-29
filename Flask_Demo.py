@@ -98,6 +98,7 @@ def login():
             else:
                 pwd = user_details[0][1]
                 print(pwd)
+                print(type(pwd))
                 #print(pwd.encode(encoding='UTF-8'))
                 #print(pwd.decode(encoding='UTF-8'))
                 decrpted_password = f.decrypt(pwd)
@@ -133,11 +134,10 @@ def register_page():
             #password=str(form.password.data)
 
             passw = str(form.password.data)
-            print(passw)
-            password = f.encrypt(b"" + passw)
-            print(password)
-            depwd = f.decrypt(password)
-            print(depwd)
+            #print(passw)
+            passwordbytes = password.encode(encoding='UTF-8')
+            #print(passwordbytes)
+            password = f.encrypt(passwordbytes)
 
             c, conn = connections()
 
