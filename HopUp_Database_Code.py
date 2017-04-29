@@ -27,7 +27,7 @@ def add_project(pid,ptitle,un,pcat,psubcat,pcountry,pimage,pdesc,ploc,pfunddur,p
     curs.execute("insert into PROJECT values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(pid,ptitle,un,pcat,psubcat,pcountry,pimage,pdesc,ploc,pfunddur,pfundgoal,rem,st))
     conn.commit()
 
-def delete_project(pid):
+def delete_project_with_id(pid):
     curs = conn.cursor()
     curs.execute("delete from PROJECT where ProjectID=%s",(pid,))
     conn.commit()

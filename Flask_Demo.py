@@ -83,7 +83,7 @@ def app_context_learning():
 def delete_project():
     projectID = request.args.get('projectID')
     print(projectID)
-    delete_project(projectID)
+    delete_project_with_id(projectID)
     dashboard()
 
 @app.route('/login',methods=['POST','GET'])
