@@ -102,7 +102,7 @@ def login():
 
             decrpted_password = f.decrypt(pwd)
             if password == decrpted_password:
-                Session['UserName'] = username
+                session['UserName'] = username
                 return render_template('home.html')
             else:
                 print(user_details)
