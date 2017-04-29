@@ -64,17 +64,16 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route('/dashboard')
+@app.route('/dashboard',methods=['GET','POST'])
 def dashboard():
-    un = ""
-    try:
+    if request.method == 'GET':
+        un = ""
         un = session['UserName']
         print(un)
-        projects = search_projects_by_username(un)
-        return render_template('dashboard.html',projects)
-    except:
-        return render_template('login.html')
-
+        if un != "":
+            projects = search_projects_by_username(un)
+            print(projects)
+            return render_template('dashboard.html',projects)
 
 @app.route('/app_name')
 def app_context_learning():
