@@ -1,5 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, make_response
 from flask import flash
+from wtforms import Form, TextField, validators, PasswordField, BooleanField
+#from passlib.hash import sha256_crypt
+#from psycopg2.extensions import adapt as thwart
 from datetime import datetime
 from flask import request
 from flask import current_app
@@ -13,6 +16,7 @@ import psycopg2
 import base64
 
 from email.mime.text import MIMEText
+
 
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
@@ -33,6 +37,7 @@ ctx = app.app_context()
 # ctx.push()
 bootstrap = Bootstrap(app)
 try:
+    create_user_table()
     create_project_table()
     create_reward_table()
     create_personal_info_table()
@@ -79,6 +84,52 @@ def login():
 #def loginback():
 #    uname = request.form.get('uname')
 #    return "Hello %s" % (uname)
+
+
+class RegistrationForm(Form):
+    username = TextField('Username', [validators.Length(min=4, max=20)])
+    email = TextField('Email Address', [validators.Length(min=6, max=50)])
+    password = PasswordField('New Password', [
+        validators.Required(),
+        validators.EqualTo('confirm', message='Passwords must match')
+    ])
+    confirm = PasswordField('Repeat Password')
+    accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
+                              [validators.Required()])
+
+@app.route('/register/', methods=["GET", "POST"])
+def register_page():
+    try:
+        form = RegistrationForm(request.form)
+
+        if request.method == "POST" and form.validate():
+            username = str(form.username.data)
+            email = str(form.email.data)
+            #password = sha256_crypt.encrypt((str(form.password.data)))
+            password=str(form.password.data)
+            c, conn = connection()
+
+            c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
+            if c.fetchone()[0]:
+
+                return render_template('register.html', form=form)
+
+            else:
+                c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
+                conn.commit()
+                flash('Thanks for registering!')
+                c.close()
+                #gc.collect()
+
+                #session['logged_in'] = True
+                #session['username'] = username
+
+                return redirect(url_for('login'))
+
+        return render_template("register.html", form=form)
+
+    except Exception as e:
+        return (str(e))
 
 
 @app.route('/story', methods=['POST', 'GET'])

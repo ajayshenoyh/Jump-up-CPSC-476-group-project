@@ -1,163 +1,109 @@
-{% extends 'bootstrap/base.html'%}
-{% block title %}HopUp User Login{% endblock %}
-{% block navbar %}
-<div class="navbar navbar-inverse" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle"
-      data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Home</a>
-  </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li><a href="/login">Login</a></li>
-      <li><a href="/project_register">Start a new Project</a></li>
-    </ul>
-  </div>
-</div>
-</div>
-{% endblock %}
-{%block content%}
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <script type="text/javascript">
-      function donateAmount(){
-        var projectid = document.getElementById("cell1");
-        var projectname = document.getElementById("cell2");
-        var remaining = document.getElementById("cell12")
-        localStorage.setItem('projectId',projectid);
-        localStorage.setItem('projectTitle',projectname);
-        localStorage.setItem('remaining',remaining);
-        window.location.href="/donate";
-      }
-  </script>
-  <style type="text/css">
-    .Table
-    {
-        display: table;
-    }
-    .Title
-    {
-        display: table-caption;
-        text-align: center;
-        font-weight: bold;
-        font-size: larger;
-    }
-    .Heading
-    {
-        display: table-row;
-        font-weight: bold;
-        text-align: center;
-    }
-    .Row
-    {
-        display: table-row;
-    }
-    .Cell
-    {
-        display: table-cell;
-        border: solid;
-        border-width: thin;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-  </style>
-  <div class="container" align="center">
-    <h1>Project Created Successfully</h1>
-  </div>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jump Up</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="/static/css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-  {% for project in projectList %}
-  <div class="Table">
-    <div class="Title">
-        <p></p>
-    </div>
-    <div class="Heading">
-        <div class="Cell">
-            <p>ProjectID</p>
-        </div>
-        <div class="Cell">
-            <p>ProjectTitle</p>
-        </div>
-        <div class="Cell">
-            <p>Project Category</p>
-        </div>
-        <div class="Cell">
-            <p>Project Sub Category</p>
-        </div>
-        <div class="Cell">
-            <p>Country</p>
-        </div>
-        <div class="Cell">
-            <p>Project Image link</p>
-        </div>
-        <div class="Cell">
-            <p>Project Description</p>
-        </div>
-        <div class="Cell">
-            <p>Project Location</p>
-        </div>
-        <div class="Cell">
-            <p>Project fund duration</p>
-        </div>
-        <div class="Cell">
-            <p>Project fund goal</p>
-        </div>
-        <div class="Cell">
-            <p>Project Location</p>
-        </div>
-        <div class="Cell">
-            <p>Remaining fund</p>
-        </div>
-    </div>
-    <div class="Row" onclick="donateAmount()">
-        <div class="Cell">
-            <p id = "cell1" name="cell1">{{project[0]}}</p>
-        </div>
-        <div class="Cell">
-            <p id = "cell2" name="cell2">{{project[1]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell3" name="cell3">{{project[2]}}</p>
-        </div>
-        <div class="Cell" >
-            <p id="cell4" name="cell4">{{project[3]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell5" name="cell5">{{project[4]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell6" name="cell6">{{project[5]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell7" name="cell7">{{project[6]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell8" name="cell8">{{project[7]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell9" name="cell9">{{project[8]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell10" name="cell10">{{project[9]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell11" name="cell11">{{project[10]}}</p>
-        </div>
-        <div class="Cell">
-            <p id="cell12" name="cell12">{{project[12]}}</p>
-        </div>
-    </div>
+{% block body %}
 
-</div>
-{% endfor %}
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>Jump up</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/explore"><h4>Explore</h4></a>
+                    </li>
+                    <li> <a class="page-scroll" href="/register"><h4>User Registrations</h4></a> </li>
+                    <li> <a class="page-scroll" href="/login"><h4>Login</h4></a> </li>
+                    <li>
+                        <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1 class="brand-heading">Jump up</h1>
+                      <h1 class="intro-text">Projects at a glance</h1>
+
+                       {% for project in projectList %}
+                            <div style="background-color:black;color:white;padding:20px;" >
+                                <a href="/donate" onclick="localStorage.setItem('projectID',{{ project[0] }})"><h2>{{project[0]}}. {{project[1]}}</h2></a>
+                                <h3>Project Category: {{project[3]}}</h3>
+                                <p>Sub Category: {{ project[4]}}</p>
+                                <p>{{project[7]}}</p>
+                                <h4> Location: {{project[8]}} </h4>
+                                <h5> Fund duration: {{project[9]}} </h5>
+                                <h6> Fund Goal: {{project[10]}} </h6>
+                                <h6> Remaining: {{ project[11] }}</h6>
+                            </div>
+                       {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Jump Up</h2>
+                <p>Jump Up helps the start-up companies and the people with innovative ideas to showcase their projects, interact with the consumers and raise funds that are needed for their projects. We have implemented the backend of the website called kickstarter.com <a href="https://www.kickstarter.com/"></p>
+                <p>This website features innovative projects <a href="/explore">Explore the projects</a> Just login and register your project. <a href="/login">login here</a>.</p>
+                <p>Your project will be showcased in our explorers forum.<a href="/explore">Explorer's forum</a> Users can pledge to various projects in explorer's forum.</p>
+            </div>
+        </div>
+    </section>
 </body>
+
+{% endblock %}
 </html>
-{%endblock%}

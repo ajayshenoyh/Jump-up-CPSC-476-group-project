@@ -1,4 +1,4 @@
-{%block content%}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +10,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registration Page</title>
-	<script type="text/javascript">
+    <title>Jump Up</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="/static/css/grayscale.min.css" rel="stylesheet">
+    <script type="text/javascript">
 
    function configureFundGoal(country,fund){
         switch(country.value){
@@ -238,30 +249,16 @@
       return false;
     }
 
-  }
+	}
 
-</script>
+	</script>
 
-
-    <!-- Bootstrap Core CSS -->
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="/static/css/grayscale.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
+{% block body %}
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -284,6 +281,7 @@
                     <li>
                         <a class="page-scroll" href="/explore"><h4>Explore</h4></a>
                     </li>
+                    <li> <a class="page-scroll" href="/register"><h4>User Registrations</h4></a> </li>
                     <li> <a class="page-scroll" href="/login"><h4>Login</h4></a> </li>
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
@@ -294,140 +292,122 @@
         </div>
         <!-- /.container -->
     </nav>
-
     <!-- Intro Header -->
-   <form method="post" name="PRojectRegistrationForm" action="/project_register" onsubmit="return validateProjectRegistrationForm()">
-		<div class="form-group" align="center">
-			<label for="start"><h1>Getting Started with the project</h1></label>
-		</div>
-		<div class="form-group">
-			<label for="category">1. Choose a project Category</label>
-			<select id="ddl1" name="ddl1" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
-			<option>Category</option>
-			<option value="arts">Arts</option>
-			<option value="comics">Comics</option>
-			<option value="crafts">Crafts</option>
-			<option value="games">Games</option>
-			<option value="dance">Dance</option>
-			<option value="design">Design</option>
-			<option value="fashion">Fashion</option>
-			<option value="food">Food</option>
-			<option value="filmvideo">Film & Video</option>
-			<option value="journalism">Journalism</option>
-			<option value="music">Music</option>
-			<option value="photography">Photography</option>
-			<option value="publishing">Publishing</option>
-			<option value="technology">Technology</option>
-			<option value="theatre">Theatre</option>
-			</select><br><br>
-			<label for="subCategory">Sub Category</label>
-			<select id="ddl2" name="ddl2">
-			<option>Sub Category</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label for="title">2. Project title</label>
-			<input type="text" class="form-control" id="project_title" name="project_title" placeholder="Project title should go in here" required>
-		</div>
-		<div class="form-group">
-	    		<label for="country">3. Country of Residence</label>
-			<select class="Country" id="projectCountry" name="projectCountry" onchange="configureFundGoal(this,document.getElementById('fundGoal'))">
-			<option value="australia">Australia</option>
-			<option value="austria">Austria</option>
-			<option value="belgium">Belgium</option>
-			<option value="canada">Canada</option>
-			<option value="denmark">Denmark</option>
-			<option value="france">France</option>
-			<option value="germany">Germany</option>
-			<option value="hongkong">Hongkong</option>
-			<option value="ireland">Ireland</option>
-			<option value="italy">Italy</option>
-			<option value="india">India</option>
-			<option value="mexico">Mexico</option>
-			<option value="netherlands">Netherlands</option>
-			<option value="newzealand">New Zealand</option>
-			<option value="norway">Norway</option>
-			<option value="singapore">Singapore</option>
-			<option value="spain">Spain</option>
-			<option value="sweden">Sweden</option>
-			<option value="switzerland">Switzerland</option>
-			<option value="uk">United Kingdom</option>
-			<option value="us">United States</option>
-			</select><br><br>
-		</div>
-    <div class="form-group">
-	    		<label for="project image">4. Project Image</label>
-			<input type="text" class="form-control" id="project_image" name="project_image">
-      <p> Please give the link of your project's image </p>
-		</div>
-		<div class="form-group">
-	    		<label for="projectDescription">5. Project Description</label>
-			<input type="text" class="form-control" id="project_description" name="project_description" placeholder="Breifly describe the work in your project">
-		</div>
-		<div class="form-group">
-	    		<label for="projectLocation">6. Project Location</label>
-			<input type="text" class="form-control" id="project_location" name="project_location" placeholder="Project Location">
-		</div>
-		<div class="form-group">
-			 <label for="fundDuration">7. Funding Duration</label>
-       <p> Please specify the duration in number of days, just the number </p>
-			 <input type="text" class="form-control" id="fund_duration" name="fund_duration" placeholder=" " required>
-		</div>
-		<div class="form-group">
-		 	   <label for="fundingGoal">8. Fund Goal</label>
-			   <input type="text" class="form-control" id="fundGoal" name="fundGoal" placeholder="Specify your fund goal starting from $0" required>
-	  </div>
-		<div class="form-group">
-		 	   <label for="projectLocation">9. Location of project</label>
-			   <input type="text" class="form-control" id="project_exact_location" placeholder="Specify the exact location of your project">
-	  </div>
-		<form method="post" action="/invite">
-			<div class="form-group">
-				<label class="sr-only" for="projectCollaborators">10. Project Collaborators</label>
-				<div class="input-group">
-					<p>11. Invite your team mates to help you with project</p>
-			</div>
-		 	<button type="submit" class="btn-btn-primary"><a href="/invite">Add Teammates</a></button>
-	  </form>
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1 class="brand-heading">Jump up</h1>
+                      <h1 class="intro-text">Start a new project</h1>
+
+						<form method="post" name="ProjectRegistrationForm" action="/project_register" onsubmit="return validateProjectRegistrationForm()">
+							<dl>
+						          <label for="category">1. Choose a project Category</label>
+									<select style="color:darkslategray" id="ddl1" name="ddl1" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+									<option>Category</option>
+									<option style="color:darkslategray" value="arts">Arts</option>
+									<option style="color:darkslategray" value="comics">Comics</option>
+									<option style="color:darkslategray" value="crafts">Crafts</option>
+									<option style="color:darkslategray" value="games">Games</option>
+									<option style="color:darkslategray" value="dance">Dance</option>
+									<option style="color:darkslategray" value="design">Design</option>
+									<option style="color:darkslategray" value="fashion">Fashion</option>
+									<option style="color:darkslategray" value="food">Food</option>
+									<option style="color:darkslategray" value="filmvideo">Film & Video</option>
+									<option style="color:darkslategray" value="journalism">Journalism</option>
+									<option style="color:darkslategray" value="music">Music</option>
+									<option style="color:darkslategray" value="photography">Photography</option>
+									<option style="color:darkslategray" value="publishing">Publishing</option>
+									<option style="color:darkslategray" value="technology">Technology</option>
+									<option style="color:darkslategray" value="theatre">Theatre</option>
+									</select><br><br>
+									<label for="subCategory">Sub Category</label>
+									<select style="color:darkslategray" id="ddl2" name="ddl2">
+									<option style="color:darkslategray">Sub Category</option>
+									</select>
+                                    <br><br>
+									<label for="title">2. Project title</label>
+									<input type="text" class="form-control" id="project_title" name="project_title" placeholder="Project title should go in here" required>
+                                    <br>
+									<label for="country">3. Country of Residence</label>
+									<select style="color:darkslategray" class="Country" id="projectCountry" name="projectCountry" onchange="configureFundGoal(this,document.getElementById('fundGoal'))">
+									<option style="color:darkslategray" value="australia">Australia</option>
+									<option style="color:darkslategray" value="austria">Austria</option>
+									<option style="color:darkslategray" value="belgium">Belgium</option>
+									<option style="color:darkslategray" value="canada">Canada</option>
+									<option style="color:darkslategray" value="denmark">Denmark</option>
+									<option style="color:darkslategray" value="france">France</option>
+									<option style="color:darkslategray" value="germany">Germany</option>
+									<option style="color:darkslategray" value="hongkong">Hongkong</option>
+									<option style="color:darkslategray" value="ireland">Ireland</option>
+									<option style="color:darkslategray" value="italy">Italy</option>
+									<option style="color:darkslategray" value="india">India</option>
+									<option style="color:darkslategray" value="mexico">Mexico</option>
+									<option style="color:darkslategray" value="netherlands">Netherlands</option>
+									<option style="color:darkslategray" value="newzealand">New Zealand</option>
+									<option style="color:darkslategray" value="norway">Norway</option>
+									<option style="color:darkslategray" value="singapore">Singapore</option>
+									<option style="color:darkslategray" value="spain">Spain</option>
+									<option style="color:darkslategray" value="sweden">Sweden</option>
+									<option style="color:darkslategray" value="switzerland">Switzerland</option>
+									<option style="color:darkslategray" value="uk">United Kingdom</option>
+									<option style="color:darkslategray" value="us">United States</option>
+									</select><br><br>
+									<label for="project image">4. Project Image</label>
+									<input type="text" class="form-control" id="project_image" name="project_image">
+									<p> Please give the link of your project's image </p>
+                                <br>
+									<label for="projectDescription">5. Project Description</label>
+									<input type="text" class="form-control" id="project_description" name="project_description" placeholder="Breifly describe the work in your project">
+                                <br>
+									<label for="projectLocation">6. Project Location</label>
+									<input type="text" class="form-control" id="project_location" name="project_location" placeholder="Project Location">
+                                <br>
+									<label for="fundDuration">7. Funding Duration</label>
+									<p> Please specify the duration in number of days, just the number </p>
+									<input type="text" class="form-control" id="fund_duration" name="fund_duration" placeholder=" " required>
+                                <br>
+									<label for="fundingGoal">8. Fund Goal</label>
+									<input type="text" class="form-control" id="fundGoal" name="fundGoal" placeholder="Specify your fund goal starting from $0" required>
+                                <br>
+									<label for="projectLocation">9. Location of project</label>
+									<input type="text" class="form-control" id="project_exact_location" placeholder="Specify the exact location of your project">
+									<form method="post" action="/invite">
+									<div class="form-group">
+										<label class="sr-only" for="projectCollaborators">10. Project Collaborators</label>
+									<p>11. Invite your team mates to help you with project</p>
+									</div>
+									<button style="color:darkslategray" type="submit" class="btn-btn-primary"><a href="/invite">Add Teammates</a></button>
+									</form>
+									<br>
+									<br>
+									<button style="color:darkslategray" align="center" type="submit" class="btn btn-default">Go ahead and add rewards to fund donors</button>
+
     <br><br>
-    <div class="form-group">
-    <button align="center" type="submit" class="btn btn-default">Go ahead and add rewards to fund donors</button>
-  </div>
-  </form>
-
-<<<<<<< HEAD
-    
-  
-=======
 
 
->>>>>>> 556822fbfbd4706b40c49980095ed0615a0e332c
+									</dl>
+						</form>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright Team RAISA; Our Website 2017</p>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="/static/vendor/jquery/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="/static/js/grayscale.min.js"></script>
-
+    </header>
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Jump Up</h2>
+                <p>Jump Up helps the start-up companies and the people with innovative ideas to showcase their projects, interact with the consumers and raise funds that are needed for their projects. We have implemented the backend of the website called kickstarter.com <a href="https://www.kickstarter.com/"></p>
+                <p>This website features innovative projects <a href="/explore">Explore the projects</a> Just login and register your project. <a href="/login">login here</a>.</p>
+                <p>Your project will be showcased in our explorers forum.<a href="/explore">Explorer's forum</a> Users can pledge to various projects in explorer's forum.</p>
+            </div>
+        </div>
+    </section>
 </body>
 
+{% endblock %}
 </html>
-{%endblock%}
-
-
