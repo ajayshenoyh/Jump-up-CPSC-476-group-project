@@ -88,8 +88,8 @@ def login():
         username = request.form.get('uname')
         password = request.form.get('pwd')
         print(password)
-        password = f.encrypt(b"" + password)
-        print(password)
+        #password = f.encrypt(b"" + password)
+        #print(password)
         user_details = validate_user(username)
         if len(user_details) == 0:
             flash("No user registered under this user name")
@@ -98,7 +98,7 @@ def login():
             pwd = user_details[0][1]
             print(pwd)
             #print(pwd.encode(encoding='UTF-8'))
-            # print(pwd.decode(encoding='UTF-8'))
+            #print(pwd.decode(encoding='UTF-8'))
 
             decrpted_password = f.decrypt(pwd)
             if password == decrpted_password:
@@ -133,8 +133,11 @@ def register_page():
             #password=str(form.password.data)
 
             passw = str(form.password.data)
+            print(passw)
             password = f.encrypt(b"" + passw)
-
+            print(password)
+            depwd = f.decrypt(password)
+            print(depwd)
 
             c, conn = connections()
 
