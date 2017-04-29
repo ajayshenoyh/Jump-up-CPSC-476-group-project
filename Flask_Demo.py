@@ -69,6 +69,7 @@ def dashboard():
     un = ""
     try:
         un = session['UserName']
+        print(un)
         projects = search_projects_by_username(un)
         return render_template('dashboard.html',projects)
     except:
