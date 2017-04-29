@@ -72,10 +72,18 @@
 
     <!-- Intro Header -->
     <header class="intro">
-
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
                     <h1 class="intro-text">My Projects</h1>
                     {% for project in projects %}
-                        <div class="floating-box">
+                        <div class="floating-box" style=".floating-box {
+            float: left;
+            width: 150px;
+            height: 75px;
+            margin: 10px;
+            border: 3px solid #73AD21;
+        }">
                              <h3>Project Category: {{project[3]}}</h3>
                              <p>Sub Category: {{ project[4]}}</p>
                              <p>{{project[7]}}</p>
@@ -85,7 +93,9 @@
                              <h6> Remaining: {{ project[11] }}</h6>
                         </div>
                     {% endfor %}
-
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- About Section -->
