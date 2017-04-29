@@ -79,6 +79,9 @@ def app_context_learning():
     print(app.url_map)
     return current_app.name
 
+@app.route('/delete_project')
+def delete_project():
+    return "Deleting Project"
 
 @app.route('/login',methods=['POST','GET'])
 def login():

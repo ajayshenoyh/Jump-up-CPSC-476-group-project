@@ -27,6 +27,7 @@ def add_project(pid,ptitle,un,pcat,psubcat,pcountry,pimage,pdesc,ploc,pfunddur,p
     curs.execute("insert into PROJECT values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(pid,ptitle,un,pcat,psubcat,pcountry,pimage,pdesc,ploc,pfunddur,pfundgoal,rem,st))
     conn.commit()
 
+
 def view_projects():
     curs = conn.cursor()
     curs.execute("select * from PROJECT")
