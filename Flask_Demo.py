@@ -4,6 +4,7 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
 from cryptography.fernet import Fernet
+from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 from flask import request
 from flask import current_app
@@ -96,11 +97,10 @@ def login():
                 flash("No user registered under this user name")
                 return redirect(url_for('register_page'))
             else:
-                pwd = str(user_details[0][1])
+                pwd = user_details[0][1]
                 print(pwd)
-                pwdbytes = str.encode(pwd)
-                decrpted_password = f.decrypt(pwdbytes)
-                if password == decrpted_password:
+                password_check = check_password_hash(pwd,password)
+                if password_check:
                     session['UserName'] = username
                     return render_template('home.html')
                 else:
@@ -130,12 +130,13 @@ def register_page():
             username = str(form.username.data)
             email = str(form.email.data)
             #password=str(form.password.data)
-
             passw = str(form.password.data)
             #print(passw)
-            passwordbytes = passw.encode(encoding='UTF-8')
+            #passwordbytes = passw.encode(encoding='UTF-8')
             #print(passwordbytes)
-            password = f.encrypt(passwordbytes)
+            #password = f.encrypt(passwordbytes)
+
+            password = generate_password_hash(passw)
 
             c, conn = connections()
 
