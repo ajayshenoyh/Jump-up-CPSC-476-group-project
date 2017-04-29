@@ -87,6 +87,9 @@ def login():
     elif request.method == 'POST':
         username = request.form.get('uname')
         password = request.form.get('pwd')
+        print(password)
+        password = f.encrypt(b"" + passw)
+        print(password)
         user_details = validate_user(username)
         if len(user_details) == 0:
             flash("No user registered under this user name")
@@ -96,6 +99,7 @@ def login():
             print(pwd)
             #print(pwd.encode(encoding='UTF-8'))
             # print(pwd.decode(encoding='UTF-8'))
+
             decrpted_password = f.decrypt(pwd)
             if password == decrpted_password:
                 Session['UserName'] = username
