@@ -94,9 +94,9 @@ def login():
         else:
             pwd = user_details[0][1]
             print(pwd)
-            print(pwd.encode(encoding='UTF-8'))
-            print(pwd.decode(encoding='UTF-8'))
-            decrpted_password = f.decrypt(pwd.encode(encoding='UTF-8'))
+            #print(pwd.encode(encoding='UTF-8'))
+            # print(pwd.decode(encoding='UTF-8'))
+            decrpted_password = f.decrypt(pwd)
             if password == decrpted_password:
                 Session['UserName'] = username
                 return render_template('home.html')
