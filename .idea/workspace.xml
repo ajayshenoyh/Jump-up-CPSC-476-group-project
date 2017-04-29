@@ -45,8 +45,8 @@
       <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="88" column="91" lean-forward="false" selection-start-line="88" selection-start-column="91" selection-end-line="88" selection-end-column="91" />
+            <state relative-caret-position="477">
+              <caret line="79" column="55" lean-forward="false" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -482,13 +482,6 @@
       <option name="presentableId" value="Default" />
       <updated>1492902709205</updated>
     </task>
-    <task id="LOCAL-00133" summary="Adding dashboard">
-      <created>1493444212200</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1493444212200</updated>
-    </task>
     <task id="LOCAL-00134" summary="Adding dashboard">
       <created>1493444578274</created>
       <option name="number" value="00134" />
@@ -825,7 +818,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493504438055</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Adding dashboard">
+      <created>1493504565123</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1493504565123</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1382,8 +1382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="88" column="91" lean-forward="false" selection-start-line="88" selection-start-column="91" selection-end-line="88" selection-end-column="91" />
+        <state relative-caret-position="477">
+          <caret line="79" column="55" lean-forward="false" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
