@@ -82,9 +82,9 @@ def app_context_learning():
 @app.route('/delete_project',methods=['GET','POST'])
 def delete_project():
     projectID = request.args.get('projectID')
-    message = "Deleting project " + projectID
     print(projectID)
-    return "Deleting ..."
+    delete_project(projectID)
+    dashboard()
 
 @app.route('/login',methods=['POST','GET'])
 def login():
