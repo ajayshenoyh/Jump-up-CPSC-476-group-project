@@ -135,7 +135,7 @@ def register_page():
 
             passw = str(form.password.data)
             #print(passw)
-            passwordbytes = password.encode(encoding='UTF-8')
+            passwordbytes = passw.encode(encoding='UTF-8')
             #print(passwordbytes)
             password = f.encrypt(passwordbytes)
 
