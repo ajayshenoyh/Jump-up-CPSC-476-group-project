@@ -76,7 +76,7 @@
 
                        {% for project in projectList %}
                             <div style="background-color:black;color:white;padding:20px;" >
-                                <a href="/donate" onclick="localStorage.setItem('projectID',{{ project[0] }})"><h2>{{project[0]}}. {{project[1]}}</h2></a>
+                                <a href="/donate" {% session['deleteProjectID']= project[0] %} ><h2>{{project[0]}}. {{project[1]}}</h2></a>
                                 <h3>Project Category: {{project[3]}}</h3>
                                 <p>Sub Category: {{ project[4]}}</p>
                                 <p>{{project[7]}}</p>
