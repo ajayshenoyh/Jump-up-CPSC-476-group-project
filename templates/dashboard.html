@@ -77,7 +77,6 @@
                 <div class="row">
                     <h1 class="intro-text">My Projects</h1>
                     {% for project in projects %}
-                        {%  session['deleteProjectID'] = project[0] %}
                         <div class="floating-box" style="float: left;width: 250px;height: 200px;margin: 10px;border: 3px solid #DC143C;">
                             <br>
                              <h6>Project Category: {{project[3]}} <br>
