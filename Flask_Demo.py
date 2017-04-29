@@ -87,7 +87,7 @@ def login():
     elif request.method == 'POST':
             username = request.form.get('uname')
             password = str(request.form.get('pwd'))
-            print(password)
+            #print(password)
             #password = f.encrypt(b"" + password)
             #print(password)
             #print(password)
@@ -98,7 +98,9 @@ def login():
             else:
                 pwd = user_details[0][1]
                 print(pwd)
-                print(type(pwd))
+                pwdbytes = password.encode(encoding='UTF-8')
+                print(pwdbytes)
+                print(type(pwdbytes))
                 #print(pwd.encode(encoding='UTF-8'))
                 #print(pwd.decode(encoding='UTF-8'))
                 decrpted_password = f.decrypt(pwd)
