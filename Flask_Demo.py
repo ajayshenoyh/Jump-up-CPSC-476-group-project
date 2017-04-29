@@ -84,7 +84,7 @@ def delete_project():
     projectID = request.args.get('projectID')
     print(projectID)
     delete_project_with_id(projectID)
-    dashboard()
+    return render_template('home.html')
 
 @app.route('/login',methods=['POST','GET'])
 def login():
