@@ -77,7 +77,7 @@
                 <div class="row">
                     <h1 class="intro-text">My Projects</h1>
                     {% for project in projects %}
-                        <div class="floating-box" style="float: left;width: 200px;height: 150px;margin: 10px;border: 3px solid #73AD21;">
+                        <div class="floating-box" style="float: left;width: 250px;height: 200px;margin: 10px;border: 3px solid #73AD21;">
                              <h6>Project Category: {{project[3]}} <br>
                              Sub Category: {{ project[4]}} <br>
                              {{project[7]}} <br>
@@ -85,7 +85,7 @@
                               Fund duration: {{project[9]}} <br>
                               Fund Goal: {{project[10]}} <br>
                                  Remaining: {{ project[11] }} <br> </h6>
-                             <a href="/delete_project" ></a>
+                             <a href="/delete_project" >Delete Project</a>
                         </div>
                     {% endfor %}
                 </div>
