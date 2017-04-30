@@ -3,6 +3,7 @@ from flask import flash
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
+from cryptography.fernet import Fernet
 from datetime import datetime
 from flask import request
 from flask import current_app
@@ -35,6 +36,8 @@ app.config['SECRET_KEY'] = 'super secret key'
 ctx = app.app_context()
 # flask.g.projectTitl=''
 # ctx.push()
+key = Fernet.generate_key()
+f = Fernet(key)
 bootstrap = Bootstrap(app)
 try:
     create_user_table()
@@ -69,6 +72,7 @@ def app_context_learning():
 
 @app.route('/login',methods=['POST','GET'])
 def login():
+<<<<<<< HEAD
     username = request.form.get('uname')
     password = request.form.get('pwd')
     error = None
@@ -84,41 +88,63 @@ def login():
 #def loginback():
 #    uname = request.form.get('uname')
 #    return "Hello %s" % (uname)
+=======
+    if request.method == 'GET':
+        return render_template('login.html')
+    elif request.method == 'POST':
+        username = request.form.get('uname')
+        password = request.form.get('pwd')
+        #password=f.decrypt(password) use this for password decryption
+        user_details = validate_user(username)
+        if len(user_details) == 0:
+            flash("No user registered under this user name")
+            return redirect(url_for('register_page'))
+        else:
+            pwd = user_details[0][1]
+            if password == pwd:
+                Session['UserName'] = username
+            else:
+                return render_template('login.html')
+>>>>>>> dd52b34e02d8784ae3797f998f4b6e6e0f6344ce
 
 
-class RegistrationForm(Form):
-    username = TextField('Username', [validators.Length(min=4, max=20)])
-    email = TextField('Email Address', [validators.Length(min=6, max=50)])
-    password = PasswordField('New Password', [
-        validators.Required(),
-        validators.EqualTo('confirm', message='Passwords must match')
-    ])
-    confirm = PasswordField('Repeat Password')
-    accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
-                              [validators.Required()])
 
 @app.route('/register/', methods=["GET", "POST"])
 def register_page():
+    class RegistrationForm(Form):
+        username = TextField('Username', [validators.Length(min=4, max=20)])
+        email = TextField('Email Address', [validators.Length(min=6, max=50)])
+        password = PasswordField('New Password', [
+            validators.Required(),
+            validators.EqualTo('confirm', message='Passwords must match')
+        ])
+        confirm = PasswordField('Repeat Password')
+        accept_tos = BooleanField('I accept the Terms of Service and Privacy Notice',
+                                  [validators.Required()])
+
     try:
         form = RegistrationForm(request.form)
 
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            #password = sha256_crypt.encrypt((str(form.password.data)))
-            password=str(form.password.data)
-            c, conn = connection()
+            #password=str(form.password.data)
 
-            c.execute("Select EXISTS (SELECT * FROM USERS WHERE UserName = %s)",(username,))
+            passw = str(form.password.data)
+            password = f.encrypt(b"" + passw)
+
+
+            c, conn = connections()
+
+            c.execute("Select EXISTS (SELECT * FROM USERS WHERE username = %s)",(username,))
             if c.fetchone()[0]:
-
+                flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
 
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
                 flash('Thanks for registering!')
-                c.close()
                 #gc.collect()
 
                 #session['logged_in'] = True
@@ -169,7 +195,11 @@ def project_registration():
             return render_template("register_project.html")
         else:
             next_id = len(view_projects()) + 1
-            un = request.cookies.get('UserName')
+            un = ""
+            try:
+                un = session['UserName']
+            except:
+                un = "Guest"
             add_project(next_id, project_title, un, project_category, project_sub_category, project_country,
                         project_image, project_description, project_location, project_fund_duration, project_fund_goal,project_fund_goal,dt)
         resp = make_response(render_template('rewards.html'))
@@ -214,7 +244,11 @@ def account_details():
         RoutingNumber = request.form.get('routingNumber')
         bankAccountNumber = request.form.get('BankAccountNumber')
         next_id = len(view_bank_account_info()) + 1
-        un = request.cookies.get('UserName')
+        un = ""
+        try:
+            un = session['UserName']
+        except:
+            un = "Guest"
         add_bank_account_info(next_id, un, contact_email, firstName, lastName, DOB, HomeAddress, RoutingNumber,
                               bankAccountNumber)
         #project_details = search_projects_by_title(request.cookies.get('projectTitle'))
@@ -253,7 +287,11 @@ def reward():
         expected_delivery_year = request.form.get('year')
         shippingDetails = request.form.get('shippingDetails')
         reward_limit = request.form.get('rewardLimit')
-        un = request.cookies.get('UserName')
+        un = ""
+        try:
+            un = session['UserName']
+        except:
+            un = "Guest"
         pt = request.cookies.get('projectTitle')
         next_id = len(view_rewards()) + 1
         add_reward(next_id, reward_title, pt, un, pledged_amount, reward_description, expected_delivery_month,
@@ -263,19 +301,19 @@ def reward():
 @app.route('/donate',methods=['POST','GET'])
 def donate():
     if request.method == 'GET':
-
         return render_template('donateAmount.html')
     elif request.method == 'POST':
         id = request.form.get('projectID')
         fn = request.form.get('fn')
         ln = request.form.get('ln')
-        rem = request.form.get('rem')
-        rem_amount = int(rem) - int(amount_pledged)
         amount_pledged = request.form.get('pledgeAmount')
         address = request.form.get('address')
         mobileNumber = request.form.get('mobileNumber')
-        project_pledged_amount(amount_pledged,str(rem_amount))
-        return "Pledged Successfully"
+        if pledge_amount(id,amount_pledged):
+            flash("Pledged Successfully")
+            return render_template('project_overview.html')
+        else:
+            flash("Transaction unsuccessful and is rolled back")
 
 @app.errorhandler(404)
 def page_not_found(e):
