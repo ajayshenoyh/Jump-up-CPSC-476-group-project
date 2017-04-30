@@ -1,9 +1,10 @@
 from flask import Flask, render_template, redirect, url_for, make_response
-from flask import flash
+from flask import flash,session
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
 from cryptography.fernet import Fernet
+from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 from flask import request
 from flask import current_app
@@ -63,12 +64,29 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route('/dashboard',methods=['GET','POST'])
+def dashboard():
+    if request.method == 'GET':
+        un = ""
+        un = session['UserName']
+        print(un)
+        if un != "":
+            projects = search_projects_by_username(un)
+            return render_template('dashboard.html',projects=projects)
+        else:
+            return render_template('login.html')
 
 @app.route('/app_name')
 def app_context_learning():
     print(app.url_map)
     return current_app.name
 
+@app.route('/delete_project',methods=['GET','POST'])
+def delete_project():
+    projectID = request.args.get('projectID')
+    print(projectID)
+    delete_project_with_id(projectID)
+    return render_template('home.html')
 
 @app.route('/login',methods=['POST','GET'])
 def login():
@@ -92,20 +110,32 @@ def login():
     if request.method == 'GET':
         return render_template('login.html')
     elif request.method == 'POST':
-        username = request.form.get('uname')
-        password = request.form.get('pwd')
-        #password=f.decrypt(password) use this for password decryption
-        user_details = validate_user(username)
-        if len(user_details) == 0:
-            flash("No user registered under this user name")
-            return redirect(url_for('register_page'))
-        else:
-            pwd = user_details[0][1]
-            if password == pwd:
-                Session['UserName'] = username
+            username = request.form.get('uname')
+            password = str(request.form.get('pwd'))
+            #print(password)
+            #password = f.encrypt(b"" + password)
+            #print(password)
+            #print(password)
+            user_details = validate_user(username)
+            if len(user_details) == 0:
+                flash("No user registered under this user name")
+                return redirect(url_for('register_page'))
             else:
+<<<<<<< HEAD
                 return render_template('login.html')
 >>>>>>> dd52b34e02d8784ae3797f998f4b6e6e0f6344ce
+=======
+                pwd = user_details[0][1]
+                print(pwd)
+                password_check = check_password_hash(pwd,password)
+                if password_check:
+                    session['UserName'] = username
+                    return render_template('home.html')
+                else:
+                    print(user_details)
+                    print(pwd)
+                    return render_template('login.html')
+>>>>>>> aa92e4220e04a0889744e95f97c2577b1cbe01fa
 
 
 
@@ -129,10 +159,13 @@ def register_page():
             username = str(form.username.data)
             email = str(form.email.data)
             #password=str(form.password.data)
-
             passw = str(form.password.data)
-            password = f.encrypt(b"" + passw)
+            #print(passw)
+            #passwordbytes = passw.encode(encoding='UTF-8')
+            #print(passwordbytes)
+            #password = f.encrypt(passwordbytes)
 
+            password = generate_password_hash(passw)
 
             c, conn = connections()
 

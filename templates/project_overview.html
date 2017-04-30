@@ -52,6 +52,9 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="/dashboard"><h4>Dashboard</h4></a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="/explore"><h4>Explore</h4></a>
                     </li>
                     <li> <a class="page-scroll" href="/register"><h4>User Registrations</h4></a> </li>
@@ -71,12 +74,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h1 class="brand-heading">Jump up</h1>
+                      
                       <h1 class="intro-text">Projects at a glance</h1>
 
                        {% for project in projectList %}
                             <div style="background-color:black;color:white;padding:20px;" >
-                                <a href="/donate" onclick="localStorage.setItem('projectID',{{ project[0] }})"><h2>{{project[0]}}. {{project[1]}}</h2></a>
+                                <a href="/donate"><h2>{{project[0]}}. {{project[1]}}</h2></a>
                                 <h3>Project Category: {{project[3]}}</h3>
                                 <p>Sub Category: {{ project[4]}}</p>
                                 <p>{{project[7]}}</p>
