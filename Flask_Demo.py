@@ -4,21 +4,33 @@ from wtforms import Form, TextField, validators, PasswordField, BooleanField
 #from passlib.hash import sha256_crypt
 #from psycopg2.extensions import adapt as thwart
 from cryptography.fernet import Fernet
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 from datetime import datetime
 from flask import request
 from flask import current_app
 from flask_bootstrap import Bootstrap
 from HopUp_Database_Code import *
 #from JumpUp import JumpUpDB_URL
-import os
-import urlparse
 import smtplib
-import psycopg2
-import base64
 
 from email.mime.text import MIMEText
+# from JumpUp import JumpUpDB_URL
+import smtplib
+from datetime import datetime
+from email.mime.text import MIMEText
 
+# from passlib.hash import sha256_crypt
+# from psycopg2.extensions import adapt as thwart
+from cryptography.fernet import Fernet
+from flask import Flask, render_template, redirect, url_for, make_response
+from flask import current_app
+from flask import flash, session
+from flask import request
+from flask_bootstrap import Bootstrap
+from werkzeug.security import generate_password_hash
+from wtforms import Form, TextField, validators, PasswordField, BooleanField
+
+from HopUp_Database_Code import *
 
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
@@ -106,7 +118,7 @@ def login():
 #def loginback():
 #    uname = request.form.get('uname')
 #    return "Hello %s" % (uname)
-=======
+#=======
     if request.method == 'GET':
         return render_template('login.html')
     elif request.method == 'POST':
