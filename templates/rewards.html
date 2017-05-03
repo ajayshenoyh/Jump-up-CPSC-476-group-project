@@ -73,7 +73,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>Jump up</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
+                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>{%  if session['Login'] %} Welcome, {{ session['UserName'] }} {% else %} Jump Up{%  endif %}</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -93,6 +93,9 @@
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="/logout"><h4>Logout</h4></a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -111,7 +114,7 @@
 							<h1>Register the rewards you are going to give to the fund donors for your project</h1>
                             <p>Appreciate the help people are doing by giving them some rewards or by giving them some extra privileged access to your project</p>
 						</div>
-		<form method="post" name="RewardForm" action="/reward" onsubmit="return validateRewards()">
+		<form method="POST" name="RewardForm" action="/reward" onsubmit="return validateRewards()">
 			<dl>
 
       <label for="rewardTitle">Reward Title</label>
@@ -121,7 +124,7 @@
       <input type="text" class="form-control" id="pledgedAmount" name="pledgedAmount" placeholder="$0" required>
 
       <label for="rewardDescription">Reward Description</label>
-      <textarea rows="3" cols="40" id="rewardDescription" name="rewardDescription">
+      <textarea rows="3" cols="40" id="rewardDescription" name="rewardDescription" style="background-color:grey">
         Think of creative rewards like ebooks, videos, your project manuals, t-shirts with your project logo,...
       </textarea>
                 <br><br>
@@ -171,7 +174,7 @@
    </dl>
   </form>
   <form method='GET' action="/story">
-      <button type="submit" style="background-color:grey;margin:auto;display:block">Go Ahead and tell your story</button>
+      <button type="submit" style="background-color:grey;margin:auto;display:block">Skip go Ahead and tell your story</button>
 
   </form>
 

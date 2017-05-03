@@ -49,10 +49,10 @@ def pledge_amount(id,amount_pledged):
         print(rem)
         curs.execute("update PROJECT set Remaining=%s where ProjectID=%s",(rem,id,))
         conn.commit()
-        return true
+        return True
     except:
         pass
-        return false
+        return False
 
 def search_projects_by_title(ptitle):
     curs = conn.cursor()
@@ -81,6 +81,33 @@ def view_rewards():
     curs.execute("select * from REWARD")
     rows = curs.fetchall()
     return rows
+
+def create_sponsor_table():
+    curs = conn.cursor()
+    curs.execute("create table if not exists sponsor(SponsorID integer, FirstName text, LastName text,Address text,MobileNumber text,pledgeamount integer,projectTitle text)")
+    conn.commit()
+
+def view_sponsors():
+    curs = conn.cursor()
+    curs.execute("select * from sponsor")
+    sponsors = curs.fetchall()
+    return sponsors
+
+def update_sponsor_table(pa,pt):
+    curs = conn.cursor()
+    curs.execute("update sponsor set pledgeamount = %s where projectTitle = %s",(pa,pt))
+    conn.commit()
+
+def add_sponsor(id,fn,ln,address,mn,pa,pt):
+    curs = conn.cursor()
+    curs.execute("insert into sponsor values(%s,%s,%s,%s,%s,%s,%s)",(id,fn,ln,address,mn,pa,pt,))
+    conn.commit()
+
+def search_sponsor(fn,ln):
+    curs = conn.cursor()
+    curs.execute("select * from sponsor where FirstName = %s and LastName = %s",(fn,ln,))
+    details = curs.fetchall()
+    return details
 
 def create_personal_info_table():
     curs = conn.cursor()

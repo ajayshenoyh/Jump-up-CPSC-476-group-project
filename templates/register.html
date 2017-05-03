@@ -42,7 +42,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>Jump up</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
+                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>{%  if session['Login'] %} Welcome, {{ session['UserName'] }} {% else %} Jump Up{%  endif %}</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -50,9 +50,6 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/dashboard"><h4>Dashboard</h4></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/explore"><h4>Explore</h4></a>

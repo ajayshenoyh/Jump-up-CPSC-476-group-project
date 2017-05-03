@@ -43,7 +43,8 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>Jump up</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
+
+                <a class="navbar-brand page-scroll" href="/"> <em class="fa fa-play-circle"></em> <span class="light"><h4>{%  if session['Login'] %} Welcome, {{ session['UserName'] }} {% else %} Jump Up{%  endif %}</h4></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -62,6 +63,9 @@
                     <li> <a class="page-scroll" href="/login"><h4>Login</h4></a> </li>
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/logout"><h4>Logout</h4></a>
                     </li>
                 </ul>
             </div>
