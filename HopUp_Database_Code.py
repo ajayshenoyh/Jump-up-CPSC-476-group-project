@@ -87,6 +87,12 @@ def create_sponsor_table():
     curs.execute("create table if not exists sponsor(SponsorID integer, FirstName text, LastName text,Address text,MobileNumber text,pledgeamount integer,projectTitle text)")
     conn.commit()
 
+def search_reward_by_project(pt):
+    curs = conn.cursor()
+    curs.execute("select * from REWARD where ProjectTitle=%s",(pt,))
+    projects = curs.fetchall()
+    return projects
+
 def view_sponsors():
     curs = conn.cursor()
     curs.execute("select * from sponsor")
@@ -98,9 +104,9 @@ def update_sponsor_table(pa,pt):
     curs.execute("update sponsor set pledgeamount = %s where projectTitle = %s",(pa,pt))
     conn.commit()
 
-def add_sponsor(id,fn,ln,address,mn,pa,pt):
+def add_sponsor(id,fn,ln,address,pa,pt):
     curs = conn.cursor()
-    curs.execute("insert into sponsor values(%s,%s,%s,%s,%s,%s,%s)",(id,fn,ln,address,mn,pa,pt,))
+    curs.execute("insert into sponsor values(%s,%s,%s,%s,%s,%s)",(id,fn,ln,address,pa,pt,))
     conn.commit()
 
 def search_sponsor(fn,ln):
@@ -160,5 +166,17 @@ def view_project_detailed_info():
 def search_projects_by_username(un):
     curs = conn.cursor()
     curs.execute("select * from PROJECT where UserName = %s",(un,))
+    rows = curs.fetchall()
+    return rows
+
+def search_projects_by_id(id):
+    curs = conn.cursor()
+    curs.execute("select * from PROJECT where ProjectID=%s",(id,))
+    rows = curs.fetchall()
+    return rows
+
+def get_user_details(un):
+    curs = conn.cursor()
+    curs.execute("select * from USERS where UserName=%s",(un,))
     rows = curs.fetchall()
     return rows

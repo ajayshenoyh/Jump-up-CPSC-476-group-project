@@ -113,9 +113,11 @@
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
                     </li>
+                    {% if session['Login'] == True %}
                     <li>
                         <a class="page-scroll" href="/logout"><h4>Logout</h4></a>
                     </li>
+                    {%  endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -128,8 +130,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-
+<br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                       <h1 class="intro-text">Link your bank account</h1>
+
 					  <form method="post" action="/account_details" name="BankAccountDetailsForm" onsubmit="return validateAccountDetailsForm()">
 					  <dl>
 							<label for="contactEmail">Email to Contact</label>

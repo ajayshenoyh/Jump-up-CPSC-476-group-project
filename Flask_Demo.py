@@ -35,6 +35,8 @@ from HopUp_Database_Code import *
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
     'plain', 'utf-8')
+msg['Subject'] ='Collaboration Invitation'
+msg['From'] = 'Jump Up'
 reward_message = MIMEText("The sponsorer has donated the amount and is now eligible for the reward you have created. Please prepate to ship the reward.")
 reward_message['Subject'] = 'Sponsorer is now eligible for a reward'
 reward_message['From'] = 'Jump Up'
@@ -95,7 +97,8 @@ def dashboard():
             else:
                 return render_template('login.html')
         except:
-            return render_template('login.html')
+            projects = view_projects()
+            return render_template('dashboard.html',projects=projects)
 
 @app.route('/app_name')
 def app_context_learning():
@@ -352,24 +355,35 @@ def reward():
 def donate():
     if request.method == 'GET':
         pid = request.args.get("projectID")
-        print(pid)
+        #print(pid)
         return render_template('donateAmount.html',pid=pid)
     elif request.method == 'POST':
         id = int(request.form.get('projectID'))
         fn = str(request.form.get('fn'))
         ln = str(request.form.get('ln'))
         amount_pledged = int(request.form.get('pledgeAmount'))
+        projectTitle = str(request.form.get('projectTitle'))
+        print(projectTitle)
         address = str(request.form.get('address'))
-        mobileNumber = str(request.form.get('mobileNumber'))
-        rewards = search_reward_by_project(id)
-        for reward in rewards:
-            amount = reward[4]
-            if amount <= amount_pledged:
-                project_details = search_projects_by_id(id)
-                creator = project_details[0][2]
-                user_details = get_user_details(creator)
-                user_email = str(user_details[0][3])
-                s.sendmail(from_addr,user_email, reward_message.as_string())
+        rewards = search_reward_by_project(projectTitle)
+        #print("Rewards")
+        print(rewards)
+        try:
+            for reward in rewards:
+                amount = int(reward[4])
+                print(amount)
+                print(amount_pledged)
+                if amount_pledged >= amount:
+                    project_details = search_projects_by_id(id)
+                    creator = project_details[0][2]
+                    print(creator)
+                    user_details = get_user_details(creator)
+                    user_email = str(user_details[0][3])
+                    s.sendmail(from_addr,user_email, reward_message.as_string())
+        except:
+            pass
+
+
         if pledge_amount(id,amount_pledged):
             flash("Pledged Successfully")
             sponsors = search_sponsor(fn, ln)
@@ -387,12 +401,12 @@ def donate():
                     update_sponsor_table(pa,id)
                 else:
                     next = len(view_sponsors()) + 1
-                    add_sponsor(next,fn,ln,address,mobileNumber,amount_pledged,id)
+                    add_sponsor(next,fn,ln,address,amount_pledged,id)
                 projects = view_projects()
                 return render_template('project_overview.html',projectList=projects)
             else:
                 next = len(view_sponsors()) + 1
-                add_sponsor(next, fn, ln, address, mobileNumber, amount_pledged, id)
+                add_sponsor(next, fn, ln, address,amount_pledged, id)
                 projects = view_projects()
                 return render_template('project_overview.html',projectList=projects)
         else:
@@ -401,6 +415,7 @@ def donate():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
+
 
 
 def validate_project_title(ptitle):

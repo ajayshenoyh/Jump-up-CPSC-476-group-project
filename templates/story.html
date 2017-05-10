@@ -60,9 +60,11 @@
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
                     </li>
+                    {% if session['Login'] == True %}
                     <li>
                         <a class="page-scroll" href="/logout"><h4>Logout</h4></a>
                     </li>
+                    {%  endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

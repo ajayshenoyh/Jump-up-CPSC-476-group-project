@@ -89,28 +89,19 @@
     function validatePersonalProfileForm(){
       var fb_url = document.forms["PersonalProfileForm"]["fbProfile"].value;
       var url_regex = /[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/;
-      if(fb_url == ""){
-        alert("Facebook url cannot be empty");
-        return false;
-      }else if(!url_regex.test(fb_url)){
+      if(!url_regex.test(fb_url)){
         alert("Please enter the valid facebook url");
         return false;
       }
 
       var website_url = document.forms["PersonalProfileForm"]["website"].value;
-      if(website_url == ""){
-        alert("Personal Website url cannot be empty");
-        return false;
-      }else if(!url_regex.test(website_url)){
+      if(!url_regex.test(website_url)){
         alert("Please enter the valid website url");
         return false;
       }
 
       var git_url = document.forms["PersonalProfileForm"]["giturl"].value;
-      if(git_url == ""){
-        alert("Github url cannot be empty");
-        return false;
-      }else if(!url_regex.test(git_url)){
+      if(!url_regex.test(git_url)){
         alert("Please enter the valid git url");
         return false;
       }
@@ -165,7 +156,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h1 class="brand-heading">Jump up</h1>
+                     <br>
+                        <br>
+<br>
+                        <br>
+                        <br>
                       <h1 class="intro-text">We need more information about you to verify the authenticity of the project</h1>
 							<form method="post" action="/more_about_you" name="PersonalProfileForm" onsubmit="return validatePersonalProfileForm()">
             <dl>

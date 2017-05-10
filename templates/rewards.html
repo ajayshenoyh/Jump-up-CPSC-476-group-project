@@ -93,9 +93,11 @@
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
                     </li>
+                    {% if session['Login'] == True %}
                     <li>
                         <a class="page-scroll" href="/logout"><h4>Logout</h4></a>
                     </li>
+                    {%  endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -108,10 +110,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+
                       <h1 class="intro-text">Add Reward</h1>
 						<div class="container" align="center">
+                             <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 							<h1>Register the rewards you are going to give to the fund donors for your project</h1>
-                            <p>Appreciate the help people are doing by giving them some rewards or by giving them some extra privileged access to your project</p>
+                            <p>Appreciate the help people are doing by giving them some rewards or by giving <br>
+                                them some extra privileged access to your project</p>
 						</div>
 		<form method="POST" name="RewardForm" action="/reward" onsubmit="return validateRewards()">
 			<dl>
@@ -182,7 +191,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    <!--</header>-->
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">

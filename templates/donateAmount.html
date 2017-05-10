@@ -74,9 +74,11 @@
                     <li>
                         <a class="page-scroll" href="/project_register"><h4>Start a new Project</h4></a>
                     </li>
+                    {% if session['Login'] == True %}
                     <li>
                         <a class="page-scroll" href="/logout"><h4>Logout</h4></a>
                     </li>
+                    {%  endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -89,10 +91,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                       <h1 class="intro-text">Pledge Amount</h1>
 		<form method="post" action="/donate">
             <dl>
                 Project ID<input type="number" class="form-control" id="projectID" name="projectID" value="{{ pid }}" placeholder="Enter project ID">
+                Project Title<input type="text" class="form-control" id="projectTitle" name="projectTitle" placeholder="Enter the project Title">
                 Pledge Amount<input type="number" class="form-control" id="pledgeAmount" name="pledgeAmount" value = " " placeholder="Enter the amount you want to donate">
                 First Name<input type="text" class="form-control" id="fn" name="fn" value = " " placeholder="Enter your first name">
 
