@@ -89,13 +89,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h1 class="brand-heading">Jump up</h1>
                       <h1 class="intro-text">Pledge Amount</h1>
 		<form method="post" action="/donate">
             <dl>
-                Project ID<input type="number" class="form-control" id="projectID" name="projectID" onclick="document.getElementById('projectID').value = localStorage.getItem('projectID')" placeholder="Enter project ID">
+                Project ID<input type="number" class="form-control" id="projectID" name="projectID" value="{{ pid }}" placeholder="Enter project ID">
                 Pledge Amount<input type="number" class="form-control" id="pledgeAmount" name="pledgeAmount" value = " " placeholder="Enter the amount you want to donate">
                 First Name<input type="text" class="form-control" id="fn" name="fn" value = " " placeholder="Enter your first name">
+
                 Last Name<input type="text" class="form-control" id="ln" name="ln" value = " " placeholder="Enter your last name">
                 Address<input type="text" class="form-control" id="address" name="address" value = " " placeholder="Enter your shipping address">
                 <p><input type=submit style="background-color: #555555; font-size: 24px;" value="Pledge"></p>

@@ -1,17 +1,17 @@
 from flask import Flask, render_template, redirect, url_for, make_response
 from flask import flash,session
 from wtforms import Form, TextField, validators, PasswordField, BooleanField
-#from passlib.hash import sha256_crypt
-#from psycopg2.extensions import adapt as thwart
 from cryptography.fernet import Fernet
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash,check_password_hash
 from datetime import datetime
 from flask import request
 from flask import current_app
 from flask_bootstrap import Bootstrap
 from HopUp_Database_Code import *
 #from JumpUp import JumpUpDB_URL
+import simplejson as json
 import smtplib
+import boto3
 
 from email.mime.text import MIMEText
 # from JumpUp import JumpUpDB_URL
@@ -35,6 +35,11 @@ from HopUp_Database_Code import *
 msg = MIMEText(
     'From: HopUp \n Subject: Project collaboration invitation \n Hello!! Your team mate is inviting you to collaborate and help with their project on hopup',
     'plain', 'utf-8')
+reward_message = MIMEText("The sponsorer has donated the amount and is now eligible for the reward you have created. Please prepate to ship the reward.")
+reward_message['Subject'] = 'Sponsorer is now eligible for a reward'
+reward_message['From'] = 'Jump Up'
+reward_message['To'] = 'Project Creator'
+
 from_addr = 'craftingideas.25@gmail.com'
 password = 'SuperUser'
 s = smtplib.SMTP_SSL('smtp.gmail.com')
@@ -59,6 +64,7 @@ try:
     create_personal_info_table()
     create_bank_account_info_table()
     create_project_detailed_info_table()
+    create_sponsor_table()
 except:
     pass
 
@@ -80,12 +86,15 @@ def about():
 def dashboard():
     if request.method == 'GET':
         un = ""
-        un = session['UserName']
-        print(un)
-        if un != "":
-            projects = search_projects_by_username(un)
-            return render_template('dashboard.html',projects=projects)
-        else:
+        try:
+            un = session['UserName']
+            print(un)
+            if un != "":
+                projects = search_projects_by_username(un)
+                return render_template('dashboard.html',projects=projects)
+            else:
+                return render_template('login.html')
+        except:
             return render_template('login.html')
 
 @app.route('/app_name')
@@ -102,61 +111,65 @@ def delete_project():
 
 @app.route('/login',methods=['POST','GET'])
 def login():
-<<<<<<< HEAD
-    username = request.form.get('uname')
-    password = request.form.get('pwd')
-    error = None
-
-    if request.method == 'POST':
-        if username == 'uname' and password == 'pwd':
-            session['login'] = True
-            return redirect(url_for('home'))
-        else:
-            error ='Invalid credentials. Please try again'
-    return render_template("login.html", error=error)
-#@app.route('/loginback', methods=['POST', 'GET'])
-#def loginback():
-#    uname = request.form.get('uname')
-#    return "Hello %s" % (uname)
-#=======
     if request.method == 'GET':
         return render_template('login.html')
     elif request.method == 'POST':
-            username = request.form.get('uname')
-            password = str(request.form.get('pwd'))
-            #print(password)
-            #password = f.encrypt(b"" + password)
-            #print(password)
-            #print(password)
-            user_details = validate_user(username)
-            if len(user_details) == 0:
-                flash("No user registered under this user name")
-                return redirect(url_for('register_page'))
+        username = request.form.get('uname')
+        password = request.form.get('pwd')
+        user_details = validate_user(username)
+        if len(user_details) == 0:
+            flash("No user registered under this user name")
+            return redirect(url_for('register_page'))
+        else:
+            pwd = user_details[0][1]
+            print(pwd)
+            password_check = check_password_hash(pwd,password)
+            if password_check:
+                session['UserName'] = username
+                session['Login'] = True
+                print("logged in the user")
+                return render_template('home.html')
             else:
-<<<<<<< HEAD
-                return render_template('login.html')
->>>>>>> dd52b34e02d8784ae3797f998f4b6e6e0f6344ce
-=======
-                pwd = user_details[0][1]
+                print(user_details)
                 print(pwd)
-                password_check = check_password_hash(pwd,password)
-                if password_check:
-                    session['UserName'] = username
-                    return render_template('home.html')
-                else:
-                    print(user_details)
-                    print(pwd)
-                    return render_template('login.html')
->>>>>>> aa92e4220e04a0889744e95f97c2577b1cbe01fa
+                return render_template('login.html')
 
+@app.route('/logout')
+def logout():
+    session['UserName'] = ""
+    session['Login'] = False
+    return render_template('login.html')
 
+@app.route('/sign_s3/')
+def sign_s3():
+    S3_BUCKET = os.environ.get('S3_BUCKET')
+    file_name = request.args.get('file_name')
+    file_type = request.args.get('file_type')
+    print(file_name)
+    print(file_type)
+    s3 = boto3.client('s3')
+    presigned_post = s3.generate_presigned_post(
+        Bucket=S3_BUCKET,
+        Key=file_name,
+        Fields={"acl": "public-read", "Content-Type": file_type},
+        Conditions=[
+            {"acl": "public-read"},
+            {"Content-Type": file_type}
+        ],
+        ExpiresIn=3600
+    )
+    return json.dumps({
+        'data': presigned_post,
+        'url': 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, file_name)
+    })
 
 @app.route('/register/', methods=["GET", "POST"])
 def register_page():
-    class RegistrationForm(Form):
+    class FormRegistration(Form):
         username = TextField('Username', [validators.Length(min=4, max=20)])
         email = TextField('Email Address', [validators.Length(min=6, max=50)])
         password = PasswordField('New Password', [
+            validators.Length(min=6, max=50),
             validators.Required(),
             validators.EqualTo('confirm', message='Passwords must match')
         ])
@@ -165,40 +178,25 @@ def register_page():
                                   [validators.Required()])
 
     try:
-        form = RegistrationForm(request.form)
-
+        form = FormRegistration(request.form)
         if request.method == "POST" and form.validate():
             username = str(form.username.data)
             email = str(form.email.data)
-            #password=str(form.password.data)
             passw = str(form.password.data)
-            #print(passw)
-            #passwordbytes = passw.encode(encoding='UTF-8')
-            #print(passwordbytes)
-            #password = f.encrypt(passwordbytes)
-
             password = generate_password_hash(passw)
 
             c, conn = connections()
 
             c.execute("Select EXISTS (SELECT * FROM USERS WHERE username = %s)",(username,))
             if c.fetchone()[0]:
-                flash('That username is already taken, please choose another')
                 return render_template('register.html', form=form)
 
             else:
                 c.execute("INSERT INTO USERS(UserName, PassWord, EmailId) VALUES (%s, %s, %s)",(username,password,email))
                 conn.commit()
-                flash('Thanks for registering!')
-                #gc.collect()
-
-                #session['logged_in'] = True
-                #session['username'] = username
-
                 return redirect(url_for('login'))
 
         return render_template("register.html", form=form)
-
     except Exception as e:
         return (str(e))
 
@@ -206,6 +204,7 @@ def register_page():
 @app.route('/story', methods=['POST', 'GET'])
 def story():
     if request.method == 'GET':
+
         return render_template("story.html")
     elif request.method == 'POST':
         pt = request.cookies.get('projectTitle')
@@ -270,7 +269,11 @@ def more_about_you():
         github_url = request.form.get('giturl')
         biography = request.form.get('biography')
         next_id = len(view_personal_info()) + 1
-        un = request.cookies.get('UserName')
+        un = ""
+        try:
+            un = session['UserName']
+        except:
+            un = "Guest"
         add_personal_info(next_id, un, profile_image, facebook_url, personal_website_url, personal_location, github_url,
                           biography)
         return render_template('bank_details.html')
@@ -305,7 +308,8 @@ def account_details():
 def send_invite():
     to_addr = request.form.get('col_email')
     s.sendmail(from_addr, [to_addr], msg.as_string())
-    return "Successfully sent invitation"
+    print("Invitation sent successfully")
+    return render_template("rewards.html")
 
 @app.route('/explore',methods=['POST','GET'])
 def explore():
@@ -332,6 +336,7 @@ def reward():
         expected_delivery_year = request.form.get('year')
         shippingDetails = request.form.get('shippingDetails')
         reward_limit = request.form.get('rewardLimit')
+        print(reward_title)
         un = ""
         try:
             un = session['UserName']
@@ -341,22 +346,55 @@ def reward():
         next_id = len(view_rewards()) + 1
         add_reward(next_id, reward_title, pt, un, pledged_amount, reward_description, expected_delivery_month,
                    expected_delivery_year, shippingDetails, reward_limit)
-        return render_template('more_about_you.html')
+        return render_template('rewards.html')
 
 @app.route('/donate',methods=['POST','GET'])
 def donate():
     if request.method == 'GET':
-        return render_template('donateAmount.html')
+        pid = request.args.get("projectID")
+        print(pid)
+        return render_template('donateAmount.html',pid=pid)
     elif request.method == 'POST':
-        id = request.form.get('projectID')
-        fn = request.form.get('fn')
-        ln = request.form.get('ln')
-        amount_pledged = request.form.get('pledgeAmount')
-        address = request.form.get('address')
-        mobileNumber = request.form.get('mobileNumber')
+        id = int(request.form.get('projectID'))
+        fn = str(request.form.get('fn'))
+        ln = str(request.form.get('ln'))
+        amount_pledged = int(request.form.get('pledgeAmount'))
+        address = str(request.form.get('address'))
+        mobileNumber = str(request.form.get('mobileNumber'))
+        rewards = search_reward_by_project(id)
+        for reward in rewards:
+            amount = reward[4]
+            if amount <= amount_pledged:
+                project_details = search_projects_by_id(id)
+                creator = project_details[0][2]
+                user_details = get_user_details(creator)
+                user_email = str(user_details[0][3])
+                s.sendmail(from_addr,user_email, reward_message.as_string())
         if pledge_amount(id,amount_pledged):
             flash("Pledged Successfully")
-            return render_template('project_overview.html')
+            sponsors = search_sponsor(fn, ln)
+            #print(sponsors)
+            if len(sponsors) >= 1:
+                previous_project_id = sponsors[0][6]
+                #print(type(previous_project_id))
+                #print(type(id))
+                #print(type(fn))
+                #print(type(ln))
+                if previous_project_id == id:
+                    #print("Yes i am already there")
+                    prev_amount = sponsors[0][5]
+                    pa = int(prev_amount) + int(amount_pledged)
+                    update_sponsor_table(pa,id)
+                else:
+                    next = len(view_sponsors()) + 1
+                    add_sponsor(next,fn,ln,address,mobileNumber,amount_pledged,id)
+                projects = view_projects()
+                return render_template('project_overview.html',projectList=projects)
+            else:
+                next = len(view_sponsors()) + 1
+                add_sponsor(next, fn, ln, address, mobileNumber, amount_pledged, id)
+                projects = view_projects()
+                return render_template('project_overview.html',projectList=projects)
         else:
             flash("Transaction unsuccessful and is rolled back")
 
